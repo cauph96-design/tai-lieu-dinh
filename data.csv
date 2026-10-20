@@ -1,0 +1,41 @@
+Mã,Tiêu đề,Mô tả,Môn,Khối,LinkDemo
+TH-TOAN-01,Bộ Toán Tiểu Học 1–5,"Trọn bộ bài tập, đề kiểm tra Toán từ lớp 1 đến lớp 5.",Toán,Tiểu học,https://drive.google.com/file/d/1dFGTOA1ybIrAeYKdqWFphMzyRWnL8N1G/view?usp=sharing
+TH-VAN-01,Tập Làm Văn Tiểu Học,"Hướng dẫn viết văn miêu tả, kể chuyện cho học sinh tiểu học.",Văn,Tiểu học,https://drive.google.com/file/d/1nZmAg8-FrKxhI8i8RrxzYDg0GDTdRPkz/view?usp=sharing
+TH-ANH-01,Tiếng Anh Tiểu Học 1–5,"Từ vựng, ngữ pháp cơ bản, bài nghe và bài tập theo chương trình mới.",Anh,Tiểu học
+TH-KHTN-01,Khoa Học Tự Nhiên Tiểu Học,"Thí nghiệm vui, kiến thức tự nhiên dành cho lớp 4–5.",KHTN,Tiểu học
+TH-KHXH-01,Lịch Sử & Địa Lý Tiểu Học,Tài liệu tổng hợp Lịch sử – Địa lý lớp 4–5 theo chương trình mới.,KHXH,Tiểu học
+L6-TOAN-01,Toán Lớp 6,"Số học, hình học, phân số – lý thuyết trọng tâm và bài tập.",Toán,Lớp 6
+L6-VAN-01,Ngữ Văn Lớp 6,"Phân tích tác phẩm, tập làm văn tự sự, bài văn mẫu.",Văn,Lớp 6
+L6-ANH-01,Tiếng Anh Lớp 6,"Ngữ pháp, từ vựng theo unit, đề kiểm tra giữa kỳ và cuối kỳ.",Anh,Lớp 6
+L6-KHTN-01,KHTN Lớp 6,"Vật lý, Hoá học, Sinh học tích hợp – bài giảng và thí nghiệm.",KHTN,Lớp 6
+L6-KHXH-01,KHXH Lớp 6,"Lịch sử, Địa lý tích hợp – sơ đồ tư duy và câu hỏi ôn tập.",KHXH,Lớp 6
+L7-TOAN-01,Toán Lớp 7,"Đại số, hình học – phương pháp giải nhanh, đề thi thử.",Toán,Lớp 7
+L7-VAN-01,Ngữ Văn Lớp 7,"Văn biểu cảm, nghị luận – dàn ý chi tiết và bài văn mẫu.",Văn,Lớp 7
+L7-ANH-01,Tiếng Anh Lớp 7,"Ngữ pháp nâng cao, kỹ năng đọc hiểu, viết đoạn văn.",Anh,Lớp 7
+L7-KHTN-01,KHTN Lớp 7,"Cơ học, nhiệt học, sinh thái – lý thuyết và bài tập vận dụng.",KHTN,Lớp 7
+L7-KHXH-01,KHXH Lớp 7,"Lịch sử thế giới trung đại, địa lý các châu lục.",KHXH,Lớp 7
+L8-TOAN-01,Toán Lớp 8,"Phương trình, bất phương trình, hình học không gian cơ bản.",Toán,Lớp 8
+L8-VAN-01,Ngữ Văn Lớp 8,"Văn nghị luận xã hội, phân tích thơ hiện đại.",Văn,Lớp 8
+L8-ANH-01,Tiếng Anh Lớp 8,"Câu bị động, câu điều kiện, đề thi theo chuẩn.",Anh,Lớp 8
+L8-KHTN-01,KHTN Lớp 8,"Áp suất, phản ứng hoá học, cơ thể người.",KHTN,Lớp 8
+L8-KHXH-01,KHXH Lớp 8,"Cách mạng tư sản, địa lý kinh tế Việt Nam.",KHXH,Lớp 8
+L9-TOAN-01,Toán Lớp 9,"Hàm số bậc hai, hệ phương trình, hình học tổng hợp – ôn thi vào 10.",Toán,Lớp 9
+L9-VAN-01,Ngữ Văn Lớp 9,"Tổng ôn tác phẩm trọng tâm, nghị luận văn học – luyện thi vào 10.",Văn,Lớp 9
+L9-ANH-01,Tiếng Anh Lớp 9,"Tổng ôn ngữ pháp, bài tập đọc hiểu, viết lại câu – thi vào 10.",Anh,Lớp 9
+L9-KHTN-01,KHTN Lớp 9,"Điện học, quang học, di truyền – ôn thi tổng hợp.",KHTN,Lớp 9
+L9-KHXH-01,KHXH Lớp 9,"Lịch sử Việt Nam hiện đại, địa lý dân cư & kinh tế.",KHXH,Lớp 9
+L10-TOAN-01,Toán Lớp 10,"Mệnh đề, tập hợp, hàm số bậc hai, vector – lý thuyết & bài tập.",Toán,Lớp 10
+L10-VAN-01,Ngữ Văn Lớp 10,"Văn học dân gian, trung đại – phân tích chuyên sâu, bài mẫu.",Văn,Lớp 10
+L10-ANH-01,Tiếng Anh Lớp 10,"Ngữ pháp, từ vựng theo chủ đề, luyện kỹ năng nghe nói.",Anh,Lớp 10
+L10-KHTN-01,KHTN Lớp 10,Vật lý: Động học; Hoá học: Cấu tạo nguyên tử; Sinh: Tế bào.,KHTN,Lớp 10
+L10-KHXH-01,KHXH Lớp 10,"Lịch sử văn minh thế giới, địa lý tự nhiên đại cương.",KHXH,Lớp 10
+L11-TOAN-01,Toán Lớp 11,"Lượng giác, tổ hợp – xác suất, dãy số, giới hạn.",Toán,Lớp 11
+L11-VAN-01,Ngữ Văn Lớp 11,"Thơ mới, văn xuôi lãng mạn & hiện thực phê phán.",Văn,Lớp 11
+L11-ANH-01,Tiếng Anh Lớp 11,"Mệnh đề quan hệ, câu giả định, viết luận IELTS nền tảng.",Anh,Lớp 11
+L11-KHTN-01,KHTN Lớp 11,"Điện từ, hoá hữu cơ đại cương, sinh thái học.",KHTN,Lớp 11
+L11-KHXH-01,KHXH Lớp 11,"Cách mạng tư sản & công nghiệp, địa lý kinh tế thế giới.",KHXH,Lớp 11
+L12-TOAN-01,Toán Lớp 12,"Khảo sát hàm số, tích phân, hình không gian – tổng ôn thi TN.",Toán,Lớp 12
+L12-VAN-01,Ngữ Văn Lớp 12,"Phân tích tác phẩm trọng tâm, nghị luận xã hội – ôn thi TN.",Văn,Lớp 12
+L12-ANH-01,Tiếng Anh Lớp 12,"Tổng ôn ngữ pháp, 30 đề thi thử TN quốc gia có đáp án.",Anh,Lớp 12
+L12-KHTN-01,KHTN Lớp 12,"Sóng, hạt nhân, este – polymer, di truyền học – ôn thi TN.",KHTN,Lớp 12
+L12-KHXH-01,KHXH Lớp 12,"Lịch sử Việt Nam 1945–nay, địa lý VN – ôn thi TN.",KHXH,Lớp 12
