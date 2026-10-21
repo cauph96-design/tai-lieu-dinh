@@ -25,12 +25,17 @@
 - [x] **Rà soát câu từ (Copywriting):** Giữ đúng tên và slogan *Đỉnh cao tài liệu*; loại bỏ 100% tuyên bố không căn cứ; giờ hỗ trợ chuẩn `8h00–12h00` và `13h30–21h30`.
 - [x] **Đồng bộ mã nguồn:** Đã khởi tạo Git và đẩy toàn bộ mã nguồn lên GitHub tại `github.com/cauph96-design/tai-lieu-dinh` qua SSH Key `ed25519`.
 - [x] **Kiểm thử tự động:** Vượt qua 12/12 ca kiểm thử (`run_12_tests.py`), kiểm thử đồng bộ Google Sheets đạt 100%, 0 liên kết nội bộ bị gãy.
+- [x] **Tối ưu nhận diện & Triển khai tự động (GitHub Pages):**
+  - Tích hợp `favicon.svg` vector nhận diện sắc nét.
+  - Tích hợp `manifest.json` chuẩn PWA (hỗ trợ Thêm vào màn hình chính trên iOS/Android).
+  - Tích hợp Open Graph meta tags (chia sẻ Zalo, Facebook hiển thị thumbnail và mô tả chuẩn xác).
+  - Cấu hình quy trình tự động triển khai GitHub Actions (`.github/workflows/deploy.yml`) đưa website lên GitHub Pages tại: `https://cauph96-design.github.io/tai-lieu-dinh/`.
 
 ---
 
 ### 3. CÔNG VIỆC ĐANG THỰC HIỆN
 - Thiết lập bộ tài liệu phối hợp 3 AI (`AI_TEAM_PROTOCOL.md`, `DECISION_LOG.md`, `implementation_plan.md`, `PROJECT_STATUS.md`, `AI_REVIEW_PACKET.md`).
-- Chuẩn bị gói dữ liệu review độc lập Milestone 1 để Chủ dự án có thể chuyển cho Claude hoặc ChatGPT thẩm định khi cần.
+- Sẵn sàng gói bàn giao review độc lập Milestone 1 để Chủ dự án có thể chuyển cho Claude hoặc ChatGPT thẩm định khi cần.
 
 ---
 
