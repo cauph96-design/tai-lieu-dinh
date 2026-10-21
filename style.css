@@ -746,9 +746,11 @@ img, svg {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
   font-size: 0.82rem;
   color: var(--c-text-muted);
   margin-bottom: 16px;
+  word-break: break-word;
 }
 .breadcrumb a:hover {
   color: var(--c-green-dark);
@@ -1665,23 +1667,116 @@ textarea.form-control {
 }
 
 @media (max-width: 600px) {
+  .container {
+    padding: 0 14px;
+  }
+  .header__inner {
+    gap: 8px;
+  }
+  .logo__icon {
+    width: 32px;
+    height: 32px;
+  }
+  .logo__text {
+    font-size: 0.95rem;
+  }
+  .logo__slogan {
+    font-size: 0.58rem;
+  }
+  .header__actions {
+    gap: 6px;
+  }
+  .btn-header-search {
+    width: 36px;
+    height: 36px;
+  }
+  .btn-header-zalo {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    border-radius: var(--r-full);
+  }
+  .btn-header-zalo span {
+    display: none;
+  }
+  .btn-header-zalo svg,
+  .btn-header-zalo i {
+    width: 16px;
+    height: 16px;
+  }
+  .nav__toggle {
+    width: 36px;
+    height: 36px;
+  }
+  .hero {
+    padding: 28px 0 40px;
+  }
   .hero__title {
-    font-size: 2.1rem;
+    font-size: 1.85rem;
+    line-height: 1.25;
   }
   .hero__desc {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+  }
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    text-align: center;
   }
   .categories__grid {
     grid-template-columns: 1fr;
   }
   .docs-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .filter-bar {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .filter-bar .filter-select {
+    flex: 1;
+    min-width: 0;
+  }
+  .btn-mobile-filter {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
   }
   .detail-layout {
-    padding: 20px;
+    padding: 16px;
+    gap: 20px;
+  }
+  .detail-main-cover {
+    padding: 20px 14px;
+  }
+  .detail-cover__title {
+    font-size: 1.1rem;
+  }
+  .detail-title {
+    font-size: 1.35rem;
   }
   .detail-meta-list {
     grid-template-columns: 1fr;
+  }
+  .detail-tabs-section {
+    padding: 18px 16px;
+  }
+  .editorial-card {
+    padding: 20px 16px;
+  }
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .contact-info-card,
+  .contact-form-card {
+    padding: 20px 16px;
   }
   .form-grid {
     grid-template-columns: 1fr;
@@ -1690,34 +1785,62 @@ textarea.form-control {
   .footer__bottom {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .header__inner {
-    gap: 8px;
-  }
   .logo__icon {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
   .logo__text {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
   .logo__slogan {
-    font-size: 0.6rem;
+    font-size: 0.58rem;
   }
   .btn-header-zalo {
-    padding: 7px 14px;
-    font-size: 0.8rem;
-    gap: 4px;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    border-radius: var(--r-full);
   }
-  .btn-header-zalo svg {
-    width: 14px;
-    height: 14px;
+  .btn-header-zalo span {
+    display: none;
+  }
+  .btn-header-zalo svg,
+  .btn-header-zalo i {
+    width: 16px;
+    height: 16px;
+  }
+  .btn-header-search {
+    width: 36px;
+    height: 36px;
   }
   .nav__toggle {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+  }
+  .catalog-header h1 {
+    font-size: 1.65rem;
+  }
+  .catalog-status-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .drawer {
+    max-height: 90vh;
+  }
+  .step-item {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .step-num {
+    width: 32px;
+    height: 32px;
+    font-size: 0.88rem;
   }
 }
