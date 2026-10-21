@@ -1117,13 +1117,15 @@ function filterDocuments() {
     list = list.filter(d => d.loai === filterState.loai);
   }
 
-  // Lọc Từ khóa tìm kiếm (AND)
+  // Lọc Từ khóa tìm kiếm (AND giữa các token từ khóa)
   if (filterState.tuKhoa.trim()) {
-    const kw = boDao(filterState.tuKhoa);
-    list = list.filter(d => {
-      const fullText = boDao(`${d.ma} ${d.tieuDe} ${d.moTa} ${d.mon} ${d.khoi} ${d.capHoc} ${d.boSach || ''} ${d.chuanCV || ''}`);
-      return fullText.includes(kw);
-    });
+    const tokens = boDao(filterState.tuKhoa).split(/\s+/).filter(Boolean);
+    if (tokens.length > 0) {
+      list = list.filter(d => {
+        const fullText = boDao(`${d.ma} ${d.tieuDe} ${d.moTa} ${d.mon} ${d.khoi} ${d.capHoc} ${d.boSach || ''} ${d.chuanCV || ''}`);
+        return tokens.every(token => fullText.includes(token));
+      });
+    }
   }
 
   return list;
@@ -1197,8 +1199,8 @@ function syncStateToURL() {
 function loadStateFromURL() {
   const params = new URLSearchParams(window.location.search);
   const cap = params.get('cap') || '';
-  const khoi = params.get('khoi') ? params.get('khoi').split(',') : [];
-  const mon = params.get('mon') ? params.get('mon').split(',') : [];
+  const khoi = params.get('khoi') ? params.get('khoi').split(',').map(s => s.trim()).filter(Boolean) : [];
+  const mon = params.get('mon') ? params.get('mon').split(',').map(s => s.trim()).filter(Boolean) : [];
   const doiTuong = params.get('doituong') || 'all';
   const loai = params.get('loai') || 'all';
   const q = params.get('q') || '';
@@ -1311,29 +1313,46 @@ function renderActivePills() {
   const pills = [];
 
   if (filterState.cap) {
-    pills.push(`<span class="pill">Cấp: ${escapeHTML(filterState.cap)} <span class="pill__x" onclick="chonCapHoc('')"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`<span class="pill">Cấp: ${escapeHTML(filterState.cap)} <span class="pill__x" data-action="remove-cap" aria-label="Xóa bộ lọc cấp học"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
   }
   filterState.khoi.forEach(k => {
-    pills.push(`<span class="pill">${escapeHTML(k)} <span class="pill__x" onclick="toggleKhoi('${escapeHTML(k)}')"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`<span class="pill">${escapeHTML(k)} <span class="pill__x" data-action="remove-khoi" data-val="${encodeURIComponent(k)}" aria-label="Xóa ${escapeHTML(k)}"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
   });
   filterState.mon.forEach(m => {
-    pills.push(`<span class="pill">Môn: ${escapeHTML(m)} <span class="pill__x" onclick="toggleMon('${escapeHTML(m)}')"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`<span class="pill">Môn: ${escapeHTML(m)} <span class="pill__x" data-action="remove-mon" data-val="${encodeURIComponent(m)}" aria-label="Xóa môn ${escapeHTML(m)}"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
   });
   if (filterState.doiTuong !== 'all') {
     const lbl = filterState.doiTuong === 'giaovien' ? 'Giáo viên' : 'Học sinh / Phụ huynh';
-    pills.push(`<span class="pill">${lbl} <span class="pill__x" onclick="chonDoiTuong('all')"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`<span class="pill">${lbl} <span class="pill__x" data-action="remove-doituong" aria-label="Xóa bộ lọc đối tượng"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
   }
   if (filterState.loai !== 'all') {
     const typeNames = { giaoan: 'Giáo án/KHBD', dekiemtra: 'Đề kiểm tra', ontap: 'Ôn tập/Chuyên đề' };
-    pills.push(`<span class="pill">${typeNames[filterState.loai] || filterState.loai} <span class="pill__x" onclick="chonTheLoai('all')"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`<span class="pill">${typeNames[filterState.loai] || filterState.loai} <span class="pill__x" data-action="remove-loai" aria-label="Xóa thể loại"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
   }
   if (filterState.tuKhoa.trim()) {
-    pills.push(`<span class="pill">Từ khóa: "${escapeHTML(filterState.tuKhoa)}" <span class="pill__x" onclick="xoaTuKhoa()"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`<span class="pill">Từ khóa: "${escapeHTML(filterState.tuKhoa)}" <span class="pill__x" data-action="remove-tukhoa" aria-label="Xóa từ khóa"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
   }
 
   if (pills.length > 0) {
     wrap.style.display = 'flex';
     list.innerHTML = pills.join('');
+
+    if (!list._hasDelegatedPills) {
+      list._hasDelegatedPills = true;
+      list.addEventListener('click', (e) => {
+        const btn = e.target.closest('.pill__x');
+        if (!btn) return;
+        const action = btn.dataset.action;
+        const val = decodeURIComponent(btn.dataset.val || '');
+        if (action === 'remove-cap') chonCapHoc('');
+        else if (action === 'remove-khoi') toggleKhoi(val);
+        else if (action === 'remove-mon') toggleMon(val);
+        else if (action === 'remove-doituong') chonDoiTuong('all');
+        else if (action === 'remove-loai') chonTheLoai('all');
+        else if (action === 'remove-tukhoa') xoaTuKhoa();
+      });
+    }
+
     if (mobileCount) {
       mobileCount.style.display = 'inline-block';
       mobileCount.textContent = pills.length;
@@ -1352,6 +1371,11 @@ function chonCapHoc(cap) {
   if (cap && KHOI_THEO_CAP[cap]) {
     const valid = new Set(KHOI_THEO_CAP[cap]);
     filterState.khoi = new Set([...filterState.khoi].filter(k => valid.has(k)));
+  }
+  // Loại bỏ các môn học không thuộc cấp mới
+  if (cap && MON_THEO_CAP[cap]) {
+    const validMon = new Set(MON_THEO_CAP[cap]);
+    filterState.mon = new Set([...filterState.mon].filter(m => validMon.has(m)));
   }
   capNhatGiaoDienKho();
 }
@@ -1494,7 +1518,8 @@ function initDetailPage() {
   const doiTuongText = doc.doiTuong === 'giaovien' ? 'Giáo viên' : 'Học sinh / Phụ huynh';
 
   let previewMarkup = '';
-  if (doc.linkDemo && doc.linkDemo.includes('drive.google.com')) {
+  const isValidDriveLink = /^https:\/\/(drive|docs)\.google\.com\/file\/d\/[a-zA-Z0-9_-]+/.test(doc.linkDemo || '');
+  if (isValidDriveLink) {
     let embedUrl = doc.linkDemo;
     if (embedUrl.includes('/view')) embedUrl = embedUrl.replace('/view', '/preview');
     previewMarkup = `
@@ -1626,7 +1651,7 @@ function initDetailPage() {
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
               Nhắn Zalo hỏi tài liệu này
             </a>
-            <button class="btn btn--outline btn--full" onclick="copyThongTinTaiLieu('${escapeHTML(doc.ma)}', '${escapeHTML(doc.tieuDe)}')">
+            <button id="btn-copy-doc-info" class="btn btn--outline btn--full" data-ma="${encodeURIComponent(doc.ma)}" data-title="${encodeURIComponent(doc.tieuDe)}">
               <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
               Sao chép mã & thông tin
             </button>
@@ -1641,6 +1666,13 @@ function initDetailPage() {
 
     ${relatedHtml}
   `;
+
+  const copyBtn = document.getElementById('btn-copy-doc-info');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      copyThongTinTaiLieu(decodeURIComponent(copyBtn.dataset.ma || ''), decodeURIComponent(copyBtn.dataset.title || ''));
+    });
+  }
 
   if (window.lucide && typeof lucide.createIcons === 'function') {
     lucide.createIcons();
@@ -1810,6 +1842,8 @@ window.handleSheetData = function(res) {
 
       if (window.location.pathname.includes('/kho-tai-lieu')) {
         capNhatGiaoDienKho();
+      } else if (window.location.pathname.includes('/tai-lieu')) {
+        initDetailPage();
       }
     }
   } catch (err) {
@@ -1845,6 +1879,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const searchInput = document.getElementById('search-input');
     const searchClear = document.getElementById('search-clear-btn');
+    if (searchClear) {
+      searchClear.style.display = filterState.tuKhoa ? 'flex' : 'none';
+      searchClear.addEventListener('click', xoaTuKhoa);
+    }
     if (searchInput) {
       if (filterState.tuKhoa) searchInput.value = filterState.tuKhoa;
       searchInput.addEventListener('input', (e) => {
@@ -1852,9 +1890,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (searchClear) searchClear.style.display = filterState.tuKhoa ? 'flex' : 'none';
         capNhatGiaoDienKho();
       });
-    }
-    if (searchClear) {
-      searchClear.addEventListener('click', xoaTuKhoa);
     }
 
     capNhatGiaoDienKho();

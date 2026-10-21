@@ -57,10 +57,14 @@ Trong file CSV / Google Sheet, **không thể nhét trực tiếp file PDF nặn
    - Chọn **Toàn bộ tài liệu** (hoặc Trang tính 1).
    - Đổi mục *Trang web* thành **Giá trị phân cách bằng dấu phẩy (.csv)**.
 4. Nhấn **Xuất bản (Publish)** $\rightarrow$ nhấn **OK** xác nhận.
-5. Sao chép link xuất hiện (link dạng: `https://docs.google.com/spreadsheets/d/e/2PACX-.../pub?output=csv`).
-6. Dán link này vào dòng số 10 trong file `script.js`:
+5. Sao chép ID của file Google Sheet (chuỗi ký tự nằm giữa `/d/` và `/edit` trên thanh địa chỉ trình duyệt).
+6. Dán ID này vào cấu hình `CONFIG.SHEET_ID` trong tệp `script.js`:
    ```javascript
-   const SHEET_CSV = 'LINK_CSV_CỦA_BẠN';
+   const CONFIG = {
+     // ...
+     SHEET_ID: 'ID_SHEET_CỦA_BẠN',
+     // ...
+   };
    ```
 
 Từ đó về sau, mỗi khi bạn thêm tài liệu mới hoặc paste thêm link PDF vào Google Sheet, website sẽ **tự động cập nhật tài liệu mới ngay lập tức**!

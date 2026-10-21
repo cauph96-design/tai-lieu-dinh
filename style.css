@@ -220,8 +220,8 @@ img { max-width: 100%; display: block; }
 
 .nav__toggle {
   display: none;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--r-sm);
   border: 1px solid var(--c-border);
   background: #ffffff;
@@ -397,7 +397,10 @@ img { max-width: 100%; display: block; }
   color: var(--c-text-muted);
   display: flex;
   align-items: center;
-  padding: 4px;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
 }
 .search-box__clear svg { width: 14px; height: 14px; }
 
@@ -831,6 +834,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
   border-bottom: 1px solid #f8fafc;
 }
 .card__badge-docx {
@@ -850,6 +855,7 @@ img { max-width: 100%; display: block; }
 .card__tags {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 5px;
 }
 .tag {
@@ -1723,8 +1729,8 @@ img { max-width: 100%; display: block; }
 .drawer__title-wrap svg { width: 17px; height: 17px; color: var(--c-word); }
 .drawer__title-wrap h3 { font-size: 1rem; font-weight: 700; color: var(--c-navy); }
 .drawer__close {
-  width: 28px;
-  height: 28px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
