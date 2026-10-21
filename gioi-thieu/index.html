@@ -22,14 +22,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link rel="stylesheet" href="../style.css?v=2.2" />
+  <link rel="stylesheet" href="../style.css?v=2.3" />
 
-  <!-- Zero-FOUC Theme Detector -->
+  <!-- Zero-FOUC Theme Detector (5h–19h: Sáng, 19h–5h: Tối) -->
   <script>
     (function() {
       try {
-        var t = localStorage.getItem('tld_theme');
-        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var h = new Date().getHours();
+        var t = (h >= 5 && h < 19) ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', t);
       } catch(e) {}
     })();
@@ -76,14 +76,6 @@
       </nav>
 
       <div class="header__actions">
-        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ sáng/tối" aria-pressed="false">
-          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-          </svg>
-          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-          </svg>
-        </button>
         <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="btn btn--zalo-header">
           <i data-lucide="message-circle"></i>
           <span>Hỏi Zalo</span>
@@ -226,6 +218,6 @@
   </div>
 
 
-  <script src="../script.js?v=2.2"></script>
+  <script src="../script.js?v=2.3"></script>
 </body>
 </html>

@@ -266,6 +266,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 .btn--zalo-header {
   background: var(--c-zalo);
@@ -279,6 +280,7 @@ img { max-width: 100%; display: block; }
   gap: 6px;
   box-shadow: 0 1px 3px rgba(0, 104, 255, 0.25);
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 .btn--zalo-header svg { width: 15px; height: 15px; }
 .btn--zalo-header:hover {
@@ -331,7 +333,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 860px) {
   .nav { display: none; }
   .nav__toggle { display: flex; }
-  .btn--zalo-header { display: none !important; }
 }
 
 @media (max-width: 480px) {
@@ -339,25 +340,36 @@ img { max-width: 100%; display: block; }
     gap: 8px;
   }
   .logo__icon-wrap {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
   .logo__icon-wrap svg {
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
   }
   .logo__text {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
   .logo__slogan {
-    font-size: 0.6rem;
+    font-size: 0.58rem;
   }
-  .theme-toggle,
+  .header__actions {
+    gap: 6px;
+  }
+  .btn--zalo-header {
+    padding: 6px 10px;
+    font-size: 0.76rem;
+    gap: 4px;
+  }
+  .btn--zalo-header svg {
+    width: 14px;
+    height: 14px;
+  }
   .nav__toggle {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 

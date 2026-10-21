@@ -1861,12 +1861,11 @@ function fetchGoogleSheetData() {
   document.head.appendChild(script);
 }
 
-// ─── HỆ THỐNG GIAO DIỆN SÁNG / TỐI (DARK MODE) ───
+// ─── HỆ THỐNG GIAO DIỆN SÁNG / TỐI TỰ ĐỘNG THEO KHUNG GIỜ (5h–19h: SÁNG, 19h–5h: TỐI) ───
 function initTheme() {
-  const getPreferredTheme = () => {
-    const saved = localStorage.getItem('tld_theme');
-    if (saved === 'dark' || saved === 'light') return saved;
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const calculateThemeByHour = () => {
+    const hour = new Date().getHours();
+    return (hour >= 5 && hour < 19) ? 'light' : 'dark';
   };
 
   const applyTheme = (theme, withTransition = false) => {
@@ -1877,36 +1876,24 @@ function initTheme() {
       }, 350);
     }
     document.documentElement.setAttribute('data-theme', theme);
-    // Cập nhật aria-pressed cho accessibility
-    document.querySelectorAll('.theme-toggle').forEach(btn => {
-      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-    });
   };
 
-  // Khởi tạo ban đầu
-  applyTheme(getPreferredTheme(), false);
+  // Áp dụng theme chuẩn theo giờ hiện tại
+  applyTheme(calculateThemeByHour(), false);
 
-  // Lắng nghe nút bấm chuyển theme
-  const toggleBtns = document.querySelectorAll('.theme-toggle');
-  toggleBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'light';
-      const nextTheme = current === 'dark' ? 'light' : 'dark';
-      applyTheme(nextTheme, true);
-      try {
-        localStorage.setItem('tld_theme', nextTheme);
-      } catch (e) {}
-    });
-  });
+  // Xóa cài đặt cũ nếu có để tránh xung đột
+  try {
+    localStorage.removeItem('tld_theme');
+  } catch (e) {}
 
-  // Lắng nghe thay đổi theme từ hệ điều hành nếu người dùng chưa chọn thủ công
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (!localStorage.getItem('tld_theme')) {
-        applyTheme(e.matches ? 'dark' : 'light', true);
-      }
-    });
-  }
+  // Tự động kiểm tra mỗi phút: chuyển chế độ mượt mà khi qua mốc 5h hoặc 19h
+  setInterval(() => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const expectedTheme = calculateThemeByHour();
+    if (currentTheme !== expectedTheme) {
+      applyTheme(expectedTheme, true);
+    }
+  }, 60000);
 }
 
 // ─── HIỆU ỨNG CHUYỂN ĐỘNG & MOTION GRAPHICS (APPLE INSPIRED) ───
