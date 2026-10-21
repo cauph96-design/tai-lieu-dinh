@@ -1877,6 +1877,10 @@ function initTheme() {
       }, 350);
     }
     document.documentElement.setAttribute('data-theme', theme);
+    // Cập nhật aria-pressed cho accessibility
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    });
   };
 
   // Khởi tạo ban đầu
@@ -1906,6 +1910,9 @@ function initTheme() {
 }
 
 // ─── HIỆU ỨNG CHUYỂN ĐỘNG & MOTION GRAPHICS (APPLE INSPIRED) ───
+let _revealObserver = null;
+let _counterObserver = null;
+
 function initMotionGraphics() {
   // 1. Tự động thêm class .reveal cho các section và card
   const autoRevealSelectors = [
@@ -1928,25 +1935,37 @@ function initMotionGraphics() {
     });
   });
 
-  // 2. IntersectionObserver kích hoạt hiệu ứng cuộn mượt
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
-          obs.unobserve(entry.target);
-        }
+  // 2. Tạo reveal observer chỉ 1 lần duy nhất (singleton)
+  if (!_revealObserver) {
+    if ('IntersectionObserver' in window) {
+      _revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
       });
-    }, {
-      root: null,
-      threshold: 0.1,
-      rootMargin: '0px 0px -30px 0px'
+    }
+  }
+
+  // 3. Luôn observe các phần tử reveal MỚI (chưa is-revealed) sau mỗi lần render
+  if (_revealObserver) {
+    document.querySelectorAll('.reveal:not(.is-revealed)').forEach(el => {
+      _revealObserver.observe(el);
     });
+  } else {
+    // Fallback cho trình duyệt cũ
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-revealed'));
+  }
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // 3. Hiệu ứng đếm số mượt mà (Animated Counter)
-    const counterObserver = new IntersectionObserver((entries, obs) => {
+  // 4. Counter observer cũng singleton, guard bằng data-counted attribute
+  if (!_counterObserver && 'IntersectionObserver' in window) {
+    _counterObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const el = entry.target;
@@ -1974,10 +1993,14 @@ function initMotionGraphics() {
         }
       });
     }, { threshold: 0.3 });
+  }
 
-    document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
-  } else {
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-revealed'));
+  // Observe counter elements mới (chưa được observe)
+  if (_counterObserver) {
+    document.querySelectorAll('[data-counter]:not([data-counted])').forEach(el => {
+      el.setAttribute('data-counted', '1');
+      _counterObserver.observe(el);
+    });
   }
 }
 
@@ -1988,6 +2011,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // 0. Khởi tạo Giao diện Sáng/Tối & Motion Graphics
   initTheme();
   initMotionGraphics();
+
+  // Lắng nghe trạng thái tab (Page Visibility API) để tiết kiệm tài nguyên
+  document.addEventListener('visibilitychange', () => {
+    const state = document.hidden ? 'paused' : 'running';
+    document.querySelectorAll('.hero, .shimmer-badge').forEach(el => {
+      el.style.animationPlayState = state;
+    });
+  });
 
   // 1. Mobile Menu Toggle ở Header
   const navToggleBtn = document.getElementById('nav-toggle-btn');

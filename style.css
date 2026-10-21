@@ -290,6 +290,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 860px) {
   .nav { display: none; }
   .nav__toggle { display: flex; }
+  .btn--zalo-header { display: none; }
 }
 
 /* ---------- BUTTONS ---------- */
@@ -350,6 +351,8 @@ img { max-width: 100%; display: block; }
   max-width: 840px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .hero__badge {
   display: inline-flex;
@@ -1798,12 +1801,26 @@ img { max-width: 100%; display: block; }
 }
 .btn--flex { flex: 1; }
 
-/* Smooth Theme Transition */
-html.theme-transitioning,
-html.theme-transitioning *,
-html.theme-transitioning *::before,
-html.theme-transitioning *::after {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease !important;
+/* Smooth Theme Transition — chỉ áp dụng cho các component cụ thể */
+html.theme-transitioning .header,
+html.theme-transitioning .top-bar,
+html.theme-transitioning body,
+html.theme-transitioning .card,
+html.theme-transitioning .level-card,
+html.theme-transitioning .chip,
+html.theme-transitioning .footer,
+html.theme-transitioning .nav-mobile,
+html.theme-transitioning .drawer,
+html.theme-transitioning .detail-card,
+html.theme-transitioning .pricing-card,
+html.theme-transitioning .faq-item,
+html.theme-transitioning .step-card,
+html.theme-transitioning .search-box,
+html.theme-transitioning .tag,
+html.theme-transitioning .pill,
+html.theme-transitioning .hero {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+              color 0.3s ease, box-shadow 0.3s ease !important;
   transition-delay: 0s !important;
 }
 
@@ -2014,6 +2031,7 @@ html.theme-transitioning *::after {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   animation: badgeShimmer 4s ease-in-out infinite;
+  will-change: transform;
 }
 @keyframes badgeShimmer {
   0% { left: -100%; }
@@ -2116,6 +2134,16 @@ html.theme-transitioning *::after {
   }
   .hero__stat-number { font-size: 0.96rem; }
   .hero__stat-label { font-size: 0.65rem; }
+}
+@media (max-width: 400px) {
+  .hero__stats {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    justify-content: center;
+    border-radius: var(--r-md);
+    padding: 10px 14px;
+  }
+  .hero__stat-divider { display: none; }
 }
 
 /* Respect User Reduced Motion Preference */
