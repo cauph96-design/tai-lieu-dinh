@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#185abd"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#grad)"/>
+  <!-- Document Folded Sheet -->
+  <path d="M19 14h18l12 12v24a2 2 0 0 1-2 2H19a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2z" fill="#ffffff" fill-opacity="0.95"/>
+  <path d="M37 14v10a2 2 0 0 0 2 2h10" fill="#cbd5e1"/>
+  <!-- Letter W/Dossier accent -->
+  <path d="M24 32h16M24 38h16M24 44h10" stroke="#185abd" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

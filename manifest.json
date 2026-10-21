@@ -1,0 +1,16 @@
+{
+  "name": "Tài Liệu Đỉnh — Đỉnh cao tài liệu",
+  "short_name": "Tài Liệu Đỉnh",
+  "description": "Kho tài liệu Microsoft Word (.docx) chuẩn GDPT 2018 dành cho Giáo viên & Học sinh Lớp 1–12",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
