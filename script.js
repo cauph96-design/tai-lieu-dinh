@@ -1,11 +1,12 @@
 /**
- * TÀI LIỆU ĐỈNH — SCRIPT XỬ LÝ TOÀN TRANG
+ * TÀI LIỆU ĐỈNH — SCRIPT XỬ LÝ TOÀN TRANG (PHIÊN BẢN MỚI PASTEL HỒNG & XANH LÁ)
  * Tên thương hiệu: Tài Liệu Đỉnh | Slogan chính thức: Đỉnh cao tài liệu
- * Chuyên mục: Học liệu Microsoft Word (.docx) Giáo viên & Học sinh Lớp 1–12
- * Zalo tư vấn: 0926.999.869 (https://zalo.me/0926999869)
+ * Phong cách thiết kế: Editorial, Tối giản, Ấm áp (Apple & Starbucks Inspired)
+ * Bảng màu nhận diện: Hồng pastel (#F3D9E2, #FAEDEF) & Xanh lá (#DCEADD, #47765B, #254A38)
+ * Zalo tư vấn chính thức: 0926.999.869 (https://zalo.me/0926999869)
  */
 
-// ─── DỮ LIỆU TÀI LIỆU CHUẨN (66 TÀI LIỆU PHỔ THÔNG 1-12) ───
+// ─── DỮ LIỆU TÀI LIỆU CHUẨN (72 TÀI LIỆU CHUẨN TIỂU HỌC, THCS, THPT & ĐẠI HỌC) ───
 let danhSach = [
   {
     "ma": "TH1-TOAN-01",
@@ -996,10 +997,100 @@ let danhSach = [
     "boSach": "Chân trời sáng tạo",
     "chuanCV": "Cấu trúc trắc nghiệm mới",
     "maTranDapAn": "Đầy đủ ma trận & đáp án"
+  },
+  {
+    "ma": "SV-PLDC-01",
+    "tieuDe": "Tiểu luận & Bài tập tình huống Pháp luật đại cương — Mẫu chuẩn DOCX",
+    "moTa": "Trọn bộ tiểu luận mẫu điểm 9-10 và 100 câu hỏi tình huống có lời giải chi tiết môn Pháp luật đại cương, trình bày chuẩn thể thức báo cáo học thuật.",
+    "mon": "Pháp luật đại cương",
+    "khoi": "Đại học",
+    "capHoc": "Đại học",
+    "doiTuong": "sinhvien",
+    "loai": "tailieusinhvien",
+    "dinhDang": "DOCX",
+    "linkDemo": "",
+    "boSach": "Giáo trình ĐH Quốc gia",
+    "chuanCV": "Chuẩn học thuật NCKH",
+    "maTranDapAn": "Tiểu luận mẫu & Đáp án tình huống"
+  },
+  {
+    "ma": "SV-TRIET-02",
+    "tieuDe": "Đề cương ôn tập & 300 câu trắc nghiệm Triết học Mác - Lênin có đáp án",
+    "moTa": "Tổng hợp sơ đồ tư duy lý thuyết 3 chương Triết học Mác - Lênin và ngân hàng 300 câu trắc nghiệm thi kết thúc học phần có giải thích chi tiết.",
+    "mon": "Triết học Mác - Lênin",
+    "khoi": "Đại học",
+    "capHoc": "Đại học",
+    "doiTuong": "sinhvien",
+    "loai": "chuyende",
+    "dinhDang": "DOCX",
+    "linkDemo": "https://drive.google.com/file/d/1nZmAg8-FrKxhI8i8RrxzYDg0GDTdRPkz/view?usp=sharing",
+    "boSach": "Bộ Giáo dục và Đào tạo",
+    "chuanCV": "Chương trình Đại học đại cương",
+    "maTranDapAn": "Sơ đồ tư duy & 300 câu trắc nghiệm"
+  },
+  {
+    "ma": "SV-KTCT-03",
+    "tieuDe": "Bài tập lớn & Chuyên đề Kinh tế chính trị Mác - Lênin",
+    "moTa": "Hệ thống bài tập tính toán giá trị thặng dư, tỷ suất lợi nhuận và các bài luận mẫu về nền kinh tế thị trường định hướng XHCN ở Việt Nam.",
+    "mon": "Kinh tế chính trị",
+    "khoi": "Đại học",
+    "capHoc": "Đại học",
+    "doiTuong": "sinhvien",
+    "loai": "tailieusinhvien",
+    "dinhDang": "DOCX",
+    "linkDemo": "",
+    "boSach": "Bộ Giáo dục và Đào tạo",
+    "chuanCV": "Chương trình Đại học đại cương",
+    "maTranDapAn": "Công thức giải & bài tập lớn mẫu"
+  },
+  {
+    "ma": "SV-XSTK-04",
+    "tieuDe": "Tổng hợp công thức & 150 bài tập giải chi tiết Xác suất Thống kê",
+    "moTa": "Sổ tay tra cứu nhanh toàn bộ công thức xác suất, biến ngẫu nhiên, ước lượng và kiểm định giả thuyết kèm 150 bài tập mẫu có lời giải từng bước.",
+    "mon": "Xác suất Thống kê",
+    "khoi": "Đại học",
+    "capHoc": "Đại học",
+    "doiTuong": "sinhvien",
+    "loai": "baitap",
+    "dinhDang": "DOCX",
+    "linkDemo": "",
+    "boSach": "Giáo trình Toán ĐH",
+    "chuanCV": "Toán cao cấp đại học",
+    "maTranDapAn": "150 bài tập mẫu & file Word chỉnh sửa"
+  },
+  {
+    "ma": "SV-KTVM-05",
+    "tieuDe": "Bộ đề thi thử & Hướng dẫn giải bài tập Kinh tế vĩ mô",
+    "moTa": "Bộ 10 đề thi kết thúc học phần Kinh tế vĩ mô có ma trận điểm, bài tập mô hình IS-LM, AS-AD và chính sách tài khóa, tiền tệ.",
+    "mon": "Kinh tế vĩ mô",
+    "khoi": "Đại học",
+    "capHoc": "Đại học",
+    "doiTuong": "sinhvien",
+    "loai": "dekiemtra",
+    "dinhDang": "DOCX",
+    "linkDemo": "https://drive.google.com/file/d/1dFGTOA1ybIrAeYKdqWFphMzyRWnL8N1G/view?usp=sharing",
+    "boSach": "Kinh tế học cơ bản",
+    "chuanCV": "Chuẩn đầu ra cử nhân",
+    "maTranDapAn": "10 đề thi & đáp án chi tiết"
+  },
+  {
+    "ma": "SV-BC-06",
+    "tieuDe": "Mẫu Báo cáo thực tập tốt nghiệp & Khóa luận cử nhân chuẩn Bộ GD&ĐT",
+    "moTa": "Bộ khung template Word chuẩn (.docx) có sẵn bìa, mục lục tự động, danh mục bảng biểu, định dạng căn lề, font chữ và phong cách trích dẫn APA 7th.",
+    "mon": "Phương pháp NCKH",
+    "khoi": "Đại học",
+    "capHoc": "Đại học",
+    "doiTuong": "sinhvien",
+    "loai": "tailieusinhvien",
+    "dinhDang": "DOCX",
+    "linkDemo": "",
+    "boSach": "Quy chuẩn NCKH & Luận văn",
+    "chuanCV": "Định dạng APA 7th",
+    "maTranDapAn": "Template Word tự động mục lục"
   }
 ];
 
-// ─── CẤU HÌNH PHÂN LOẠI MÔN THEO LỚP ───
+// ─── MA TRẬN MÔN HỌC THEO LỚP & CẤP ───
 const MON_THEO_LOP = {
   'Lớp 1': ['Toán', 'Tiếng Việt', 'Tiếng Anh', 'Tự nhiên và Xã hội'],
   'Lớp 2': ['Toán', 'Tiếng Việt', 'Tiếng Anh', 'Tự nhiên và Xã hội'],
@@ -1012,19 +1103,22 @@ const MON_THEO_LOP = {
   'Lớp 9': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Khoa học Tự nhiên', 'Lịch sử và Địa lý'],
   'Lớp 10': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
   'Lớp 11': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
-  'Lớp 12': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý']
+  'Lớp 12': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
+  'Đại học': ['Pháp luật đại cương', 'Triết học Mác - Lênin', 'Kinh tế chính trị', 'Xác suất Thống kê', 'Kinh tế vĩ mô', 'Phương pháp NCKH']
 };
 
 const MON_THEO_CAP = {
   'Tiểu học': ['Toán', 'Tiếng Việt', 'Tiếng Anh', 'Tự nhiên và Xã hội', 'Khoa học', 'Lịch sử và Địa lý'],
   'THCS': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Khoa học Tự nhiên', 'Lịch sử và Địa lý'],
-  'THPT': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý']
+  'THPT': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
+  'Đại học': ['Pháp luật đại cương', 'Triết học Mác - Lênin', 'Kinh tế chính trị', 'Xác suất Thống kê', 'Kinh tế vĩ mô', 'Phương pháp NCKH']
 };
 
 const KHOI_THEO_CAP = {
   'Tiểu học': ['Lớp 1', 'Lớp 2', 'Lớp 3', 'Lớp 4', 'Lớp 5'],
   'THCS': ['Lớp 6', 'Lớp 7', 'Lớp 8', 'Lớp 9'],
-  'THPT': ['Lớp 10', 'Lớp 11', 'Lớp 12']
+  'THPT': ['Lớp 10', 'Lớp 11', 'Lớp 12'],
+  'Đại học': ['Đại học']
 };
 
 // ─── CẤU HÌNH HỆ THỐNG ───
@@ -1033,30 +1127,30 @@ const CONFIG = {
   ZALO_PHONE_DISPLAY: '0926.999.869',
   ZALO_LINK: 'https://zalo.me/0926999869',
   SHEET_ID: '1wQQXVthJrTmYSJPJfuGJ3kbHdi3YnhM1_Dch1QAZvuM',
-  SUPPORT_HOURS: '8h00 – 12h00 | 13h30 – 21h30'
+  SUPPORT_HOURS: '8:00 – 21:00 (Thứ 2 – Chủ nhật)'
 };
 
-// ─── TRẠNG THÁI BỘ LỌC TOÀN CỤC (CHO TRANG KHO TÀI LIỆU) ───
+// ─── TRẠNG THÁI BỘ LỌC TOÀN CỤC ───
 let filterState = {
   cap: '',
   khoi: new Set(),
   mon: new Set(),
   doiTuong: 'all',
   loai: 'all',
-  tuKhoa: ''
+  tuKhoa: '',
+  sort: 'default',
+  viewMode: 'grid'
 };
 
-// ─── HÀM BỎ DẤU TIẾNG VIỆT ───
+// ─── XỬ LÝ TIẾNG VIỆT KHÔNG DẤU ───
 function boDao(s) {
   if (!s) return '';
-  return s.normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[đĐ]/g, m => m === 'đ' ? 'd' : 'D')
-    .toLowerCase()
-    .trim();
+  s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  s = s.replace(/[đĐ]/g, (m) => m === 'đ' ? 'd' : 'D');
+  return s.toLowerCase().trim();
 }
 
-// ─── XỬ LÝ AN TOÀN HTML (TRÁNH XSS) ───
+// ─── ESCAPE HTML AN TOÀN ───
 function escapeHTML(str) {
   if (!str) return '';
   return String(str)
@@ -1088,99 +1182,105 @@ function copySoZalo() {
   });
 }
 
-// ─── LỌC TÀI LIỆU CHUẨN MỰC (LOGIC OR TRONG NHÓM, AND GIỮA CÁC NHÓM) ───
+// ─── LỌC TÀI LIỆU CHUẨN MỰC (OR TRONG NHÓM, AND GIỮA CÁC NHÓM) ───
 function filterDocuments() {
   let list = danhSach;
 
-  // Lọc Cấp học (nếu không chọn lớp cụ thể)
+  // 1. Cấp học (chỉ áp dụng nếu chưa chọn khối cụ thể)
   if (filterState.cap && filterState.khoi.size === 0) {
     list = list.filter(d => d.capHoc === filterState.cap);
   }
 
-  // Lọc Khối lớp (OR giữa các lớp đã chọn)
+  // 2. Khối lớp (OR giữa các lớp đang chọn)
   if (filterState.khoi.size > 0) {
     list = list.filter(d => filterState.khoi.has(d.khoi));
   }
 
-  // Lọc Môn học (OR giữa các môn đã chọn)
+  // 3. Môn học (OR giữa các môn đang chọn)
   if (filterState.mon.size > 0) {
     list = list.filter(d => filterState.mon.has(d.mon));
   }
 
-  // Lọc Đối tượng
+  // 4. Đối tượng
   if (filterState.doiTuong && filterState.doiTuong !== 'all') {
     list = list.filter(d => d.doiTuong === filterState.doiTuong || d.doiTuong === 'ca_hai');
   }
 
-  // Lọc Loại tài liệu
+  // 5. Loại tài liệu
   if (filterState.loai && filterState.loai !== 'all') {
     list = list.filter(d => d.loai === filterState.loai);
   }
 
-  // Lọc Từ khóa tìm kiếm (AND giữa các token từ khóa)
+  // 6. Từ khóa (AND giữa các token từ khóa tiếng Việt)
   if (filterState.tuKhoa.trim()) {
     const tokens = boDao(filterState.tuKhoa).split(/\s+/).filter(Boolean);
-    if (tokens.length > 0) {
-      list = list.filter(d => {
-        const fullText = boDao(`${d.ma} ${d.tieuDe} ${d.moTa} ${d.mon} ${d.khoi} ${d.capHoc} ${d.boSach || ''} ${d.chuanCV || ''}`);
-        return tokens.every(token => fullText.includes(token));
-      });
-    }
+    list = list.filter(d => {
+      const textHaystack = boDao(`${d.ma} ${d.tieuDe} ${d.moTa} ${d.mon} ${d.khoi} ${d.capHoc} ${d.chuanCV || ''}`);
+      return tokens.every(token => textHaystack.includes(token));
+    });
+  }
+
+  // 7. Sắp xếp (Sort)
+  if (filterState.sort === 'newest') {
+    list = [...list].reverse();
+  } else if (filterState.sort === 'az') {
+    list = [...list].sort((a, b) => a.tieuDe.localeCompare(b.tieuDe, 'vi'));
   }
 
   return list;
 }
 
-// ─── RENDER THẺ HỒ SƠ TÀI LIỆU ───
-function renderCard(d, prefix = '') {
-  const doiTuongBadge = d.doiTuong === 'giaovien' ? '<span class="tag tag--audience">Giáo viên</span>' : '<span class="tag tag--audience">Học sinh / Phụ huynh</span>';
-  const detailUrl = `${prefix}tai-lieu/?id=${encodeURIComponent(d.ma)}`;
-  const zaloUrl = `https://zalo.me/${CONFIG.ZALO_PHONE}`;
+// ─── TẠO BÌA SÁCH MINH HỌA PASTEL SANG TRỌNG ───
+function renderDocCoverHTML(doc) {
+  const isPink = ['Ngữ văn', 'Tiếng Việt', 'Lịch sử', 'Triết học Mác - Lênin', 'Địa lý'].includes(doc.mon) || doc.khoi === 'Lớp 1' || doc.khoi === 'Lớp 8';
+  const coverClass = isPink ? 'doc-card__thumb--pink' : 'doc-card__thumb--green';
+  const badgeText = doc.dinhDang || 'DOCX';
+
+  // Cắt ngắn tiêu đề cho bìa
+  let shortTitle = doc.tieuDe;
+  if (shortTitle.includes('—')) {
+    shortTitle = shortTitle.split('—')[0].trim();
+  }
 
   return `
-    <article class="card" data-id="${escapeHTML(d.ma)}">
-      <div class="card__header">
-        <span class="card__badge-docx">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M10 13l-1.5 5h-1l-1.5-5h1l1 3.5 1-3.5h1z"/></svg>
-          ${escapeHTML(d.dinhDang || 'DOCX')}
-        </span>
-        <div class="card__tags">
-          <span class="tag tag--grade">${escapeHTML(d.khoi)}</span>
-          <span class="tag tag--subject">${escapeHTML(d.mon)}</span>
-          ${doiTuongBadge}
-        </div>
-      </div>
-      <div class="card__body">
-        <h3 class="card__title">
+    <div class="doc-card__thumb ${coverClass}">
+      <span class="doc-card__badge-docx">${escapeHTML(badgeText)}</span>
+      <div class="doc-card__cover-title">${escapeHTML(shortTitle)}</div>
+      <div class="doc-card__cover-sub">${escapeHTML(doc.mon)} • ${escapeHTML(doc.khoi)}</div>
+    </div>
+  `;
+}
+
+// ─── RENDER CARD TÀI LIỆU TRÊN LƯỚI / DANH SÁCH ───
+function renderCard(d, prefix = '') {
+  const detailUrl = `${prefix}tai-lieu/?ma=${encodeURIComponent(d.ma)}`;
+  const coverHTML = renderDocCoverHTML(d);
+
+  return `
+    <article class="doc-card" data-ma="${escapeHTML(d.ma)}">
+      <a href="${detailUrl}">
+        ${coverHTML}
+      </a>
+      <div class="doc-card__body">
+        <h3 class="doc-card__title">
           <a href="${detailUrl}">${escapeHTML(d.tieuDe)}</a>
         </h3>
-        <p class="card__desc">${escapeHTML(d.moTa)}</p>
-        <div class="card__trust-box">
-          <div class="trust-line">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-            <span>Bộ sách: <strong>${escapeHTML(d.boSach || 'Chuẩn GDPT 2018')}</strong></span>
-          </div>
-          <div class="trust-line">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-            <span>Quy chuẩn: <strong>${escapeHTML(d.chuanCV || 'Bám sát chương trình')}</strong></span>
-          </div>
+        <div class="doc-card__tags">
+          <span class="tag tag--highlight">${escapeHTML(d.capHoc)}</span>
+          <span class="tag">${escapeHTML(d.khoi)}</span>
+          <span class="tag">${escapeHTML(d.mon)}</span>
         </div>
-      </div>
-      <div class="card__footer">
-        <a href="${detailUrl}" class="btn--card-detail">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-          Xem chi tiết
-        </a>
-        <a href="${zaloUrl}" target="_blank" rel="noopener" class="btn--card-zalo" title="Nhắn Zalo hỏi tài liệu này">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          Hỏi Zalo
-        </a>
+        <div class="doc-card__footer">
+          <a href="${detailUrl}" class="doc-card__detail-link">
+            Xem chi tiết <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
       </div>
     </article>
   `;
 }
 
-// ─── ĐIỀU HƯỚNG URL SYNC CHO KHO TÀI LIỆU ───
+// ─── ĐIỀU HƯỚNG URL SYNC (2 CHIỀU) ───
 function syncStateToURL() {
   const params = new URLSearchParams();
   if (filterState.cap) params.set('cap', filterState.cap);
@@ -1189,6 +1289,7 @@ function syncStateToURL() {
   if (filterState.doiTuong !== 'all') params.set('doituong', filterState.doiTuong);
   if (filterState.loai !== 'all') params.set('loai', filterState.loai);
   if (filterState.tuKhoa.trim()) params.set('q', filterState.tuKhoa.trim());
+  if (filterState.sort !== 'default') params.set('sort', filterState.sort);
 
   const newQuery = params.toString();
   const currentPath = window.location.pathname;
@@ -1204,6 +1305,7 @@ function loadStateFromURL() {
   const doiTuong = params.get('doituong') || 'all';
   const loai = params.get('loai') || 'all';
   const q = params.get('q') || '';
+  const sort = params.get('sort') || 'default';
 
   filterState.cap = cap;
   filterState.khoi = new Set(khoi);
@@ -1211,99 +1313,115 @@ function loadStateFromURL() {
   filterState.doiTuong = doiTuong;
   filterState.loai = loai;
   filterState.tuKhoa = q;
+  filterState.sort = sort;
 }
 
-// ─── RENDER BỘ LỌC CHIP TẠI KHO TÀI LIỆU ───
-function renderFilterChips() {
-  // 1. Cấp học (Chỉ 3 cấp: Tiểu học, THCS, THPT)
-  const levelFilter = document.getElementById('level-filter');
-  const mLevelFilter = document.getElementById('m-level-filter');
-  const capOptions = [
-    { id: '', label: 'Tất cả cấp' },
-    { id: 'Tiểu học', label: 'Tiểu học (1–5)' },
-    { id: 'THCS', label: 'THCS (6–9)' },
-    { id: 'THPT', label: 'THPT (10–12)' }
-  ];
+// ─── RENDER BỘ LỌC TẠI KHO TÀI LIỆU ───
+function renderFilterControls() {
+  // Đồng bộ Dropdown selects (trên Desktop Filter Bar)
+  const selCap = document.getElementById('filter-select-cap');
+  const selKhoi = document.getElementById('filter-select-khoi');
+  const selMon = document.getElementById('filter-select-mon');
+  const selDoiTuong = document.getElementById('filter-select-doituong');
+  const selLoai = document.getElementById('filter-select-loai');
+  const selSort = document.getElementById('filter-select-sort');
 
-  function buildChips(opts, currentVal, onClickFn) {
-    return opts.map(o => `
-      <button class="chip ${currentVal === o.id ? 'chip--active' : ''}" onclick="${onClickFn}('${o.id}')">
-        ${escapeHTML(o.label)}
-      </button>
+  if (selCap) selCap.value = filterState.cap;
+  if (selDoiTuong) selDoiTuong.value = filterState.doiTuong;
+  if (selLoai) selLoai.value = filterState.loai;
+  if (selSort) selSort.value = filterState.sort;
+
+  // Cập nhật options khối lớp theo cấp
+  if (selKhoi) {
+    let validGrades = ['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12','Đại học'];
+    if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
+      validGrades = KHOI_THEO_CAP[filterState.cap];
+    }
+    selKhoi.innerHTML = '<option value="">Khối lớp (Tất cả)</option>' + validGrades.map(k => `
+      <option value="${escapeHTML(k)}" ${filterState.khoi.has(k) ? 'selected' : ''}>${escapeHTML(k)}</option>
     `).join('');
   }
 
-  if (levelFilter) levelFilter.innerHTML = buildChips(capOptions, filterState.cap, 'chonCapHoc');
-  if (mLevelFilter) mLevelFilter.innerHTML = buildChips(capOptions, filterState.cap, 'chonCapHoc');
-
-  // 2. Khối lớp (Lớp 1 đến Lớp 12)
-  const gradeFilter = document.getElementById('grade-filter');
-  const mGradeFilter = document.getElementById('m-grade-filter');
-  let validGrades = [];
-  if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
-    validGrades = KHOI_THEO_CAP[filterState.cap];
-  } else {
-    validGrades = ['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12'];
-  }
-
-  function buildMultiChips(items, activeSet, toggleFn) {
-    return items.map(item => `
-      <button class="chip ${activeSet.has(item) ? 'chip--active' : ''}" onclick="${toggleFn}('${item}')">
-        ${escapeHTML(item)}
-      </button>
+  // Cập nhật options môn học
+  if (selMon) {
+    let validMon = new Set();
+    if (filterState.khoi.size > 0) {
+      filterState.khoi.forEach(k => {
+        if (MON_THEO_LOP[k]) MON_THEO_LOP[k].forEach(m => validMon.add(m));
+      });
+    } else if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
+      MON_THEO_CAP[filterState.cap].forEach(m => validMon.add(m));
+    } else {
+      Object.values(MON_THEO_CAP).forEach(arr => arr.forEach(m => validMon.add(m)));
+    }
+    const monArr = Array.from(validMon);
+    selMon.innerHTML = '<option value="">Môn học (Tất cả)</option>' + monArr.map(m => `
+      <option value="${escapeHTML(m)}" ${filterState.mon.has(m) ? 'selected' : ''}>${escapeHTML(m)}</option>
     `).join('');
   }
 
-  if (gradeFilter) gradeFilter.innerHTML = buildMultiChips(validGrades, filterState.khoi, 'toggleKhoi');
-  if (mGradeFilter) mGradeFilter.innerHTML = buildMultiChips(validGrades, filterState.khoi, 'toggleKhoi');
-
-  // 3. Môn học
-  const subjectFilter = document.getElementById('subject-filter');
-  const mSubjectFilter = document.getElementById('m-subject-filter');
-  let validSubjects = new Set();
-
-  if (filterState.khoi.size > 0) {
-    filterState.khoi.forEach(k => {
-      if (MON_THEO_LOP[k]) MON_THEO_LOP[k].forEach(m => validSubjects.add(m));
-    });
-  } else if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
-    MON_THEO_CAP[filterState.cap].forEach(m => validSubjects.add(m));
-  } else {
-    Object.values(MON_THEO_CAP).forEach(arr => arr.forEach(m => validSubjects.add(m)));
-  }
-
-  const subjectsArr = Array.from(validSubjects);
-  if (subjectFilter) subjectFilter.innerHTML = buildMultiChips(subjectsArr, filterState.mon, 'toggleMon');
-  if (mSubjectFilter) mSubjectFilter.innerHTML = buildMultiChips(subjectsArr, filterState.mon, 'toggleMon');
-
-  // 4. Đối tượng (Giáo viên, Học sinh / Phụ huynh)
-  const audFilter = document.getElementById('audience-filter');
-  const mAudFilter = document.getElementById('m-audience-filter');
-  const audOptions = [
-    { id: 'all', label: 'Tất cả' },
-    { id: 'giaovien', label: 'Giáo viên' },
-    { id: 'nguoihoc', label: 'Học sinh / Phụ huynh' }
-  ];
-  if (audFilter) audFilter.innerHTML = buildChips(audOptions, filterState.doiTuong, 'chonDoiTuong');
-  if (mAudFilter) mAudFilter.innerHTML = buildChips(audOptions, filterState.doiTuong, 'chonDoiTuong');
-
-  // 5. Thể loại (Giáo án / KHBD, Đề kiểm tra, Ôn tập)
-  const typeFilter = document.getElementById('type-filter');
-  const mTypeFilter = document.getElementById('m-type-filter');
-  const typeOptions = [
-    { id: 'all', label: 'Tất cả thể loại' },
-    { id: 'giaoan', label: 'Kế hoạch bài dạy / Giáo án' },
-    { id: 'dekiemtra', label: 'Bộ đề kiểm tra định kỳ' },
-    { id: 'ontap', label: 'Tài liệu ôn tập / Chuyên đề' }
-  ];
-  if (typeFilter) typeFilter.innerHTML = buildChips(typeOptions, filterState.loai, 'chonTheLoai');
-  if (mTypeFilter) mTypeFilter.innerHTML = buildChips(typeOptions, filterState.loai, 'chonTheLoai');
+  // Cập nhật chips trong Mobile Drawer
+  renderDrawerChips();
 
   // Cập nhật Active Filter Pills
   renderActivePills();
 }
 
-// ─── ACTIVE FILTER PILLS ───
+// ─── RENDER CHIPS TRONG MOBILE DRAWER ───
+function renderDrawerChips() {
+  const mLevelFilter = document.getElementById('m-level-filter');
+  const mGradeFilter = document.getElementById('m-grade-filter');
+  const mSubjectFilter = document.getElementById('m-subject-filter');
+
+  const capOptions = [
+    { id: '', label: 'Tất cả cấp' },
+    { id: 'Tiểu học', label: 'Tiểu học (1–5)' },
+    { id: 'THCS', label: 'THCS (6–9)' },
+    { id: 'THPT', label: 'THPT (10–12)' },
+    { id: 'Đại học', label: 'Đại học' }
+  ];
+
+  if (mLevelFilter) {
+    mLevelFilter.innerHTML = capOptions.map(o => `
+      <button class="tag ${filterState.cap === o.id ? 'tag--highlight' : ''}" onclick="chonCapHoc('${o.id}')">
+        ${escapeHTML(o.label)}
+      </button>
+    `).join('');
+  }
+
+  let validGrades = ['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12','Đại học'];
+  if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
+    validGrades = KHOI_THEO_CAP[filterState.cap];
+  }
+  if (mGradeFilter) {
+    mGradeFilter.innerHTML = validGrades.map(k => `
+      <button class="tag ${filterState.khoi.has(k) ? 'tag--highlight' : ''}" onclick="toggleKhoi('${escapeHTML(k)}')">
+        ${escapeHTML(k)}
+      </button>
+    `).join('');
+  }
+
+  let validMon = new Set();
+  if (filterState.khoi.size > 0) {
+    filterState.khoi.forEach(k => {
+      if (MON_THEO_LOP[k]) MON_THEO_LOP[k].forEach(m => validMon.add(m));
+    });
+  } else if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
+    MON_THEO_CAP[filterState.cap].forEach(m => validMon.add(m));
+  } else {
+    Object.values(MON_THEO_CAP).forEach(arr => arr.forEach(m => validMon.add(m)));
+  }
+  const monArr = Array.from(validMon);
+  if (mSubjectFilter) {
+    mSubjectFilter.innerHTML = monArr.map(m => `
+      <button class="tag ${filterState.mon.has(m) ? 'tag--highlight' : ''}" onclick="toggleMon('${escapeHTML(m)}')">
+        ${escapeHTML(m)}
+      </button>
+    `).join('');
+  }
+}
+
+// ─── ACTIVE FILTER PILLS (HIỂN THỊ CÁC BỘ LỌC ĐANG CHỌN) ───
 function renderActivePills() {
   const wrap = document.getElementById('active-filters-wrap');
   const list = document.getElementById('active-pills-list');
@@ -1313,46 +1431,67 @@ function renderActivePills() {
   const pills = [];
 
   if (filterState.cap) {
-    pills.push(`<span class="pill">Cấp: ${escapeHTML(filterState.cap)} <span class="pill__x" data-action="remove-cap" aria-label="Xóa bộ lọc cấp học"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`
+      <span class="active-tag">
+        Cấp: ${escapeHTML(filterState.cap)}
+        <span class="active-tag__x" onclick="chonCapHoc('')" aria-label="Xóa bộ lọc cấp">&times;</span>
+      </span>
+    `);
   }
   filterState.khoi.forEach(k => {
-    pills.push(`<span class="pill">${escapeHTML(k)} <span class="pill__x" data-action="remove-khoi" data-val="${encodeURIComponent(k)}" aria-label="Xóa ${escapeHTML(k)}"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`
+      <span class="active-tag">
+        ${escapeHTML(k)}
+        <span class="active-tag__x" onclick="toggleKhoi('${escapeHTML(k)}')" aria-label="Xóa ${escapeHTML(k)}">&times;</span>
+      </span>
+    `);
   });
   filterState.mon.forEach(m => {
-    pills.push(`<span class="pill">Môn: ${escapeHTML(m)} <span class="pill__x" data-action="remove-mon" data-val="${encodeURIComponent(m)}" aria-label="Xóa môn ${escapeHTML(m)}"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`
+      <span class="active-tag">
+        ${escapeHTML(m)}
+        <span class="active-tag__x" onclick="toggleMon('${escapeHTML(m)}')" aria-label="Xóa môn ${escapeHTML(m)}">&times;</span>
+      </span>
+    `);
   });
   if (filterState.doiTuong !== 'all') {
-    const lbl = filterState.doiTuong === 'giaovien' ? 'Giáo viên' : 'Học sinh / Phụ huynh';
-    pills.push(`<span class="pill">${lbl} <span class="pill__x" data-action="remove-doituong" aria-label="Xóa bộ lọc đối tượng"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    const lbl = filterState.doiTuong === 'giaovien' ? 'Giáo viên' : (filterState.doiTuong === 'sinhvien' ? 'Sinh viên' : 'Học sinh / Phụ huynh');
+    pills.push(`
+      <span class="active-tag">
+        ${lbl}
+        <span class="active-tag__x" onclick="chonDoiTuong('all')" aria-label="Xóa đối tượng">&times;</span>
+      </span>
+    `);
   }
   if (filterState.loai !== 'all') {
-    const typeNames = { giaoan: 'Giáo án/KHBD', dekiemtra: 'Đề kiểm tra', ontap: 'Ôn tập/Chuyên đề' };
-    pills.push(`<span class="pill">${typeNames[filterState.loai] || filterState.loai} <span class="pill__x" data-action="remove-loai" aria-label="Xóa thể loại"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    const typeNames = {
+      giaoan: 'Giáo án/KHBD',
+      dekiemtra: 'Đề kiểm tra',
+      baitap: 'Bài tập & Phiếu',
+      chuyende: 'Chuyên đề',
+      tailieusinhvien: 'Tài liệu sinh viên'
+    };
+    pills.push(`
+      <span class="active-tag">
+        ${typeNames[filterState.loai] || filterState.loai}
+        <span class="active-tag__x" onclick="chonTheLoai('all')" aria-label="Xóa thể loại">&times;</span>
+      </span>
+    `);
   }
   if (filterState.tuKhoa.trim()) {
-    pills.push(`<span class="pill">Từ khóa: "${escapeHTML(filterState.tuKhoa)}" <span class="pill__x" data-action="remove-tukhoa" aria-label="Xóa từ khóa"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></span></span>`);
+    pills.push(`
+      <span class="active-tag">
+        Từ khóa: "${escapeHTML(filterState.tuKhoa)}"
+        <span class="active-tag__x" onclick="xoaTuKhoa()" aria-label="Xóa từ khóa">&times;</span>
+      </span>
+    `);
   }
 
   if (pills.length > 0) {
     wrap.style.display = 'flex';
-    list.innerHTML = pills.join('');
-
-    if (!list._hasDelegatedPills) {
-      list._hasDelegatedPills = true;
-      list.addEventListener('click', (e) => {
-        const btn = e.target.closest('.pill__x');
-        if (!btn) return;
-        const action = btn.dataset.action;
-        const val = decodeURIComponent(btn.dataset.val || '');
-        if (action === 'remove-cap') chonCapHoc('');
-        else if (action === 'remove-khoi') toggleKhoi(val);
-        else if (action === 'remove-mon') toggleMon(val);
-        else if (action === 'remove-doituong') chonDoiTuong('all');
-        else if (action === 'remove-loai') chonTheLoai('all');
-        else if (action === 'remove-tukhoa') xoaTuKhoa();
-      });
-    }
-
+    list.innerHTML = pills.join('') + `
+      <span class="btn-clear-all" onclick="datLaiBoLoc()">Xóa tất cả &rarr;</span>
+    `;
     if (mobileCount) {
       mobileCount.style.display = 'inline-block';
       mobileCount.textContent = pills.length;
@@ -1366,17 +1505,16 @@ function renderActivePills() {
 
 // ─── THAO TÁC BỘ LỌC ───
 function chonCapHoc(cap) {
-  // Nếu bấm lại vào cấp đang chọn -> quay về "Tất cả cấp"
   if (filterState.cap === cap) {
-    cap = '';
+    cap = ''; // Toggle off nếu bấm lại chính cấp đang chọn
   }
   filterState.cap = cap;
-  // Loại bỏ các khối lớp không thuộc cấp mới nếu chọn cấp cụ thể
+
+  // Nếu chọn 1 cấp cụ thể, loại bỏ các khối lớp và môn không tương thích
   if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
     const valid = new Set(KHOI_THEO_CAP[filterState.cap]);
     filterState.khoi = new Set([...filterState.khoi].filter(k => valid.has(k)));
   }
-  // Loại bỏ các môn học không thuộc cấp mới nếu chọn cấp cụ thể
   if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
     const validMon = new Set(MON_THEO_CAP[filterState.cap]);
     filterState.mon = new Set([...filterState.mon].filter(m => validMon.has(m)));
@@ -1385,12 +1523,13 @@ function chonCapHoc(cap) {
 }
 
 function toggleKhoi(khoi) {
-  if (filterState.khoi.has(khoi)) {
+  if (!khoi) {
+    filterState.khoi.clear();
+  } else if (filterState.khoi.has(khoi)) {
     filterState.khoi.delete(khoi);
   } else {
     filterState.khoi.add(khoi);
-    // Nếu đang chọn cấp học cụ thể mà người dùng chọn một khối lớp thuộc cấp khác,
-    // tự động chuyển Cấp học về "Tất cả cấp" để cho phép đa chọn liên cấp tự do.
+    // Nếu khối lớp vừa chọn không thuộc cấp học đang lọc, tự động mở rộng về "Tất cả cấp"
     if (filterState.cap && KHOI_THEO_CAP[filterState.cap] && !KHOI_THEO_CAP[filterState.cap].includes(khoi)) {
       filterState.cap = '';
     }
@@ -1399,7 +1538,9 @@ function toggleKhoi(khoi) {
 }
 
 function toggleMon(mon) {
-  if (filterState.mon.has(mon)) {
+  if (!mon) {
+    filterState.mon.clear();
+  } else if (filterState.mon.has(mon)) {
     filterState.mon.delete(mon);
   } else {
     filterState.mon.add(mon);
@@ -1408,370 +1549,298 @@ function toggleMon(mon) {
 }
 
 function chonDoiTuong(dt) {
-  filterState.doiTuong = dt;
+  filterState.doiTuong = dt || 'all';
   capNhatGiaoDienKho();
 }
 
 function chonTheLoai(tl) {
-  filterState.loai = tl;
+  filterState.loai = tl || 'all';
+  capNhatGiaoDienKho();
+}
+
+function chonSort(sortVal) {
+  filterState.sort = sortVal || 'default';
   capNhatGiaoDienKho();
 }
 
 function xoaTuKhoa() {
   filterState.tuKhoa = '';
-  const input = document.getElementById('search-input');
-  const clearBtn = document.getElementById('search-clear-btn');
-  if (input) input.value = '';
-  if (clearBtn) clearBtn.style.display = 'none';
+  const searchInput = document.getElementById('catalog-search-input');
+  if (searchInput) searchInput.value = '';
   capNhatGiaoDienKho();
 }
 
 function datLaiBoLoc() {
-  filterState = {
-    cap: '',
-    khoi: new Set(),
-    mon: new Set(),
-    doiTuong: 'all',
-    loai: 'all',
-    tuKhoa: ''
-  };
-  const input = document.getElementById('search-input');
-  const clearBtn = document.getElementById('search-clear-btn');
-  if (input) input.value = '';
-  if (clearBtn) clearBtn.style.display = 'none';
+  filterState.cap = '';
+  filterState.khoi.clear();
+  filterState.mon.clear();
+  filterState.doiTuong = 'all';
+  filterState.loai = 'all';
+  filterState.tuKhoa = '';
+  filterState.sort = 'default';
+
+  const searchInput = document.getElementById('catalog-search-input');
+  if (searchInput) searchInput.value = '';
+
   capNhatGiaoDienKho();
+  showToast('Đã đặt lại toàn bộ bộ lọc');
 }
+
+// ─── CHUYỂN ĐỔI CHẾ ĐỘ XEM (LƯỚI HOẶC DANH SÁCH) ───
+window.setViewMode = function(mode) {
+  filterState.viewMode = mode;
+  const grid = document.getElementById('docs-grid');
+  const btnGrid = document.getElementById('btn-view-grid');
+  const btnList = document.getElementById('btn-view-list');
+
+  if (grid) {
+    if (mode === 'list') {
+      grid.classList.add('docs-grid--list');
+    } else {
+      grid.classList.remove('docs-grid--list');
+    }
+  }
+  if (btnGrid && btnList) {
+    btnGrid.classList.toggle('view-btn--active', mode === 'grid');
+    btnList.classList.toggle('view-btn--active', mode === 'list');
+  }
+};
 
 // ─── CẬP NHẬT GIAO DIỆN KHO TÀI LIỆU ───
 function capNhatGiaoDienKho() {
-  renderFilterChips();
+  renderFilterControls();
   syncStateToURL();
 
-  const results = filterDocuments();
-  const grid = document.getElementById('document-grid');
-  const empty = document.getElementById('empty-state');
-  const count = document.getElementById('result-count');
-
-  if (count) {
-    count.textContent = `Hiển thị ${results.length} / ${danhSach.length} tài liệu Word`;
-  }
-
+  const grid = document.getElementById('docs-grid');
+  const countEl = document.getElementById('catalog-result-count');
+  const emptyState = document.getElementById('catalog-empty-state');
   if (!grid) return;
 
-  if (results.length === 0) {
-    grid.innerHTML = '';
-    if (empty) empty.style.display = 'block';
-  } else {
-    if (empty) empty.style.display = 'none';
-    grid.innerHTML = results.map(d => renderCard(d, '../')).join('');
-    initMotionGraphics();
+  const results = filterDocuments();
+
+  if (countEl) {
+    countEl.textContent = `Tìm thấy ${results.length} kết quả`;
   }
 
-  if (window.lucide && typeof lucide.createIcons === 'function') {
-    lucide.createIcons();
+  if (results.length === 0) {
+    grid.style.display = 'none';
+    if (emptyState) emptyState.style.display = 'block';
+  } else {
+    grid.style.display = filterState.viewMode === 'list' ? 'flex' : 'grid';
+    if (emptyState) emptyState.style.display = 'none';
+    grid.innerHTML = results.map(d => renderCard(d, '../')).join('');
   }
 }
 
-// ─── DRAWER MOBILE CHO KHO TÀI LIỆU ───
+// ─── MOBILE FILTER DRAWER ───
 function moDrawerBoLoc() {
-  const drawer = document.getElementById('drawer-filter-overlay');
-  if (drawer) {
-    drawer.classList.add('drawer-overlay--active');
+  const drawer = document.getElementById('drawer-filter');
+  const overlay = document.getElementById('drawer-filter-overlay');
+  if (drawer && overlay) {
+    drawer.classList.add('drawer--open');
+    overlay.classList.add('drawer-overlay--open');
     document.body.classList.add('no-scroll');
+    renderDrawerChips();
   }
 }
 
 function dongDrawerBoLoc() {
-  const drawer = document.getElementById('drawer-filter-overlay');
-  if (drawer) {
-    drawer.classList.remove('drawer-overlay--active');
+  const drawer = document.getElementById('drawer-filter');
+  const overlay = document.getElementById('drawer-filter-overlay');
+  if (drawer && overlay) {
+    drawer.classList.remove('drawer--open');
+    overlay.classList.remove('drawer-overlay--open');
     document.body.classList.remove('no-scroll');
   }
 }
 
-// ─── TRANG CHI TIẾT TÀI LIỆU (/tai-lieu/) ───
+// ─── TRANG CHI TIẾT TÀI LIỆU (DETAIL PAGE) ───
 function initDetailPage() {
   const params = new URLSearchParams(window.location.search);
-  const docId = params.get('id') || params.get('ma') || '';
-  const doc = danhSach.find(d => d.ma === docId);
+  const ma = params.get('ma');
+  const doc = danhSach.find(d => d.ma === ma) || danhSach[0];
+  if (!doc) return;
 
-  const container = document.getElementById('detail-page-container');
-  if (!container) return;
+  document.title = `${doc.tieuDe} — Tài Liệu Đỉnh`;
 
-  if (!doc) {
-    container.innerHTML = `
-      <div class="empty">
-        <svg class="empty__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 8l6 6M14 8l-6 6"/></svg>
-        <h3>Không tìm thấy tài liệu này</h3>
-        <p>Tài liệu có mã "<strong>${escapeHTML(docId)}</strong>" không tồn tại hoặc đã được cập nhật sang danh mục mới.</p>
-        <a href="../kho-tai-lieu/" class="btn btn--primary" style="margin-top:12px;">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-          Quay lại Kho tài liệu
-        </a>
+  // Breadcrumb
+  const bcTitle = document.getElementById('detail-bc-title');
+  if (bcTitle) bcTitle.textContent = doc.tieuDe;
+
+  // Main Cover
+  const coverWrap = document.getElementById('detail-cover-container');
+  if (coverWrap) {
+    coverWrap.innerHTML = `
+      <div class="detail-main-cover">
+        <span class="doc-card__badge-docx" style="top:20px; right:20px; font-size:0.8rem; padding:4px 10px;">${escapeHTML(doc.dinhDang || 'DOCX')}</span>
+        <div class="detail-cover__title">${escapeHTML(doc.tieuDe)}</div>
+        <div class="detail-cover__sub">${escapeHTML(doc.mon)} • ${escapeHTML(doc.khoi)} • ${escapeHTML(doc.capHoc)}</div>
       </div>
     `;
-    return;
   }
 
-  document.title = `${doc.tieuDe} — Chi tiết tài liệu Word | Tài Liệu Đỉnh`;
-  const doiTuongText = doc.doiTuong === 'giaovien' ? 'Giáo viên' : 'Học sinh / Phụ huynh';
+  // Title & Tags
+  const titleEl = document.getElementById('detail-title');
+  if (titleEl) titleEl.textContent = doc.tieuDe;
 
-  let previewMarkup = '';
-  const isValidDriveLink = /^https:\/\/(drive|docs)\.google\.com\/file\/d\/[a-zA-Z0-9_-]+/.test(doc.linkDemo || '');
-  if (isValidDriveLink) {
-    let embedUrl = doc.linkDemo;
-    if (embedUrl.includes('/view')) embedUrl = embedUrl.replace('/view', '/preview');
-    previewMarkup = `
-      <div class="preview-card">
-        <div class="preview-card__head">
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-            Bản xem thử trực tuyến (PDF mẫu)
-          </h3>
-          <a href="${escapeHTML(doc.linkDemo)}" target="_blank" rel="noopener" class="btn btn--outline" style="font-size:0.76rem; padding:5px 10px;">
-            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Mở toàn màn hình
-          </a>
-        </div>
-        <div class="preview-iframe-wrap">
-          <iframe src="${escapeHTML(embedUrl)}" allow="autoplay" loading="lazy"></iframe>
-        </div>
-        <p style="font-size:0.75rem; color:#64748b; margin-top:8px;">* File Word (.docx) đầy đủ với toàn bộ bảng ma trận, câu hỏi và đáp án sẽ được gửi qua Zalo sau khi thống nhất.</p>
+  const tagsEl = document.getElementById('detail-tags');
+  if (tagsEl) {
+    tagsEl.innerHTML = `
+      <span class="tag tag--highlight">${escapeHTML(doc.capHoc)}</span>
+      <span class="tag">${escapeHTML(doc.khoi)}</span>
+      <span class="tag">${escapeHTML(doc.mon)}</span>
+      <span class="tag">${escapeHTML(doc.chuanCV || 'Bản chuẩn Word')}</span>
+    `;
+  }
+
+  // Description
+  const descEl = document.getElementById('detail-desc');
+  if (descEl) descEl.textContent = doc.moTa;
+
+  // Metadata
+  const metaObj = {
+    'detail-meta-dinhdang': doc.dinhDang ? `Word (.${doc.dinhDang.toLowerCase()})` : 'Word (.docx)',
+    'detail-meta-doituong': doc.doiTuong === 'giaovien' ? 'Giáo viên' : (doc.doiTuong === 'sinhvien' ? 'Sinh viên' : 'Học sinh & Phụ huynh'),
+    'detail-meta-sotrang': '15+ trang (Đầy đủ cả năm)',
+    'detail-meta-capnhat': 'Năm học 2025–2026'
+  };
+  for (const [id, val] of Object.entries(metaObj)) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  }
+
+  // Zalo Deep Link
+  const zaloBtn = document.getElementById('btn-detail-zalo');
+  if (zaloBtn) {
+    const zaloMsg = `Chào bạn, mình cần hỗ trợ tư vấn tài liệu: [${doc.ma}] - ${doc.tieuDe}`;
+    zaloBtn.href = `${CONFIG.ZALO_LINK}?text=${encodeURIComponent(zaloMsg)}`;
+  }
+
+  // Tab Content (Mục lục, Nội dung)
+  const tabContentEl = document.getElementById('detail-tab-content');
+  if (tabContentEl) {
+    tabContentEl.innerHTML = `
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <h4 style="font-weight:700; color:var(--c-text-primary);">1. Kế hoạch giảng dạy &amp; Cấu trúc tài liệu:</h4>
+        <p>Tài liệu được biên soạn kỹ lưỡng theo định dạng Microsoft Word (.docx), các bảng biểu và đề mục được phân cấp rõ ràng, dễ dàng chỉnh sửa tên trường, lớp, giáo viên giảng dạy.</p>
+        <h4 style="font-weight:700; color:var(--c-text-primary);">2. Điểm nổi bật học thuật:</h4>
+        <ul style="padding-left:20px; display:flex; flex-direction:column; gap:6px;">
+          <li>${escapeHTML(doc.chuanCV || 'Chuẩn phân phối chương trình mới')}</li>
+          <li>${escapeHTML(doc.maTranDapAn || 'Kèm ma trận và bảng đặc tả chi tiết')}</li>
+          <li>Định dạng font chữ chuẩn Unicode (Times New Roman / Inter), căn lề chuẩn trang in A4.</li>
+        </ul>
       </div>
+    `;
+  }
+
+  // PDF Preview Iframe nếu có link Google Drive hợp lệ
+  const pdfContainer = document.getElementById('detail-pdf-preview');
+  if (pdfContainer && doc.linkDemo && /^https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/.test(doc.linkDemo)) {
+    const fileId = doc.linkDemo.match(/\/d\/([a-zA-Z0-9_-]+)/)[1];
+    pdfContainer.style.display = 'block';
+    pdfContainer.innerHTML = `
+      <h3 style="font-size:1.15rem; font-weight:800; color:var(--c-text-primary); margin-bottom:12px;">Bản đọc thử PDF (Trực tiếp từ Google Drive)</h3>
+      <div class="pdf-embed-container">
+        <iframe src="https://drive.google.com/file/d/${fileId}/preview" allow="autoplay"></iframe>
+      </div>
+    `;
+  } else if (pdfContainer) {
+    pdfContainer.style.display = 'none';
+  }
+
+  // Tài liệu tương tự (Related Documents)
+  const relatedGrid = document.getElementById('detail-related-grid');
+  if (relatedGrid) {
+    const related = danhSach.filter(d => d.ma !== doc.ma && (d.capHoc === doc.capHoc || d.mon === doc.mon)).slice(0, 4);
+    relatedGrid.innerHTML = related.map(d => renderCard(d, '../')).join('');
+  }
+}
+
+// ─── TAB SWITCHING TRÊN TRANG CHI TIẾT ───
+window.switchDetailTab = function(tabName, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('tab-btn--active'));
+  if (btn) btn.classList.add('tab-btn--active');
+  const tabContent = document.getElementById('detail-tab-content');
+  if (!tabContent) return;
+
+  if (tabName === 'mucluc') {
+    tabContent.innerHTML = `
+      <ol style="padding-left:20px; line-height:2;">
+        <li><strong>Phần I:</strong> Mục tiêu và yêu cầu cần đạt theo phẩm chất, năng lực.</li>
+        <li><strong>Phần II:</strong> Thiết bị dạy học và học liệu trực quan.</li>
+        <li><strong>Phần III:</strong> Tiến trình dạy học 4 bước chuẩn Bộ Giáo dục và Đào tạo.</li>
+        <li><strong>Phần IV:</strong> Phiếu học tập, bài tập củng cố và đáp án chi tiết.</li>
+      </ol>
+    `;
+  } else if (tabName === 'noidung') {
+    tabContent.innerHTML = `
+      <p style="margin-bottom:10px;">Toàn bộ nội dung tài liệu được lưu dưới dạng tệp Microsoft Word (.docx) nguyên gốc, không khóa bảo vệ, sẵn sàng cho thầy cô và các bạn sinh viên tải về bổ sung, tinh chỉnh.</p>
+      <p>Sau khi nhận file qua Zalo <strong>${CONFIG.ZALO_PHONE_DISPLAY}</strong>, bạn có thể in ấn ngay hoặc chia sẻ cho đồng nghiệp.</p>
     `;
   } else {
-    previewMarkup = `
-      <div class="preview-card">
-        <div class="preview-empty-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          <h4>Bản xem thử trực tuyến hiện chưa cập nhật</h4>
-          <p>Tài liệu này hiện chưa có liên kết xem thử trực tuyến. Quý thầy cô và các bạn vui lòng nhắn Zalo người phụ trách để nhận trích đoạn nội dung mẫu trước khi quyết định nhận file.</p>
-          <a href="https://zalo.me/${CONFIG.ZALO_PHONE}" target="_blank" rel="noopener" class="btn btn--zalo">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            Nhắn Zalo xin bản đọc thử
-          </a>
-        </div>
-      </div>
+    tabContent.innerHTML = `
+      <p><strong>Bản quyền &amp; Phân phối:</strong> Tài Liệu Đỉnh — Đỉnh cao tài liệu.</p>
+      <p>Mọi thắc mắc kỹ thuật hoặc hỗ trợ định dạng file Word, vui lòng nhắn trực tiếp Zalo <strong>${CONFIG.ZALO_PHONE_DISPLAY}</strong> trong khung giờ 8:00 – 21:00 hàng ngày.</p>
     `;
   }
+};
 
-  // 3 Tài liệu liên quan cùng môn hoặc lớp
-  const relatedDocs = danhSach
-    .filter(d => d.ma !== doc.ma && (d.khoi === doc.khoi || d.mon === doc.mon))
-    .slice(0, 3);
-
-  const relatedHtml = relatedDocs.length > 0 ? `
-    <div class="related-section">
-      <h3>Tài liệu cùng chuyên môn liên quan</h3>
-      <div class="grid">
-        ${relatedDocs.map(d => renderCard(d, '../')).join('')}
-      </div>
-    </div>
-  ` : '';
-
-  container.innerHTML = `
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-      <a href="../">Trang chủ</a>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-      <a href="../kho-tai-lieu/">Kho tài liệu</a>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-      <span class="breadcrumb__current">${escapeHTML(doc.mon)} — ${escapeHTML(doc.khoi)}</span>
-    </nav>
-
-    <div class="detail-layout">
-      <!-- Cột chính bên trái -->
-      <div class="detail-main">
-        <div class="detail-card">
-          <div class="detail-header-badges">
-            <span class="card__badge-docx">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
-              ${escapeHTML(doc.dinhDang || 'DOCX')}
-            </span>
-            <span class="tag tag--grade">${escapeHTML(doc.khoi)}</span>
-            <span class="tag tag--subject">${escapeHTML(doc.mon)}</span>
-            <span class="tag tag--audience">${doiTuongText}</span>
-          </div>
-
-          <h1 class="detail-title">${escapeHTML(doc.tieuDe)}</h1>
-          <p class="detail-desc">${escapeHTML(doc.moTa)}</p>
-
-          <h3 style="font-size:1.05rem; font-weight:700; color:var(--c-navy); margin-bottom:10px;">
-            Thông số kỹ thuật & quy chuẩn tài liệu
-          </h3>
-          <table class="specs-table">
-            <tbody>
-              <tr>
-                <th>Mã tài liệu</th>
-                <td><code>${escapeHTML(doc.ma)}</code></td>
-              </tr>
-              <tr>
-                <th>Cấp học & Khối lớp</th>
-                <td>${escapeHTML(doc.capHoc)} · ${escapeHTML(doc.khoi)}</td>
-              </tr>
-              <tr>
-                <th>Môn học</th>
-                <td>${escapeHTML(doc.mon)}</td>
-              </tr>
-              <tr>
-                <th>Bộ sách tương thích</th>
-                <td>${escapeHTML(doc.boSach || 'Dùng chung GDPT 2018')}</td>
-              </tr>
-              <tr>
-                <th>Căn cứ sư phạm</th>
-                <td>${escapeHTML(doc.chuanCV || 'Chuẩn quy định hiện hành')}</td>
-              </tr>
-              <tr>
-                <th>Tình trạng nội dung</th>
-                <td>${escapeHTML(doc.maTranDapAn || 'Đầy đủ nội dung và đáp án')}</td>
-              </tr>
-              <tr>
-                <th>Định dạng tệp</th>
-                <td>Microsoft Word (.docx) — Có thể chỉnh sửa toàn bộ phông chữ, bảng biểu, công thức</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Khung xem thử -->
-        ${previewMarkup}
-      </div>
-
-      <!-- Cột phụ bên phải: Báo giá & Nút Zalo -->
-      <div class="detail-sidebar">
-        <div class="pricing-card">
-          <div class="pricing-badge">Học liệu Word tham khảo</div>
-          <h2 class="pricing-title">Trao đổi & Báo giá qua Zalo</h2>
-          <div class="pricing-notice">
-            Website hoạt động theo mô hình giới thiệu và trao đổi trực tiếp. Để biết giá chi tiết và nhận file Word gốc, vui lòng liên hệ Zalo người phụ trách.
-          </div>
-          <div class="pricing-actions">
-            <a href="https://zalo.me/${CONFIG.ZALO_PHONE}" target="_blank" rel="noopener" class="btn btn--zalo btn--full btn--lg">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              Nhắn Zalo hỏi tài liệu này
-            </a>
-            <button id="btn-copy-doc-info" class="btn btn--outline btn--full" data-ma="${encodeURIComponent(doc.ma)}" data-title="${encodeURIComponent(doc.tieuDe)}">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-              Sao chép mã & thông tin
-            </button>
-          </div>
-          <div class="pricing-hours">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Khung giờ hỗ trợ: <strong>${CONFIG.SUPPORT_HOURS}</strong>. Phản hồi tận tình trong giờ làm việc.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    ${relatedHtml}
-  `;
-
-  const copyBtn = document.getElementById('btn-copy-doc-info');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', () => {
-      copyThongTinTaiLieu(decodeURIComponent(copyBtn.dataset.ma || ''), decodeURIComponent(copyBtn.dataset.title || ''));
-    });
-  }
-
-  if (window.lucide && typeof lucide.createIcons === 'function') {
-    lucide.createIcons();
-  }
-}
-
-function copyThongTinTaiLieu(ma, tieuDe) {
-  const text = `Xin chào Tài Liệu Đỉnh, tôi quan tâm đến tài liệu [${ma}] ${tieuDe}. Nhờ bạn tư vấn giúp tôi nhé!`;
-  navigator.clipboard.writeText(text).then(() => {
-    showToast('Đã sao chép nội dung hỏi tài liệu!');
-  }).catch(() => {
-    showToast(`Mã tài liệu: ${ma}`);
-  });
-}
-
-// ─── TRANG LIÊN HỆ & TRÌNH SOẠN YÊU CẦU (/lien-he/) ───
+// ─── TRANG LIÊN HỆ & TẠO TIN NHẮN ZALO ───
 function initContactPage() {
-  const roleSelect = document.getElementById('contact-role');
-  const levelSelect = document.getElementById('contact-level');
-  const gradeInput = document.getElementById('contact-grade');
-  const subjectInput = document.getElementById('contact-subject');
-  const bookSelect = document.getElementById('contact-book');
-  const typeSelect = document.getElementById('contact-type');
-  const noteInput = document.getElementById('contact-note');
-  const previewBox = document.getElementById('contact-live-message');
+  const form = document.getElementById('contact-quick-form');
+  const btnSubmit = document.getElementById('btn-contact-generate');
+  if (!form || !btnSubmit) return;
 
-  function updatePreview() {
-    if (!previewBox) return;
-    const role = roleSelect ? roleSelect.value : 'Giáo viên';
-    const level = levelSelect ? levelSelect.value : 'THCS';
-    const grade = gradeInput && gradeInput.value.trim() ? gradeInput.value.trim() : 'Lớp 7';
-    const subject = subjectInput && subjectInput.value.trim() ? subjectInput.value.trim() : 'Toán';
-    const book = bookSelect ? bookSelect.value : 'Kết nối tri thức';
-    const type = typeSelect ? typeSelect.value : 'Kế hoạch bài dạy (CV 5512)';
-    const note = noteInput && noteInput.value.trim() ? noteInput.value.trim() : 'Tôi cần trọn bộ cả năm';
+  btnSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+    const vaiTro = document.getElementById('c-vaitro')?.value || 'Người học';
+    const cap = document.getElementById('c-cap')?.value || 'Phổ thông';
+    const mon = document.getElementById('c-mon')?.value || 'Tài liệu giáo dục';
+    const mota = document.getElementById('c-mota')?.value.trim() || 'Cần tư vấn trọn bộ';
 
-    const msg = `Xin chào Tài Liệu Đỉnh,\nTôi là ${role}, hiện đang tìm tài liệu ${type} môn ${subject} (${grade} - ${level}).\nBộ sách dự kiến: ${book}.\nYêu cầu cụ thể: ${note}.\nNhờ bạn tư vấn nội dung, bản xem thử và cách nhận file Word nhé!`;
-    previewBox.textContent = msg;
-  }
+    const msg = `Xin chào Tài Liệu Đỉnh! Mình là [${vaiTro}], mình đang tìm tài liệu cấp [${cap}], môn [${mon}]. Nhu cầu cụ thể: ${mota}`;
 
-  [roleSelect, levelSelect, gradeInput, subjectInput, bookSelect, typeSelect, noteInput].forEach(el => {
-    if (el) {
-      el.addEventListener('input', updatePreview);
-      el.addEventListener('change', updatePreview);
-    }
-  });
-
-  updatePreview();
-
-  const copyBtn = document.getElementById('btn-copy-contact-msg');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', () => {
-      const text = previewBox ? previewBox.textContent : '';
-      if (!text) return;
-      navigator.clipboard.writeText(text).then(() => {
-        showToast('Đã sao chép nội dung tin nhắn!');
-      }).catch(() => {
-        showToast('Vui lòng chọn và sao chép thủ công.');
-      });
+    navigator.clipboard.writeText(msg).then(() => {
+      showToast('Đã sao chép nội dung tin nhắn!');
+      setTimeout(() => {
+        window.open(`${CONFIG.ZALO_LINK}?text=${encodeURIComponent(msg)}`, '_blank');
+      }, 500);
+    }).catch(() => {
+      window.open(`${CONFIG.ZALO_LINK}?text=${encodeURIComponent(msg)}`, '_blank');
     });
-  }
+  });
 }
 
-// ─── TRANG HƯỚNG DẪN & FAQ ACCORDION (/huong-dan/) ───
+// ─── TRANG HƯỚNG DẪN: FAQ ACCORDION ───
 function initGuidePage() {
-  const questions = document.querySelectorAll('.faq-question');
-  questions.forEach(q => {
+  document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
-      const parent = q.closest('.faq-item');
-      if (parent) {
-        parent.classList.toggle('faq-item--open');
-      }
+      const item = q.parentElement;
+      item.classList.toggle('faq-item--open');
     });
   });
 }
 
-// ─── TRANG CHỦ (HOME PAGE) ───
+// ─── TRANG CHỦ: FEATURED DOCS & HERO SEARCH ───
 function initHomePage() {
-  const grid = document.getElementById('home-featured-grid');
-  if (grid) {
-    // Lấy 6 tài liệu tiêu biểu (2 Tiểu học, 2 THCS, 2 THPT)
-    const featured = [
-      danhSach[0], // TH1 Toán
-      danhSach[1], // TH1 Văn
-      danhSach[12], // L6 Toán
-      danhSach[13], // L6 Văn
-      danhSach[32], // L10 Toán
-      danhSach[33]  // L10 Văn
-    ].filter(Boolean);
-    grid.innerHTML = featured.map(d => renderCard(d, '')).join('');
-    initMotionGraphics();
+  const featuredGrid = document.getElementById('home-featured-grid');
+  if (featuredGrid) {
+    const sampleDocs = danhSach.slice(0, 8);
+    featuredGrid.innerHTML = sampleDocs.map(d => renderCard(d, '')).join('');
   }
 
   const heroSearchInput = document.getElementById('hero-search-input');
+  const heroSearchBtn = document.getElementById('hero-search-btn');
+
+  const doSearch = () => {
+    const kw = heroSearchInput ? heroSearchInput.value.trim() : '';
+    window.location.href = `kho-tai-lieu/?q=${encodeURIComponent(kw)}`;
+  };
+
+  if (heroSearchBtn) heroSearchBtn.addEventListener('click', doSearch);
   if (heroSearchInput) {
     heroSearchInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        const kw = heroSearchInput.value.trim();
-        window.location.href = `kho-tai-lieu/?q=${encodeURIComponent(kw)}`;
-      }
+      if (e.key === 'Enter') doSearch();
     });
   }
 }
@@ -1798,16 +1867,17 @@ window.handleSheetData = function(res) {
       const rawKhoi = c[4] && c[4].v ? String(c[4].v).trim() : 'Lớp 12';
       const rawDemo = c[5] && c[5].v ? String(c[5].v).trim() : '';
 
-      // Xác định cấp học (Tiểu học, THCS, THPT)
+      // Xác định cấp học
       let cap = 'THPT';
       const rawLower = rawKhoi.toLowerCase();
       if (rawLower.includes('tiểu') || ['lớp 1', 'lớp 2', 'lớp 3', 'lớp 4', 'lớp 5'].some(l => rawLower.includes(l))) {
         cap = 'Tiểu học';
       } else if (['lớp 6', 'lớp 7', 'lớp 8', 'lớp 9'].some(l => rawLower.includes(l))) {
         cap = 'THCS';
+      } else if (rawLower.includes('đại') || rawLower.includes('sinh viên')) {
+        cap = 'Đại học';
       }
 
-      // Chuẩn hóa môn
       let monChuan = rawMon;
       if (rawMon === 'Văn') monChuan = cap === 'Tiểu học' ? 'Tiếng Việt' : 'Ngữ văn';
       else if (rawMon === 'Anh') monChuan = 'Tiếng Anh';
@@ -1859,151 +1929,9 @@ function fetchGoogleSheetData() {
   document.head.appendChild(script);
 }
 
-// ─── HỆ THỐNG GIAO DIỆN SÁNG / TỐI TỰ ĐỘNG THEO KHUNG GIỜ (5h–19h: SÁNG, 19h–5h: TỐI) ───
-function initTheme() {
-  const calculateThemeByHour = () => {
-    const hour = new Date().getHours();
-    return (hour >= 5 && hour < 19) ? 'light' : 'dark';
-  };
-
-  const applyTheme = (theme, withTransition = false) => {
-    if (withTransition) {
-      document.documentElement.classList.add('theme-transitioning');
-      setTimeout(() => {
-        document.documentElement.classList.remove('theme-transitioning');
-      }, 350);
-    }
-    document.documentElement.setAttribute('data-theme', theme);
-  };
-
-  // Áp dụng theme chuẩn theo giờ hiện tại
-  applyTheme(calculateThemeByHour(), false);
-
-  // Xóa cài đặt cũ nếu có để tránh xung đột
-  try {
-    localStorage.removeItem('tld_theme');
-  } catch (e) {}
-
-  // Tự động kiểm tra mỗi phút: chuyển chế độ mượt mà khi qua mốc 5h hoặc 19h
-  setInterval(() => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const expectedTheme = calculateThemeByHour();
-    if (currentTheme !== expectedTheme) {
-      applyTheme(expectedTheme, true);
-    }
-  }, 60000);
-}
-
-// ─── HIỆU ỨNG CHUYỂN ĐỘNG & MOTION GRAPHICS (APPLE INSPIRED) ───
-let _revealObserver = null;
-let _counterObserver = null;
-
-function initMotionGraphics() {
-  // 1. Tự động thêm class .reveal cho các section và card
-  const autoRevealSelectors = [
-    '.level-card',
-    '.guide-step',
-    '.card',
-    '.feature-badge',
-    '.faq-item',
-    '.pricing-card',
-    '.contact-card'
-  ];
-
-  autoRevealSelectors.forEach(sel => {
-    document.querySelectorAll(sel).forEach((el, idx) => {
-      if (!el.classList.contains('reveal')) {
-        el.classList.add('reveal');
-        const staggerClass = `reveal--delay-${(idx % 3) + 1}`;
-        el.classList.add(staggerClass);
-      }
-    });
-  });
-
-  // 2. Tạo reveal observer chỉ 1 lần duy nhất (singleton)
-  if (!_revealObserver) {
-    if ('IntersectionObserver' in window) {
-      _revealObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, {
-        root: null,
-        threshold: 0.1,
-        rootMargin: '0px 0px -30px 0px'
-      });
-    }
-  }
-
-  // 3. Luôn observe các phần tử reveal MỚI (chưa is-revealed) sau mỗi lần render
-  if (_revealObserver) {
-    document.querySelectorAll('.reveal:not(.is-revealed)').forEach(el => {
-      _revealObserver.observe(el);
-    });
-  } else {
-    // Fallback cho trình duyệt cũ
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-revealed'));
-  }
-
-  // 4. Counter observer cũng singleton, guard bằng data-counted attribute
-  if (!_counterObserver && 'IntersectionObserver' in window) {
-    _counterObserver = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-counter'), 10);
-          if (!isNaN(target)) {
-            const duration = 1200;
-            const startTime = performance.now();
-            const suffix = el.getAttribute('data-suffix') || '';
-            const prefix = el.getAttribute('data-prefix') || '';
-
-            const step = (now) => {
-              const progress = Math.min((now - startTime) / duration, 1);
-              const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-              const current = Math.floor(ease * target);
-              el.textContent = `${prefix}${current}${suffix}`;
-              if (progress < 1) {
-                requestAnimationFrame(step);
-              } else {
-                el.textContent = `${prefix}${target}${suffix}`;
-              }
-            };
-            requestAnimationFrame(step);
-          }
-          obs.unobserve(el);
-        }
-      });
-    }, { threshold: 0.3 });
-  }
-
-  // Observe counter elements mới (chưa được observe)
-  if (_counterObserver) {
-    document.querySelectorAll('[data-counter]:not([data-counted])').forEach(el => {
-      el.setAttribute('data-counted', '1');
-      _counterObserver.observe(el);
-    });
-  }
-}
-
-// ─── KHỞI TẠO TOÀN TRANG ───
+// ─── KHỞI TẠO TOÀN TRANG (DOM READY) ───
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
-
-  // 0. Khởi tạo Giao diện Sáng/Tối & Motion Graphics
-  initTheme();
-  initMotionGraphics();
-
-  // Lắng nghe trạng thái tab (Page Visibility API) để tiết kiệm tài nguyên
-  document.addEventListener('visibilitychange', () => {
-    const state = document.hidden ? 'paused' : 'running';
-    document.querySelectorAll('.hero, .shimmer-badge').forEach(el => {
-      el.style.animationPlayState = state;
-    });
-  });
 
   // 1. Mobile Menu Toggle ở Header
   const navToggleBtn = document.getElementById('nav-toggle-btn');
@@ -2014,40 +1942,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Định tuyến theo từng trang
+  // 2. Tùy biến khởi tạo theo từng trang
   if (path.includes('/kho-tai-lieu')) {
     loadStateFromURL();
-    renderFilterChips();
 
-    const searchInput = document.getElementById('search-input');
-    const searchClear = document.getElementById('search-clear-btn');
-    if (searchClear) {
-      searchClear.style.display = filterState.tuKhoa ? 'flex' : 'none';
-      searchClear.addEventListener('click', xoaTuKhoa);
-    }
+    // Lắng nghe Search Input tại Kho tài liệu
+    const searchInput = document.getElementById('catalog-search-input');
+    const searchBtn = document.getElementById('catalog-search-btn');
     if (searchInput) {
-      if (filterState.tuKhoa) searchInput.value = filterState.tuKhoa;
+      searchInput.value = filterState.tuKhoa;
       searchInput.addEventListener('input', (e) => {
         filterState.tuKhoa = e.target.value;
-        if (searchClear) searchClear.style.display = filterState.tuKhoa ? 'flex' : 'none';
         capNhatGiaoDienKho();
       });
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') capNhatGiaoDienKho();
+      });
     }
+    if (searchBtn) {
+      searchBtn.addEventListener('click', capNhatGiaoDienKho);
+    }
+
+    // Lắng nghe Dropdown Selects trên Desktop Filter Bar
+    const selCap = document.getElementById('filter-select-cap');
+    const selKhoi = document.getElementById('filter-select-khoi');
+    const selMon = document.getElementById('filter-select-mon');
+    const selDoiTuong = document.getElementById('filter-select-doituong');
+    const selLoai = document.getElementById('filter-select-loai');
+    const selSort = document.getElementById('filter-select-sort');
+
+    if (selCap) selCap.addEventListener('change', (e) => chonCapHoc(e.target.value));
+    if (selKhoi) selKhoi.addEventListener('change', (e) => toggleKhoi(e.target.value));
+    if (selMon) selMon.addEventListener('change', (e) => toggleMon(e.target.value));
+    if (selDoiTuong) selDoiTuong.addEventListener('change', (e) => chonDoiTuong(e.target.value));
+    if (selLoai) selLoai.addEventListener('change', (e) => chonTheLoai(e.target.value));
+    if (selSort) selSort.addEventListener('change', (e) => chonSort(e.target.value));
+
+    // Nút mở Drawer Mobile
+    const btnMobileFilter = document.getElementById('btn-open-mobile-filter');
+    if (btnMobileFilter) btnMobileFilter.addEventListener('click', moDrawerBoLoc);
 
     capNhatGiaoDienKho();
   } else if (path.includes('/tai-lieu')) {
     initDetailPage();
-  } else if (path.includes('/lien-he')) {
-    initContactPage();
+  } else if (path.includes('/gioi-thieu')) {
+    // Trang giới thiệu
   } else if (path.includes('/huong-dan')) {
     initGuidePage();
+  } else if (path.includes('/lien-he')) {
+    initContactPage();
   } else {
     initHomePage();
   }
 
-  if (window.lucide && typeof lucide.createIcons === 'function') {
-    lucide.createIcons();
-  }
-
+  // 3. Nạp dữ liệu nền từ Google Sheet
   fetchGoogleSheetData();
 });

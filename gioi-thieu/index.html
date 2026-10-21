@@ -3,82 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giới Thiệu Về Tài Liệu Đỉnh — Đỉnh cao tài liệu</title>
-  <meta name="description" content="Tìm hiểu về Tài Liệu Đỉnh — Nền tảng kết nối và chia sẻ kho tài liệu Word (.docx) chuẩn GDPT 2018 cho giáo viên và học sinh từ Lớp 1 đến Lớp 12 trên cả nước." />
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-  <link rel="manifest" href="../manifest.json" />
-  <meta name="theme-color" content="#0f172a" />
+  <title>Giới Thiệu — Tài Liệu Đỉnh | Đỉnh cao tài liệu</title>
+  <meta name="description" content="Tìm hiểu về Tài Liệu Đỉnh — Hệ thống tài liệu Microsoft Word (.docx) tuyển chọn dành cho giáo viên, học sinh và sinh viên. Trao đổi qua Zalo 0926.999.869." />
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
 
-  <!-- Open Graph / Zalo / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:site_name" content="Tài Liệu Đỉnh" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Giới Thiệu Về Tài Liệu Đỉnh — Đỉnh cao tài liệu" />
-  <meta property="og:description" content="Tìm hiểu về Tài Liệu Đỉnh — Nền tảng kết nối và chia sẻ kho tài liệu Word (.docx) chuẩn GDPT 2018 cho giáo viên và học sinh từ Lớp 1 đến Lớp 12 trên cả nước." />
-  <meta property="og:image" content="../qrcode.png" />
+  <meta property="og:title" content="Giới Thiệu — Tài Liệu Đỉnh | Đỉnh cao tài liệu" />
+  <meta property="og:description" content="Kho tài liệu Microsoft Word (.docx) tuyển chọn dành cho giáo viên, học sinh và sinh viên." />
 
   <!-- Fonts & Lucide Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link rel="stylesheet" href="../style.css?v=2.3" />
-
-  <!-- Zero-FOUC Theme Detector (5h–19h: Sáng, 19h–5h: Tối) -->
-  <script>
-    (function() {
-      try {
-        var h = new Date().getHours();
-        var t = (h >= 5 && h < 19) ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', t);
-      } catch(e) {}
-    })();
-  </script>
+  <link rel="stylesheet" href="../style.css?v=3.0" />
 </head>
 <body>
 
-
-  <!-- TOP BAR THÔNG TIN HỌC THUẬT -->
-  <div class="top-bar">
-    <div class="container top-bar__inner">
-      <div class="top-bar__brand-note">
-        <span class="top-bar__badge">DOC / DOCX</span>
-        <span class="top-bar__text">Kho tài liệu Word chỉnh sửa dành cho Giáo viên & Học sinh Lớp 1–12</span>
-      </div>
-      <div class="top-bar__right">
-        <span class="top-bar__hours"><i data-lucide="clock"></i> Giờ hỗ trợ: 8h00 – 12h00 | 13h30 – 21h30</span>
-        <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="top-bar__zalo">
-          <i data-lucide="message-circle"></i> Zalo tư vấn: 0926.999.869
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER & NAVIGATION -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
       <a href="../" class="logo">
-        <div class="logo__icon-wrap">
-          <i data-lucide="file-text" class="logo__icon"></i>
-        </div>
-        <div class="logo__wrap">
+        <img src="../assets/logo.svg" alt="Tài Liệu Đỉnh" class="logo__icon" />
+        <div class="logo__text-wrap">
           <span class="logo__text">Tài Liệu Đỉnh</span>
           <span class="logo__slogan">Đỉnh cao tài liệu</span>
         </div>
       </a>
 
+      <!-- Navigation -->
       <nav class="nav" id="main-nav">
-        <a href="../" class="nav__link ">Trang chủ</a>
-        <a href="../kho-tai-lieu/" class="nav__link ">Kho tài liệu</a>
-        <a href="../gioi-thieu/" class="nav__link nav__link--active">Giới thiệu</a>
-        <a href="../huong-dan/" class="nav__link ">Hướng dẫn</a>
-        <a href="../lien-he/" class="nav__link ">Liên hệ</a>
+        <a href="../" class="nav__link">Trang chủ</a>
+        <a href="../kho-tai-lieu/" class="nav__link">Kho tài liệu</a>
+        <a href="./" class="nav__link nav__link--active">Giới thiệu</a>
+        <a href="../huong-dan/" class="nav__link">Hướng dẫn</a>
+        <a href="../lien-he/" class="nav__link">Liên hệ</a>
       </nav>
 
+      <!-- Header Actions -->
       <div class="header__actions">
-        <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="btn btn--zalo-header">
-          <i data-lucide="message-circle"></i>
-          <span>Hỏi Zalo</span>
+        <a href="../kho-tai-lieu/" class="btn-header-search" aria-label="Tìm kiếm tài liệu" title="Tìm kiếm tài liệu">
+          <i data-lucide="search" style="width:18px;height:18px;"></i>
+        </a>
+        <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="btn-header-zalo">
+          <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+          <span>Nhắn Zalo</span>
         </a>
         <button class="nav__toggle" id="nav-toggle-btn" aria-label="Mở menu điều hướng">
           <i data-lucide="menu"></i>
@@ -88,136 +60,168 @@
 
     <!-- Mobile Nav Dropdown -->
     <div class="nav-mobile" id="nav-mobile-menu">
-      <a href="../" class="nav-mobile__link "><i data-lucide="home"></i> Trang chủ</a>
-      <a href="../kho-tai-lieu/" class="nav-mobile__link "><i data-lucide="folder-open"></i> Kho tài liệu</a>
-      <a href="../gioi-thieu/" class="nav-mobile__link nav-mobile__link--active"><i data-lucide="info"></i> Giới thiệu</a>
-      <a href="../huong-dan/" class="nav-mobile__link "><i data-lucide="help-circle"></i> Hướng dẫn & FAQ</a>
-      <a href="../lien-he/" class="nav-mobile__link "><i data-lucide="phone"></i> Liên hệ</a>
+      <a href="../" class="nav-mobile__link"><i data-lucide="home" style="width:18px;height:18px;"></i> Trang chủ</a>
+      <a href="../kho-tai-lieu/" class="nav-mobile__link"><i data-lucide="folder-open" style="width:18px;height:18px;"></i> Kho tài liệu</a>
+      <a href="./" class="nav-mobile__link nav-mobile__link--active"><i data-lucide="info" style="width:18px;height:18px;"></i> Giới thiệu</a>
+      <a href="../huong-dan/" class="nav-mobile__link"><i data-lucide="help-circle" style="width:18px;height:18px;"></i> Hướng dẫn &amp; FAQ</a>
+      <a href="../lien-he/" class="nav-mobile__link"><i data-lucide="phone" style="width:18px;height:18px;"></i> Liên hệ</a>
     </div>
   </header>
 
-
-  <main style="padding-bottom: 40px;">
+  <!-- MAIN EDITORIAL CONTENT -->
+  <main class="editorial-page">
     <div class="container">
+
       <!-- Breadcrumb -->
       <nav class="breadcrumb">
         <a href="../">Trang chủ</a>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-        <span class="breadcrumb__current">Giới thiệu</span>
+        <span>&rsaquo;</span>
+        <span style="color:var(--c-text-primary); font-weight:600;">Giới thiệu</span>
       </nav>
 
-      <section class="about-hero">
-        <h1>Về Thương Hiệu Tài Liệu Đỉnh</h1>
-        <p>Slogan chính thức: <strong>Đỉnh cao tài liệu</strong> — Nền tảng tuyển chọn, giới thiệu và kết nối kho học liệu Microsoft Word (.docx) dành cho thầy cô giáo và học sinh phổ thông từ Lớp 1 đến Lớp 12.</p>
-      </section>
-
-      <div class="about-card">
-        <h2>1. Sứ Mệnh & Trọng Tâm Học Liệu</h2>
-        <p>
-          Trong quá trình giảng dạy và học tập theo Chương trình Giáo dục Phổ thông 2018, việc chuẩn bị kế hoạch bài dạy, giáo án chi tiết và hệ thống đề kiểm tra định kỳ đòi hỏi rất nhiều thời gian và công sức. <strong>Tài Liệu Đỉnh</strong> ra đời với mục tiêu trở thành một điểm đến đáng tin cậy, giúp thầy cô và các em học sinh dễ dàng tiếp cận các tài liệu dạng Word (.doc, .docx) chuẩn mực, có thể tùy chỉnh theo yêu cầu thực tế của từng nhà trường và địa phương.
-        </p>
-
-        <h2>2. Ba Nguyên Tắc Hoạt Động Cốt Lõi</h2>
-        <div class="about-pillars">
-          <div class="pillar-card">
-            <h4><i data-lucide="file-edit"></i> Trọng tâm Word chỉnh sửa</h4>
-            <p>100% tài liệu được định dạng file Word (.docx), cho phép người dùng tùy chỉnh phông chữ Unicode, căn lề, chèn bổ sung bảng biểu và công thức toán học một cách thuận tiện.</p>
+      <!-- Top Story Card -->
+      <div class="editorial-card">
+        <div style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:40px; align-items:center;">
+          <div>
+            <span class="badge badge--green" style="margin-bottom:12px;">ĐỈNH CAO TÀI LIỆU</span>
+            <h1 style="font-size:2.2rem; font-weight:800; color:var(--c-text-primary); margin-bottom:16px; line-height:1.25;">
+              Về Tài Liệu Đỉnh
+            </h1>
+            <p style="font-size:1.05rem; line-height:1.7; color:var(--c-text-secondary); margin-bottom:16px;">
+              <strong>Tài Liệu Đỉnh</strong> ra đời với sứ mệnh mang đến giải pháp tài liệu học tập và giảng dạy Microsoft Word (.docx) chỉn chu, chuẩn mực sư phạm và hoàn toàn có thể chỉnh sửa.
+            </p>
+            <p style="font-size:0.95rem; line-height:1.7; color:var(--c-text-secondary);">
+              Chúng tôi hiểu rằng mỗi thầy cô giáo và người học đều cần những tài liệu có cấu trúc rõ ràng, tiết kiệm thời gian soạn thảo để tập trung vào chất lượng giảng dạy và tiếp thu kiến thức.
+            </p>
           </div>
-          <div class="pillar-card">
-            <h4><i data-lucide="shield-check"></i> Thông tin minh bạch</h4>
-            <p>Mô tả rõ ràng cấp học, khối lớp, môn học, bộ sách đối chiếu (Kết nối tri thức, Cánh Diều, Chân trời sáng tạo) và chuẩn quy định sư phạm hiện hành (CV 5512, CV 2345, TT 27).</p>
-          </div>
-          <div class="pillar-card">
-            <h4><i data-lucide="messages-square"></i> Trao đổi trực tiếp</h4>
-            <p>Website không áp dụng cơ chế thanh toán tự động. Mọi trao đổi về chi phí, trích đoạn nội dung mẫu và cách thức chuyển file đều được thực hiện qua Zalo người phụ trách.</p>
-          </div>
-        </div>
 
-        <h2>3. Phạm Vi Danh Mục Học Liệu Phổ Thông (1–12)</h2>
-        <ul>
-          <li><strong>Cấp Tiểu học (Lớp 1 đến Lớp 5):</strong> Kế hoạch bài dạy theo Công văn 2345/BGDĐT-GDTH, bộ đề kiểm tra định kỳ 3 mức độ theo Thông tư 27/2020/TT-BGDĐT.</li>
-          <li><strong>Cấp THCS (Lớp 6 đến Lớp 9):</strong> Kế hoạch bài dạy theo Công văn 5512/BGDĐT-GDTrH, đề kiểm tra định kỳ và tài liệu ôn thi vào lớp 10 theo cấu trúc mới.</li>
-          <li><strong>Cấp THPT (Lớp 10 đến Lớp 12):</strong> Kế hoạch bài dạy 4 bước phát triển năng lực, bộ đề kiểm tra và đề thi tốt nghiệp THPT theo định dạng trắc nghiệm mới (Nhiều lựa chọn, Đúng/Sai, Trả lời ngắn).</li>
-        </ul>
-
-        <h2>4. Lưu Ý Minh Bạch</h2>
-        <div class="transparency-box">
-          <strong>Thông báo pháp lý & bản quyền tham khảo:</strong><br/>
-          Tài Liệu Đỉnh là cổng thông tin và dịch vụ chia sẻ tài liệu tham khảo độc lập được xây dựng bởi đội ngũ biên soạn học liệu. Chúng tôi không phải là cơ quan trực thuộc Bộ Giáo dục và Đào tạo. Mọi tài liệu được biên soạn làm tài liệu tham khảo cho công tác chuyên môn và tự học.
+          <div style="display:flex; justify-content:center;">
+            <img src="../assets/about-illustration.svg" alt="Minh họa góc học tập và giáo án Tài Liệu Đỉnh" style="max-width:100%; height:auto;" />
+          </div>
         </div>
       </div>
+
+      <!-- 3 Value Props Cards -->
+      <div style="margin-bottom: 36px;">
+        <h2 style="font-size:1.4rem; font-weight:800; color:var(--c-text-primary); margin-bottom:8px;">
+          Giá trị cốt lõi của chúng tôi
+        </h2>
+        <p style="font-size:0.92rem; color:var(--c-text-secondary); margin-bottom:20px;">
+          Cách thức Tài Liệu Đỉnh xây dựng học liệu và hỗ trợ cộng đồng giáo dục
+        </p>
+
+        <div class="value-props-grid">
+          <div class="value-card">
+            <div class="value-card__icon">
+              <i data-lucide="users" style="width:22px;height:22px;"></i>
+            </div>
+            <h3>Phục vụ ai?</h3>
+            <p>
+              Giáo viên từ Tiểu học đến THPT, học sinh ôn tập các kỳ thi chuyển cấp, phụ huynh đồng hành cùng con và sinh viên các trường đại học, cao đẳng.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon">
+              <i data-lucide="file-check" style="width:22px;height:22px;"></i>
+            </div>
+            <h3>Loại tài liệu</h3>
+            <p>
+              Kế hoạch bài dạy chuẩn CV 5512, CV 2345; đề kiểm tra kèm ma trận đặc tả; chuyên đề nâng cao và báo cáo, tiểu luận mẫu cho sinh viên.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon">
+              <i data-lucide="message-square" style="width:22px;height:22px;"></i>
+            </div>
+            <h3>Cách thức trao đổi</h3>
+            <p>
+              Tìm kiếm nhanh trên web, xem thông số và bản đọc thử, sau đó liên hệ qua Zalo 0926.999.869 để nhận file Word (.docx) gốc chuẩn mực.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cam kết minh bạch -->
+      <div class="editorial-card" style="background:var(--c-bg); border-color:var(--c-border);">
+        <h3 style="font-size:1.2rem; font-weight:800; color:var(--c-text-primary); margin-bottom:12px;">
+          Cam kết minh bạch &amp; Tôn trọng học thuật
+        </h3>
+        <p style="font-size:0.92rem; line-height:1.7; color:var(--c-text-secondary); margin-bottom:12px;">
+          Tài Liệu Đỉnh là cổng thông tin tài liệu tham khảo độc lập. Chúng tôi không sử dụng dữ liệu đánh giá giả, không hiển thị số liệu tải ảo và không thu phí trực tuyến qua cổng trung gian. Mọi trao đổi đều được người phụ trách trực tiếp hỗ trợ qua Zalo để đảm bảo quý thầy cô và các bạn sinh viên nhận đúng file mình cần.
+        </p>
+        <div style="display:flex; gap:16px; margin-top:20px; flex-wrap:wrap;">
+          <a href="../kho-tai-lieu/" class="btn btn--primary">
+            Khám phá kho tài liệu &rarr;
+          </a>
+          <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="btn btn--secondary">
+            <i data-lucide="message-circle" style="width:16px;height:16px;"></i> Nhắn Zalo tư vấn
+          </a>
+        </div>
+      </div>
+
     </div>
   </main>
 
+  <!-- FLOATING ZALO BUTTON -->
+  <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="floating-zalo" aria-label="Nhắn Zalo 0926.999.869">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast-notify" role="status" aria-live="polite">
+    <i data-lucide="check-circle-2" style="width:18px;height:18px;"></i>
+    <span id="toast-text">Thông báo</span>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer-col">
-          <div class="logo" style="margin-bottom:12px;">
-            <div class="logo__icon-wrap">
-              <i data-lucide="file-text" class="logo__icon"></i>
-            </div>
-            <div class="logo__wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="logo">
+            <img src="../assets/logo.svg" alt="Tài Liệu Đỉnh" class="logo__icon" />
+            <div class="logo__text-wrap">
               <span class="logo__text">Tài Liệu Đỉnh</span>
               <span class="logo__slogan">Đỉnh cao tài liệu</span>
             </div>
           </div>
-          <p>Hệ thống giới thiệu và kết nối kho tài liệu Microsoft Word (.docx) chuẩn GDPT 2018 dành cho giáo viên và học sinh từ Lớp 1 đến Lớp 12 trên toàn quốc.</p>
-          <p style="font-size:0.78rem; color:var(--c-text-muted);">Trọng tâm tài liệu có thể chỉnh sửa, trình bày chuẩn thể thức sư phạm và cấu trúc thi mới.</p>
+          <!-- Bảng màu nhận diện thương hiệu -->
+          <div class="footer__swatches" title="Bảng màu nhận diện thương hiệu Tài Liệu Đỉnh">
+            <span class="swatch swatch--pink-pastel"></span>
+            <span class="swatch swatch--pink-light"></span>
+            <span class="swatch swatch--green-pastel"></span>
+            <span class="swatch swatch--green-brand"></span>
+            <span class="swatch swatch--green-dark"></span>
+            <span class="swatch swatch--zalo"></span>
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Cấp Học & Danh Mục</h4>
-          <ul>
-            <li><a href="../kho-tai-lieu/?cap=Ti%E1%BB%83u+h%E1%BB%8Dc">Tài liệu Tiểu học (Lớp 1–5)</a></li>
-            <li><a href="../kho-tai-lieu/?cap=THCS">Tài liệu THCS (Lớp 6–9)</a></li>
-            <li><a href="../kho-tai-lieu/?cap=THPT">Tài liệu THPT (Lớp 10–12)</a></li>
-            <li><a href="../kho-tai-lieu/?loai=giaoan">Kế hoạch bài dạy (CV 5512 / 2345)</a></li>
-            <li><a href="../kho-tai-lieu/?loai=dekiemtra">Bộ đề kiểm tra định kỳ</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Thông Tin & Hướng Dẫn</h4>
-          <ul>
-            <li><a href="../gioi-thieu/">Về Tài Liệu Đỉnh</a></li>
-            <li><a href="../huong-dan/">Quy trình tra cứu & nhận file</a></li>
-            <li><a href="../huong-dan/#faq">Câu hỏi thường gặp (FAQ)</a></li>
-            <li><a href="../lien-he/">Soạn yêu cầu tài liệu</a></li>
-            <li><a href="../lien-he/">Thông tin hỗ trợ Zalo</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Liên Hệ & Trao Đổi</h4>
-          <p><strong>Zalo tư vấn:</strong> <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" style="color:var(--c-word); font-weight:700;">0926.999.869</a></p>
-          <p><strong>Khung giờ hỗ trợ:</strong><br/>Sáng: 8h00 – 12h00<br/>Chiều & Tối: 13h30 – 21h30</p>
-          <p style="font-size:0.75rem; color:var(--c-text-muted); margin-top:8px;">* Website không có chức năng thanh toán trực tuyến. Mọi trao đổi và thỏa thuận được thực hiện trực tiếp qua Zalo.</p>
+        <div class="footer__slogan-script">
+          Học tốt hơn mỗi ngày &hearts;
         </div>
       </div>
 
       <div class="footer__bottom">
-        <span>© 2026 Tài Liệu Đỉnh · Đỉnh cao tài liệu. Tất cả quyền được bảo lưu.</span>
-        <span>Tài liệu Word tham khảo phục vụ giảng dạy và học tập Lớp 1–12</span>
+        <div class="footer__links">
+          <a href="../">Trang chủ</a>
+          <a href="../kho-tai-lieu/">Kho tài liệu</a>
+          <a href="./">Giới thiệu</a>
+          <a href="../huong-dan/">Hướng dẫn</a>
+          <a href="../lien-he/">Liên hệ</a>
+          <a href="../lien-he/">Chính sách sử dụng</a>
+          <a href="../lien-he/">Quyền riêng tư</a>
+          <a href="../lien-he/">Bản quyền</a>
+        </div>
+        <p>&copy; 2025 Tài Liệu Đỉnh. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- NÚT ZALO NỔI (FAB) -->
-  <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="fab-zalo" title="Nhắn Zalo 0926.999.869">
-    <i data-lucide="message-circle"></i>
-    <span class="fab-zalo__label">Zalo hỗ trợ</span>
-  </a>
-
-  <!-- TOAST THÔNG BÁO -->
-  <div class="toast" id="toast-notify" role="status" aria-live="polite">
-    <i data-lucide="check-circle-2"></i>
-    <span id="toast-text">Thông báo</span>
-  </div>
-
-
-  <script src="../script.js?v=2.4"></script>
+  <script src="../script.js?v=3.0"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

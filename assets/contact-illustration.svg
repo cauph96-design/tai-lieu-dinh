@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" width="100%" height="100%" fill="none">
+  <defs>
+    <filter id="contactShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#254A38" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Nền vệt mờ -->
+  <circle cx="160" cy="140" r="110" fill="#FAEDEF" opacity="0.6"/>
+
+  <!-- Chậu cây xanh ấm áp -->
+  <g transform="translate(180, 110)" filter="url(#contactShadow)">
+    <path d="M10 70 L60 70 L54 130 C53 136 46 140 35 140 C24 140 17 136 16 130 Z" fill="#DCEADD"/>
+    <ellipse cx="35" cy="70" rx="25" ry="7" fill="#F6F5EE"/>
+    <ellipse cx="35" cy="70" rx="21" ry="5" fill="#667169"/>
+    <!-- Lá cây -->
+    <path d="M35 65 C25 40 5 20 22 8 C35 18 38 45 35 65Z" fill="#47765B"/>
+    <path d="M38 66 C58 50 70 30 58 15 C45 22 40 48 38 66Z" fill="#254A38"/>
+  </g>
+
+  <!-- Bong bóng tin nhắn trái tim lớn màu hồng -->
+  <g transform="translate(60, 40)" filter="url(#contactShadow)">
+    <path d="M20 0 H120 C131 0 140 9 140 20 V60 C140 71 131 80 120 80 H50 L25 100 V80 H20 C9 80 0 71 0 60 V20 C0 9 9 0 20 0 Z" fill="#FFFFFF" stroke="#F3D9E2" stroke-width="2"/>
+    <!-- Icon 3 dấu chấm hoặc trái tim bên trong -->
+    <circle cx="50" cy="40" r="6" fill="#F3D9E2"/>
+    <circle cx="70" cy="40" r="6" fill="#F3D9E2"/>
+    <circle cx="90" cy="40" r="6" fill="#F3D9E2"/>
+  </g>
+
+  <!-- Bong bóng nhỏ xanh Zalo / Xanh rừng -->
+  <g transform="translate(180, 20)" filter="url(#contactShadow)">
+    <path d="M15 0 H65 C73 0 80 7 80 15 V45 C80 53 73 60 65 60 H40 L25 72 V60 H15 C7 60 0 53 0 45 V15 C0 7 7 0 15 0 Z" fill="#254A38"/>
+    <!-- Trái tim trắng -->
+    <path d="M40 22 C40 18 34 18 34 22 C34 26 40 31 40 31 C40 31 46 26 46 22 C46 18 40 18 40 22 Z" fill="#FFFFFF"/>
+  </g>
+</svg>

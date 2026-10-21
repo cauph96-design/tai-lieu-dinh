@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%" fill="none">
+  <defs>
+    <filter id="aboutShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#254A38" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Nền vệt mờ pastel -->
+  <circle cx="200" cy="160" r="130" fill="#FAEDEF" opacity="0.6"/>
+  <circle cx="270" cy="140" r="80" fill="#DCEADD" opacity="0.6"/>
+
+  <!-- Mặt bàn gỗ nhẹ -->
+  <rect x="40" y="270" width="320" height="8" rx="4" fill="#E6E8E1"/>
+
+  <!-- Chồng sách học thuật -->
+  <g transform="translate(90, 160)" filter="url(#aboutShadow)">
+    <!-- Cuốn 1 (Dưới cùng) -->
+    <rect x="0" y="80" width="150" height="26" rx="4" fill="#254A38"/>
+    <rect x="12" y="83" width="135" height="20" rx="2" fill="#FFFFFF"/>
+    <!-- Cuốn 2 (Giữa) -->
+    <rect x="10" y="52" width="135" height="24" rx="4" fill="#F3D9E2"/>
+    <rect x="22" y="55" width="120" height="18" rx="2" fill="#FFFFFF"/>
+    <!-- Cuốn 3 (Trên cùng) -->
+    <rect x="20" y="24" width="118" height="24" rx="4" fill="#47765B"/>
+    <rect x="30" y="27" width="105" height="18" rx="2" fill="#FAF9F5"/>
+  </g>
+
+  <!-- Chậu cây cảnh mini bên cạnh -->
+  <g transform="translate(260, 130)" filter="url(#aboutShadow)">
+    <!-- Chậu cây gốm hồng pastel -->
+    <path d="M12 80 L58 80 L52 140 C51 146 44 150 35 150 C26 150 19 146 18 140 Z" fill="#F3D9E2"/>
+    <ellipse cx="35" cy="80" rx="23" ry="7" fill="#FAEDEF"/>
+    <ellipse cx="35" cy="80" rx="19" ry="5" fill="#667169"/>
+
+    <!-- Tán lá xanh tươi vươn lên -->
+    <path d="M35 75 C30 50 10 30 25 15 C40 25 40 55 35 75Z" fill="#47765B"/>
+    <path d="M32 76 C12 65 0 45 10 30 C25 35 30 60 32 76Z" fill="#A8D5BA"/>
+    <path d="M38 76 C60 65 72 45 62 30 C47 35 40 60 38 76Z" fill="#254A38"/>
+    <path d="M35 75 C35 45 50 20 40 5 C30 15 32 45 35 75Z" fill="#DCEADD"/>
+  </g>
+
+  <!-- Huy hiệu học thuật nhỏ bay nhẹ -->
+  <g transform="translate(140, 70)" filter="url(#aboutShadow)">
+    <circle cx="24" cy="24" r="24" fill="#FFFFFF" stroke="#E6E8E1" stroke-width="1.5"/>
+    <path d="M24 14 L30 20 L24 26 L18 20 Z" fill="#47765B"/>
+    <path d="M24 26 V34 M21 34 H27" stroke="#254A38" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
