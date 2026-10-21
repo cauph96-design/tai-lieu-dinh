@@ -1366,15 +1366,19 @@ function renderActivePills() {
 
 // ─── THAO TÁC BỘ LỌC ───
 function chonCapHoc(cap) {
+  // Nếu bấm lại vào cấp đang chọn -> quay về "Tất cả cấp"
+  if (filterState.cap === cap) {
+    cap = '';
+  }
   filterState.cap = cap;
-  // Loại bỏ các khối lớp không thuộc cấp mới
-  if (cap && KHOI_THEO_CAP[cap]) {
-    const valid = new Set(KHOI_THEO_CAP[cap]);
+  // Loại bỏ các khối lớp không thuộc cấp mới nếu chọn cấp cụ thể
+  if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
+    const valid = new Set(KHOI_THEO_CAP[filterState.cap]);
     filterState.khoi = new Set([...filterState.khoi].filter(k => valid.has(k)));
   }
-  // Loại bỏ các môn học không thuộc cấp mới
-  if (cap && MON_THEO_CAP[cap]) {
-    const validMon = new Set(MON_THEO_CAP[cap]);
+  // Loại bỏ các môn học không thuộc cấp mới nếu chọn cấp cụ thể
+  if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
+    const validMon = new Set(MON_THEO_CAP[filterState.cap]);
     filterState.mon = new Set([...filterState.mon].filter(m => validMon.has(m)));
   }
   capNhatGiaoDienKho();
@@ -1385,16 +1389,10 @@ function toggleKhoi(khoi) {
     filterState.khoi.delete(khoi);
   } else {
     filterState.khoi.add(khoi);
-  }
-  // Tự động suy ra cấp học nếu chọn các lớp cùng một cấp
-  if (filterState.khoi.size > 0) {
-    const arr = Array.from(filterState.khoi);
-    const firstKhoi = arr[0];
-    for (const [c, dsK] of Object.entries(KHOI_THEO_CAP)) {
-      if (dsK.includes(firstKhoi)) {
-        filterState.cap = c;
-        break;
-      }
+    // Nếu đang chọn cấp học cụ thể mà người dùng chọn một khối lớp thuộc cấp khác,
+    // tự động chuyển Cấp học về "Tất cả cấp" để cho phép đa chọn liên cấp tự do.
+    if (filterState.cap && KHOI_THEO_CAP[filterState.cap] && !KHOI_THEO_CAP[filterState.cap].includes(khoi)) {
+      filterState.cap = '';
     }
   }
   capNhatGiaoDienKho();
