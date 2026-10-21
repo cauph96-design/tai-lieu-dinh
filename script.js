@@ -1466,6 +1466,7 @@ function capNhatGiaoDienKho() {
   } else {
     if (empty) empty.style.display = 'none';
     grid.innerHTML = results.map(d => renderCard(d, '../')).join('');
+    initMotionGraphics();
   }
 
   if (window.lucide && typeof lucide.createIcons === 'function') {
@@ -1763,6 +1764,7 @@ function initHomePage() {
       danhSach[33]  // L10 Văn
     ].filter(Boolean);
     grid.innerHTML = featured.map(d => renderCard(d, '')).join('');
+    initMotionGraphics();
   }
 
   const heroSearchInput = document.getElementById('hero-search-input');
@@ -1859,9 +1861,133 @@ function fetchGoogleSheetData() {
   document.head.appendChild(script);
 }
 
+// ─── HỆ THỐNG GIAO DIỆN SÁNG / TỐI (DARK MODE) ───
+function initTheme() {
+  const getPreferredTheme = () => {
+    const saved = localStorage.getItem('tld_theme');
+    if (saved === 'dark' || saved === 'light') return saved;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  };
+
+  const applyTheme = (theme, withTransition = false) => {
+    if (withTransition) {
+      document.documentElement.classList.add('theme-transitioning');
+      setTimeout(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+      }, 350);
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  };
+
+  // Khởi tạo ban đầu
+  applyTheme(getPreferredTheme(), false);
+
+  // Lắng nghe nút bấm chuyển theme
+  const toggleBtns = document.querySelectorAll('.theme-toggle');
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const nextTheme = current === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme, true);
+      try {
+        localStorage.setItem('tld_theme', nextTheme);
+      } catch (e) {}
+    });
+  });
+
+  // Lắng nghe thay đổi theme từ hệ điều hành nếu người dùng chưa chọn thủ công
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('tld_theme')) {
+        applyTheme(e.matches ? 'dark' : 'light', true);
+      }
+    });
+  }
+}
+
+// ─── HIỆU ỨNG CHUYỂN ĐỘNG & MOTION GRAPHICS (APPLE INSPIRED) ───
+function initMotionGraphics() {
+  // 1. Tự động thêm class .reveal cho các section và card
+  const autoRevealSelectors = [
+    '.level-card',
+    '.guide-step',
+    '.card',
+    '.feature-badge',
+    '.faq-item',
+    '.pricing-card',
+    '.contact-card'
+  ];
+
+  autoRevealSelectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach((el, idx) => {
+      if (!el.classList.contains('reveal')) {
+        el.classList.add('reveal');
+        const staggerClass = `reveal--delay-${(idx % 3) + 1}`;
+        el.classList.add(staggerClass);
+      }
+    });
+  });
+
+  // 2. IntersectionObserver kích hoạt hiệu ứng cuộn mượt
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // 3. Hiệu ứng đếm số mượt mà (Animated Counter)
+    const counterObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-counter'), 10);
+          if (!isNaN(target)) {
+            const duration = 1200;
+            const startTime = performance.now();
+            const suffix = el.getAttribute('data-suffix') || '';
+            const prefix = el.getAttribute('data-prefix') || '';
+
+            const step = (now) => {
+              const progress = Math.min((now - startTime) / duration, 1);
+              const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+              const current = Math.floor(ease * target);
+              el.textContent = `${prefix}${current}${suffix}`;
+              if (progress < 1) {
+                requestAnimationFrame(step);
+              } else {
+                el.textContent = `${prefix}${target}${suffix}`;
+              }
+            };
+            requestAnimationFrame(step);
+          }
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-revealed'));
+  }
+}
+
 // ─── KHỞI TẠO TOÀN TRANG ───
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
+
+  // 0. Khởi tạo Giao diện Sáng/Tối & Motion Graphics
+  initTheme();
+  initMotionGraphics();
 
   // 1. Mobile Menu Toggle ở Header
   const navToggleBtn = document.getElementById('nav-toggle-btn');
