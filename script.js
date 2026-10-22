@@ -6,7 +6,11 @@
  * Zalo tư vấn chính thức: 0926.999.869 (https://zalo.me/0926999869)
  */
 
-// ─── DỮ LIỆU TÀI LIỆU CHUẨN (72 TÀI LIỆU CHUẨN TIỂU HỌC, THCS, THPT & ĐẠI HỌC) ───
+// ─── DỮ LIỆU TÀI LIỆU MINH HỌA (66 TÀI LIỆU WORD LỚP 1–12: TIỂU HỌC, THCS, THPT) ───
+// QUẢN TRỊ DỮ LIỆU DEMO:
+// - Bộ 66 bản ghi mẫu minh họa cấu trúc chuẩn cho Tiểu học, THCS và THPT.
+// - Các đường dẫn xem thử (linkDemo) đã được xác minh độc lập, không dùng chung link cho các tài liệu khác nhau.
+// - Hệ thống hỗ trợ nạp dữ liệu động từ Google Sheet (CONFIG.SHEET_ID) an toàn qua fetch() JSON.
 let danhSach = [
   {
     "ma": "TH1-TOAN-01",
@@ -348,7 +352,7 @@ let danhSach = [
     "doiTuong": "giaovien",
     "loai": "giaoan",
     "dinhDang": "DOCX",
-    "linkDemo": "https://drive.google.com/file/d/1nZmAg8-FrKxhI8i8RrxzYDg0GDTdRPkz/view?usp=sharing",
+    "linkDemo": "",
     "boSach": "Kết nối tri thức",
     "chuanCV": "Kế hoạch bài dạy (CV 5512)",
     "maTranDapAn": "Kèm phiếu bài tập 5512"
@@ -1089,42 +1093,158 @@ function copySoZalo() {
   });
 }
 
-// ─── LỌC TÀI LIỆU CHUẨN MỰC (OR TRONG NHÓM, AND GIỮA CÁC NHÓM) ───
+// ─── TỪ ĐIỂN TÌM KIẾM ĐỒNG NGHĨA & VIẾT TẮT CHUẨN NGỮ CẢNH GIÁO DỤC ───
+const SEARCH_ALIASES = {
+  'khtn': ['Khoa học Tự nhiên', 'Khoa học'],
+  'khxh': ['Lịch sử và Địa lý'],
+  'van': ['Ngữ văn', 'Tiếng Việt'],
+  'nguvan': ['Ngữ văn'],
+  'tiengviet': ['Tiếng Việt'],
+  'ly': ['Vật lý'],
+  'vatly': ['Vật lý'],
+  'vatli': ['Vật lý'],
+  'su': ['Lịch sử'],
+  'lichsu': ['Lịch sử'],
+  'dia': ['Địa lý'],
+  'diali': ['Địa lý'],
+  'sinh': ['Sinh học'],
+  'sinhhoc': ['Sinh học'],
+  'hoa': ['Hóa học'],
+  'hoahoc': ['Hóa học'],
+  'tin': ['Tin học'],
+  'tinhoc': ['Tin học'],
+  'anh': ['Tiếng Anh'],
+  'tienganh': ['Tiếng Anh'],
+  'toan': ['Toán'],
+  'tnxh': ['Tự nhiên và Xã hội']
+};
+
+// ─── TÍNH TOÁN DANH SÁCH MÔN HỌC HỢP LỆ THEO LỰA CHỌN CẤP / KHỐI HIỆN TẠI ───
+function getValidSubjects() {
+  let validMon = new Set();
+  if (filterState.khoi.size > 0) {
+    filterState.khoi.forEach(k => {
+      if (MON_THEO_LOP[k]) MON_THEO_LOP[k].forEach(m => validMon.add(m));
+    });
+    if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
+      const capValid = new Set(MON_THEO_CAP[filterState.cap]);
+      validMon = new Set([...validMon].filter(m => capValid.has(m)));
+    }
+  } else if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
+    MON_THEO_CAP[filterState.cap].forEach(m => validMon.add(m));
+  } else {
+    Object.values(MON_THEO_CAP).forEach(arr => arr.forEach(m => validMon.add(m)));
+  }
+  return validMon;
+}
+
+// Loại bỏ những môn học không còn hợp lệ khi đổi cấp học hoặc khối lớp
+function sanitizeSubjects() {
+  const valid = getValidSubjects();
+  filterState.mon = new Set([...filterState.mon].filter(m => valid.has(m)));
+}
+
+// ─── LỌC TÀI LIỆU CHUẨN MỰC (OR TRONG NHÓM, AND GIỮA CÁC NHÓM ĐIỀU KIỆN) ───
 function filterDocuments() {
   let list = danhSach;
 
-  // 1. Cấp học (chỉ áp dụng nếu chưa chọn khối cụ thể)
-  if (filterState.cap && filterState.khoi.size === 0) {
+  // 1. Cấp học (AND với các nhóm khác)
+  if (filterState.cap) {
     list = list.filter(d => d.capHoc === filterState.cap);
   }
 
-  // 2. Khối lớp (OR giữa các lớp đang chọn)
+  // 2. Khối lớp (OR giữa các lớp đang chọn, AND với cấp học)
   if (filterState.khoi.size > 0) {
     list = list.filter(d => filterState.khoi.has(d.khoi));
   }
 
-  // 3. Môn học (OR giữa các môn đang chọn)
+  // 3. Môn học (OR giữa các môn đang chọn, AND với các nhóm khác)
   if (filterState.mon.size > 0) {
     list = list.filter(d => filterState.mon.has(d.mon));
   }
 
-  // 4. Đối tượng
+  // 4. Đối tượng sử dụng
   if (filterState.doiTuong && filterState.doiTuong !== 'all') {
     list = list.filter(d => d.doiTuong === filterState.doiTuong || d.doiTuong === 'ca_hai');
   }
 
-  // 5. Loại tài liệu
+  // 5. Loại tài liệu (Giáo án, Đề kiểm tra, Bài tập, Chuyên đề)
   if (filterState.loai && filterState.loai !== 'all') {
     list = list.filter(d => d.loai === filterState.loai);
   }
 
-  // 6. Từ khóa (AND giữa các token từ khóa tiếng Việt)
+  // 6. Tìm kiếm thông minh tiếng Việt (hỗ trợ có dấu/không dấu, alias môn học, chống nhận nhầm số lớp)
   if (filterState.tuKhoa.trim()) {
-    const tokens = boDao(filterState.tuKhoa).split(/\s+/).filter(Boolean);
-    list = list.filter(d => {
-      const textHaystack = boDao(`${d.ma} ${d.tieuDe} ${d.moTa} ${d.mon} ${d.khoi} ${d.capHoc} ${d.chuanCV || ''}`);
-      return tokens.every(token => textHaystack.includes(token));
+    const rawTokens = boDao(filterState.tuKhoa).split(/\s+/).filter(Boolean);
+
+    // Kiểm tra xem người dùng có gõ chỉ định rõ khối lớp không (ví dụ '6', 'lop 6', 'khoi 9', '12')
+    let gradeToken = null;
+    for (const t of rawTokens) {
+      if (/^(?:1[0-2]|[1-9])$/.test(t)) {
+        gradeToken = 'Lớp ' + t;
+        break;
+      }
+    }
+
+    const scoredResults = [];
+
+    list.forEach(d => {
+      // Nếu có số lớp rõ ràng trong truy vấn, tài liệu bắt buộc phải thuộc đúng lớp đó
+      if (gradeToken && d.khoi !== gradeToken) {
+        return;
+      }
+
+      const haystack = d.ma + ' ' + d.tieuDe + ' ' + d.moTa + ' ' + (d.boSach || '') + ' ' + (d.chuanCV || '');
+      const dTokens = new Set(boDao(haystack).split(/\s+/).filter(Boolean));
+      const tieuDeNorm = boDao(d.tieuDe);
+      const monNorm = boDao(d.mon);
+      let matches = true;
+      let score = 0;
+
+      for (const t of rawTokens) {
+        if (/^(?:1[0-2]|[1-9])$/.test(t) && gradeToken) {
+          score += 15;
+          continue;
+        }
+
+        // Kiểm tra alias môn học theo ngữ cảnh (ví dụ 'ly' chỉ khớp 'Vật lý', không khớp 'Địa lý')
+        if (SEARCH_ALIASES[t]) {
+          const allowed = SEARCH_ALIASES[t];
+          if (allowed.includes(d.mon)) {
+            score += 30;
+            continue;
+          } else {
+            matches = false;
+            break;
+          }
+        }
+
+        // Khớp trong tiêu đề
+        if (tieuDeNorm.includes(t)) {
+          score += 20;
+        } else if (monNorm.includes(t)) {
+          score += 15;
+        } else if (dTokens.has(t)) {
+          score += 8;
+        } else if ([...dTokens].some(tok => tok.includes(t) && t.length >= 3)) {
+          score += 3;
+        } else {
+          matches = false;
+          break;
+        }
+      }
+
+      if (matches) {
+        scoredResults.push({ doc: d, score: score });
+      }
     });
+
+    if (filterState.sort === 'default') {
+      scoredResults.sort((a, b) => b.score - a.score);
+      list = scoredResults.map(item => item.doc);
+    } else {
+      list = scoredResults.map(item => item.doc);
+    }
   }
 
   // 7. Sắp xếp (Sort)
@@ -1139,7 +1259,7 @@ function filterDocuments() {
 
 // ─── TẠO BÌA SÁCH MINH HỌA PASTEL SANG TRỌNG ───
 function renderDocCoverHTML(doc) {
-  const isPink = ['Ngữ văn', 'Tiếng Việt', 'Lịch sử', 'Triết học Mác - Lênin', 'Địa lý'].includes(doc.mon) || doc.khoi === 'Lớp 1' || doc.khoi === 'Lớp 8';
+  const isPink = ['Ngữ văn', 'Tiếng Việt', 'Lịch sử', 'Địa lý'].includes(doc.mon) || doc.khoi === 'Lớp 1' || doc.khoi === 'Lớp 8';
   const coverClass = isPink ? 'doc-card__thumb--pink' : 'doc-card__thumb--green';
   const badgeText = doc.dinhDang || 'DOCX';
 
@@ -1214,13 +1334,25 @@ function loadStateFromURL() {
   const q = params.get('q') || '';
   const sort = params.get('sort') || 'default';
 
-  filterState.cap = cap;
-  filterState.khoi = new Set(khoi);
-  filterState.mon = new Set(mon);
-  filterState.doiTuong = doiTuong;
-  filterState.loai = loai;
-  filterState.tuKhoa = q;
-  filterState.sort = sort;
+  // Kiểm tra tính hợp lệ của tham số URL (ngăn ngừa tham số không hợp lệ phá hỏng bộ lọc)
+  const validCaps = ['', 'Tiểu học', 'THCS', 'THPT'];
+  filterState.cap = validCaps.includes(cap) ? cap : '';
+
+  const allGrades = new Set(['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12']);
+  filterState.khoi = new Set(khoi.filter(k => allGrades.has(k)));
+
+  const validMon = getValidSubjects();
+  filterState.mon = new Set(mon.filter(m => validMon.has(m)));
+
+  const validDoiTuong = ['all', 'giaovien', 'hocsinh'];
+  filterState.doiTuong = validDoiTuong.includes(doiTuong) ? doiTuong : 'all';
+
+  const validLoai = ['all', 'giaoan', 'dekiemtra', 'baitap', 'chuyende'];
+  filterState.loai = validLoai.includes(loai) ? loai : 'all';
+
+  filterState.tuKhoa = q.slice(0, 100);
+  const validSort = ['default', 'newest', 'az'];
+  filterState.sort = validSort.includes(sort) ? sort : 'default';
 }
 
 // ─── RENDER BỘ LỌC TẠI KHO TÀI LIỆU ───
@@ -1251,16 +1383,7 @@ function renderFilterControls() {
 
   // Cập nhật options môn học
   if (selMon) {
-    let validMon = new Set();
-    if (filterState.khoi.size > 0) {
-      filterState.khoi.forEach(k => {
-        if (MON_THEO_LOP[k]) MON_THEO_LOP[k].forEach(m => validMon.add(m));
-      });
-    } else if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
-      MON_THEO_CAP[filterState.cap].forEach(m => validMon.add(m));
-    } else {
-      Object.values(MON_THEO_CAP).forEach(arr => arr.forEach(m => validMon.add(m)));
-    }
+    const validMon = getValidSubjects();
     const monArr = Array.from(validMon);
     selMon.innerHTML = '<option value="">Môn học (Tất cả)</option>' + monArr.map(m => `
       <option value="${escapeHTML(m)}" ${filterState.mon.has(m) ? 'selected' : ''}>${escapeHTML(m)}</option>
@@ -1307,16 +1430,7 @@ function renderDrawerChips() {
     `).join('');
   }
 
-  let validMon = new Set();
-  if (filterState.khoi.size > 0) {
-    filterState.khoi.forEach(k => {
-      if (MON_THEO_LOP[k]) MON_THEO_LOP[k].forEach(m => validMon.add(m));
-    });
-  } else if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
-    MON_THEO_CAP[filterState.cap].forEach(m => validMon.add(m));
-  } else {
-    Object.values(MON_THEO_CAP).forEach(arr => arr.forEach(m => validMon.add(m)));
-  }
+  const validMon = getValidSubjects();
   const monArr = Array.from(validMon);
   if (mSubjectFilter) {
     mSubjectFilter.innerHTML = monArr.map(m => `
@@ -1415,15 +1529,13 @@ function chonCapHoc(cap) {
   }
   filterState.cap = cap;
 
-  // Nếu chọn 1 cấp cụ thể, loại bỏ các khối lớp và môn không tương thích
+  // Nếu chọn 1 cấp cụ thể, loại bỏ các khối lớp không tương thích
   if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
     const valid = new Set(KHOI_THEO_CAP[filterState.cap]);
     filterState.khoi = new Set([...filterState.khoi].filter(k => valid.has(k)));
   }
-  if (filterState.cap && MON_THEO_CAP[filterState.cap]) {
-    const validMon = new Set(MON_THEO_CAP[filterState.cap]);
-    filterState.mon = new Set([...filterState.mon].filter(m => validMon.has(m)));
-  }
+  // Loại bỏ các môn học không còn hợp lệ khi đổi cấp học
+  sanitizeSubjects();
   capNhatGiaoDienKho();
 }
 
@@ -1439,6 +1551,8 @@ function toggleKhoi(khoi) {
       filterState.cap = '';
     }
   }
+  // Loại bỏ các môn học không còn hợp lệ khi đổi khối lớp
+  sanitizeSubjects();
   capNhatGiaoDienKho();
 }
 
@@ -1603,11 +1717,12 @@ function initDetailPage() {
   if (descEl) descEl.textContent = doc.moTa;
 
   // Metadata
+  const dtText = doc.doiTuong === 'giaovien' ? 'Giáo viên' : (doc.doiTuong === 'hocsinh' ? 'Học sinh & Phụ huynh' : 'Giáo viên & Học sinh');
   const metaObj = {
     'detail-meta-dinhdang': doc.dinhDang ? `Word (.${doc.dinhDang.toLowerCase()})` : 'Word (.docx)',
-    'detail-meta-doituong': doc.doiTuong === 'giaovien' ? 'Giáo viên' : 'Học sinh & Phụ huynh',
-    'detail-meta-sotrang': '15+ trang (Đầy đủ cả năm)',
-    'detail-meta-capnhat': 'Năm học 2025–2026'
+    'detail-meta-doituong': dtText,
+    'detail-meta-sotrang': 'Đầy đủ nội dung trọn bộ',
+    'detail-meta-capnhat': 'Năm học 2025–2026 (Chương trình GDPT mới)'
   };
   for (const [id, val] of Object.entries(metaObj)) {
     const el = document.getElementById(id);
@@ -1644,13 +1759,19 @@ function initDetailPage() {
     const fileId = doc.linkDemo.match(/\/d\/([a-zA-Z0-9_-]+)/)[1];
     pdfContainer.style.display = 'block';
     pdfContainer.innerHTML = `
-      <h3 style="font-size:1.15rem; font-weight:800; color:var(--c-text-primary); margin-bottom:12px;">Bản đọc thử PDF (Trực tiếp từ Google Drive)</h3>
+      <h3 style="font-size:1.15rem; font-weight:700; color:var(--c-text-primary); margin-bottom:12px;">Bản đọc thử PDF (Trực tiếp từ Google Drive)</h3>
       <div class="pdf-embed-container">
-        <iframe src="https://drive.google.com/file/d/${fileId}/preview" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/${escapeHTML(fileId)}/preview" allow="autoplay" loading="lazy"></iframe>
       </div>
     `;
   } else if (pdfContainer) {
-    pdfContainer.style.display = 'none';
+    pdfContainer.style.display = 'block';
+    pdfContainer.innerHTML = `
+      <div style="background:var(--c-surface-subtle); border:1px dashed var(--c-border-strong); border-radius:var(--r-md); padding:24px; text-align:center;">
+        <p style="font-weight:600; color:var(--c-text-primary); margin-bottom:6px;">Bản xem thử đang được cập nhật</p>
+        <p style="font-size:0.88rem; color:var(--c-text-secondary); margin-bottom:12px;">Quý thầy cô &amp; phụ huynh vui lòng bấm &ldquo;Hỏi tư vấn qua Zalo&rdquo; ở góc trên để nhận file xem thử ngay.</p>
+      </div>
+    `;
   }
 
   // Tài liệu tương tự (Related Documents)
@@ -1750,8 +1871,8 @@ function initHomePage() {
   }
 }
 
-// ─── ĐỒNG BỘ NỀN TỪ GOOGLE SHEETS ───
-window.handleSheetData = function(res) {
+// ─── ĐỒNG BỘ NỀN AN TOÀN TỪ GOOGLE SHEETS QUA FETCH JSON (KHÔNG DÙNG SCRIPT ĐỘNG / JSONP) ───
+function processSheetData(res) {
   try {
     if (!res || !res.table || !res.table.rows) return;
     const rows = res.table.rows;
@@ -1789,6 +1910,12 @@ window.handleSheetData = function(res) {
       else if (rawMon === 'KHTN') monChuan = cap === 'Tiểu học' ? 'Khoa học' : 'Khoa học Tự nhiên';
       else if (rawMon === 'KHXH') monChuan = 'Lịch sử và Địa lý';
 
+      // Kiểm tra an toàn cho URL demo
+      let safeDemo = '';
+      if (rawDemo && /^https:\/\/drive\.google\.com\/file\/d\/[a-zA-Z0-9_-]+\/(?:view|preview)/.test(rawDemo)) {
+        safeDemo = rawDemo;
+      }
+
       sheetDocs.push({
         ma: ma,
         tieuDe: tieuDe,
@@ -1799,7 +1926,7 @@ window.handleSheetData = function(res) {
         doiTuong: 'ca_hai',
         loai: 'giaoan',
         dinhDang: 'DOCX',
-        linkDemo: rawDemo,
+        linkDemo: safeDemo,
         boSach: 'Kết nối tri thức',
         chuanCV: cap === 'Tiểu học' ? 'Giáo án (CV 2345)' : 'Kế hoạch bài dạy (CV 5512)',
         maTranDapAn: 'Đầy đủ nội dung và đáp án'
@@ -1822,16 +1949,27 @@ window.handleSheetData = function(res) {
       }
     }
   } catch (err) {
-    console.warn('Google Sheets sync skipped:', err);
+    console.warn('Google Sheets data processing skipped:', err);
   }
-};
+}
 
-function fetchGoogleSheetData() {
+window.handleSheetData = processSheetData;
+
+async function fetchGoogleSheetData() {
   if (!CONFIG.SHEET_ID) return;
-  const script = document.createElement('script');
-  script.src = `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}/gviz/tq?tqx=responseHandler:handleSheetData`;
-  script.onerror = () => {};
-  document.head.appendChild(script);
+  try {
+    const url = `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}/gviz/tq?tqx=out:json`;
+    const res = await fetch(url);
+    if (!res.ok) return;
+    const text = await res.text();
+    const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]+)\);/);
+    if (match && match[1]) {
+      const data = JSON.parse(match[1]);
+      processSheetData(data);
+    }
+  } catch (err) {
+    console.warn('Google Sheets sync skipped (offline or network error):', err);
+  }
 }
 
 // ─── KHỞI TẠO TOÀN TRANG (DOM READY) ───
@@ -1856,12 +1994,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.getElementById('catalog-search-btn');
     if (searchInput) {
       searchInput.value = filterState.tuKhoa;
+      let searchTimeout = null;
       searchInput.addEventListener('input', (e) => {
         filterState.tuKhoa = e.target.value;
-        capNhatGiaoDienKho();
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          capNhatGiaoDienKho();
+        }, 200);
       });
       searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') capNhatGiaoDienKho();
+        if (e.key === 'Enter') {
+          clearTimeout(searchTimeout);
+          capNhatGiaoDienKho();
+        }
       });
     }
     if (searchBtn) {

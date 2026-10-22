@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tài Liệu Đỉnh — Đỉnh cao tài liệu | Giáo án, Đề thi, Bài tập Word (.docx)</title>
+  <meta name="description" content="Kho tài liệu Microsoft Word (.docx) chất lượng cao dành cho giáo viên, học sinh và phụ huynh từ Lớp 1 đến Lớp 12. Hỗ trợ tư vấn trao đổi nhận file qua Zalo 0926.999.869." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tài Liệu Đỉnh — Đỉnh cao tài liệu" />
+  <meta property="og:description" content="Kho tài liệu Microsoft Word (.docx) dành cho Giáo viên, Học sinh và Phụ huynh Lớp 1–12. Trao đổi nhận file qua Zalo 0926.999.869." />
+  <meta property="og:image" content="assets/hero-desk.svg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="style.css?v=3.1" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="./" class="logo" aria-label="Tài Liệu Đỉnh - Trang chủ">
+        <img src="assets/logo.svg" alt="Tài Liệu Đỉnh" class="logo__icon" />
+        <div class="logo__text-wrap">
+          <span class="logo__text">Tài Liệu Đỉnh</span>
+          <span class="logo__slogan">Đỉnh cao tài liệu</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav" id="main-nav">
+        <a href="./" class="nav__link nav__link--active">Trang chủ</a>
+        <a href="kho-tai-lieu/" class="nav__link">Kho tài liệu</a>
+        <a href="gioi-thieu/" class="nav__link">Giới thiệu</a>
+        <a href="huong-dan/" class="nav__link">Hướng dẫn</a>
+        <a href="lien-he/" class="nav__link">Liên hệ</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header__actions">
+        <a href="kho-tai-lieu/" class="btn-header-search" aria-label="Tìm kiếm tài liệu" title="Tìm kiếm tài liệu">
+          <i data-lucide="search" style="width:18px;height:18px;"></i>
+        </a>
+        <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="btn-header-zalo">
+          <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+          <span>Nhắn Zalo</span>
+        </a>
+        <button class="nav__toggle" id="nav-toggle-btn" aria-label="Mở menu điều hướng">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div class="nav-mobile" id="nav-mobile-menu">
+      <a href="./" class="nav-mobile__link nav-mobile__link--active"><i data-lucide="home" style="width:18px;height:18px;"></i> Trang chủ</a>
+      <a href="kho-tai-lieu/" class="nav-mobile__link"><i data-lucide="folder-open" style="width:18px;height:18px;"></i> Kho tài liệu</a>
+      <a href="gioi-thieu/" class="nav-mobile__link"><i data-lucide="info" style="width:18px;height:18px;"></i> Giới thiệu</a>
+      <a href="huong-dan/" class="nav-mobile__link"><i data-lucide="help-circle" style="width:18px;height:18px;"></i> Hướng dẫn &amp; FAQ</a>
+      <a href="lien-he/" class="nav-mobile__link"><i data-lucide="phone" style="width:18px;height:18px;"></i> Liên hệ</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="hero__preheader">TÀI LIỆU WORD DÀNH CHO GIÁO VIÊN VÀ HỌC SINH LỚP 1–12</span>
+          <h1 class="hero__title">Tài liệu phù hợp, đúng nhu cầu</h1>
+          <p class="hero__desc">
+            Kho tài liệu Word có thể chỉnh sửa, dành cho giáo viên, học sinh và phụ huynh từ Lớp 1 đến Lớp 12. Tìm nhanh theo cấp học, môn học và loại tài liệu bạn cần.
+          </p>
+
+          <!-- Search Bar -->
+          <div class="hero__search">
+            <input type="text" id="hero-search-input" class="hero__search-input" placeholder="Tìm kiếm tài liệu, ví dụ: giáo án, đề kiểm tra, ..." autocomplete="off" />
+            <button class="hero__search-btn" id="hero-search-btn" aria-label="Tìm kiếm">
+              <i data-lucide="search" style="width:18px;height:18px;"></i>
+            </button>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero__actions">
+            <a href="kho-tai-lieu/" class="btn btn--primary btn--lg">
+              Khám phá kho tài liệu &rarr;
+            </a>
+            <a href="kho-tai-lieu/?cap=THCS" class="btn btn--subtle">
+              Duyệt theo cấp học &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__illustration">
+          <img src="assets/hero-desk.svg" alt="Không gian học tập và tài liệu giảng dạy Tài Liệu Đỉnh" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DANH MỤC NỔI BẬT (FEATURED CATEGORIES) -->
+    <section class="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Danh mục nổi bật</h2>
+          <a href="kho-tai-lieu/" class="section-link">Xem tất cả &rarr;</a>
+        </div>
+
+        <div class="categories__grid">
+          <a href="kho-tai-lieu/?loai=giaoan" class="category-card category-card--green">
+            <div class="category-card__icon">
+              <i data-lucide="file-text" style="width:26px;height:26px;"></i>
+            </div>
+            <div class="category-card__title">Giáo án</div>
+            <div class="category-card__desc">Tài liệu giảng dạy</div>
+          </a>
+
+          <a href="kho-tai-lieu/?loai=dekiemtra" class="category-card category-card--pink">
+            <div class="category-card__icon">
+              <i data-lucide="award" style="width:26px;height:26px;"></i>
+            </div>
+            <div class="category-card__title">Đề kiểm tra</div>
+            <div class="category-card__desc">Đánh giá năng lực</div>
+          </a>
+
+          <a href="kho-tai-lieu/?loai=baitap" class="category-card category-card--green">
+            <div class="category-card__icon">
+              <i data-lucide="book-open" style="width:26px;height:26px;"></i>
+            </div>
+            <div class="category-card__title">Bài tập &amp; Phiếu học tập</div>
+            <div class="category-card__desc">Luyện tập, củng cố</div>
+          </a>
+
+          <a href="kho-tai-lieu/?loai=chuyende" class="category-card category-card--pink">
+            <div class="category-card__icon">
+              <i data-lucide="sparkles" style="width:26px;height:26px;"></i>
+            </div>
+            <div class="category-card__title">Chuyên đề &amp; Ôn thi</div>
+            <div class="category-card__desc">Bồi dưỡng, nâng cao</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIENCE BANNERS (DÀNH CHO GIÁO VIÊN / HỌC SINH & PHỤ HUYNH) -->
+    <section class="audiences">
+      <div class="container audiences__grid">
+        <a href="kho-tai-lieu/?doituong=giaovien" class="audience-card audience-card--pink">
+          <div class="audience-card__icon">
+            <i data-lucide="user" style="width:24px;height:24px;"></i>
+          </div>
+          <div class="audience-card__body">
+            <h3 class="audience-card__title">Dành cho giáo viên</h3>
+            <p class="audience-card__desc">Tìm giáo án, kế hoạch bài dạy, đề kiểm tra định kỳ và tài liệu chuyên môn Lớp 1–12.</p>
+            <span class="audience-card__link">Khám phá ngay &rarr;</span>
+          </div>
+        </a>
+
+        <a href="kho-tai-lieu/?doituong=nguoihoc" class="audience-card audience-card--green">
+          <div class="audience-card__icon">
+            <i data-lucide="book-marked" style="width:24px;height:24px;"></i>
+          </div>
+          <div class="audience-card__body">
+            <h3 class="audience-card__title">Dành cho học sinh &amp; phụ huynh</h3>
+            <p class="audience-card__desc">Tài liệu ôn tập, phiếu bài tập, đề cương và tài liệu chuẩn bị cho các kỳ thi chuyển cấp.</p>
+            <span class="audience-card__link">Khám phá ngay &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FEATURED RESOURCES GRID -->
+    <section class="categories" style="padding-top:16px;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Tài liệu nổi bật &amp; Mới cập nhật</h2>
+            <p style="font-size:0.9rem; color:var(--c-text-secondary); margin-top:4px;">Các bộ giáo án, đề kiểm tra chuẩn chương trình mới nhất</p>
+          </div>
+          <a href="kho-tai-lieu/" class="section-link">Xem tất cả tài liệu &rarr;</a>
+        </div>
+
+        <div class="docs-grid" id="home-featured-grid">
+          <!-- Rendered dynamically via script.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FLOATING ZALO BUTTON -->
+  <a href="https://zalo.me/0926999869" target="_blank" rel="noopener" class="floating-zalo" aria-label="Nhắn Zalo 0926.999.869">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast-notify" role="status" aria-live="polite">
+    <i data-lucide="check-circle-2" style="width:18px;height:18px;"></i>
+    <span id="toast-text">Thông báo</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="logo">
+            <img src="assets/logo.svg" alt="Tài Liệu Đỉnh" class="logo__icon" />
+            <div class="logo__text-wrap">
+              <span class="logo__text">Tài Liệu Đỉnh</span>
+              <span class="logo__slogan">Đỉnh cao tài liệu</span>
+            </div>
+          </div>
+          <!-- Bảng màu nhận diện thương hiệu -->
+          <div class="footer__swatches" title="Bảng màu nhận diện thương hiệu Tài Liệu Đỉnh">
+            <span class="swatch swatch--pink-pastel"></span>
+            <span class="swatch swatch--pink-light"></span>
+            <span class="swatch swatch--green-pastel"></span>
+            <span class="swatch swatch--green-brand"></span>
+            <span class="swatch swatch--green-dark"></span>
+            <span class="swatch swatch--zalo"></span>
+          </div>
+        </div>
+
+        <div class="footer__slogan-script">
+          Học tốt hơn mỗi ngày &hearts;
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__links">
+          <a href="./">Trang chủ</a>
+          <a href="kho-tai-lieu/">Kho tài liệu</a>
+          <a href="gioi-thieu/">Giới thiệu</a>
+          <a href="huong-dan/">Hướng dẫn</a>
+          <a href="lien-he/">Liên hệ</a>
+          <a href="lien-he/">Chính sách sử dụng</a>
+          <a href="lien-he/">Quyền riêng tư</a>
+          <a href="lien-he/">Bản quyền</a>
+        </div>
+        <p>&copy; 2025 Tài Liệu Đỉnh. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=3.1"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
