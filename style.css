@@ -463,7 +463,7 @@ img, svg {
 
 .categories__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 .category-card {
@@ -1587,10 +1587,13 @@ textarea.form-control {
 .swatch--zalo { background: var(--c-zalo); }
 
 .footer__slogan-script {
-  font-family: cursive, 'Brush Script MT', sans-serif;
-  font-size: 1.4rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.35rem;
   color: var(--c-green-brand);
   text-align: center;
+  letter-spacing: 0.3px;
 }
 
 .footer__bottom {
@@ -1627,7 +1630,7 @@ textarea.form-control {
     margin: 0 auto;
   }
   .categories__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .docs-grid {
     grid-template-columns: repeat(3, 1fr);

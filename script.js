@@ -997,96 +997,6 @@ let danhSach = [
     "boSach": "Chân trời sáng tạo",
     "chuanCV": "Cấu trúc trắc nghiệm mới",
     "maTranDapAn": "Đầy đủ ma trận & đáp án"
-  },
-  {
-    "ma": "SV-PLDC-01",
-    "tieuDe": "Tiểu luận & Bài tập tình huống Pháp luật đại cương — Mẫu chuẩn DOCX",
-    "moTa": "Trọn bộ tiểu luận mẫu điểm 9-10 và 100 câu hỏi tình huống có lời giải chi tiết môn Pháp luật đại cương, trình bày chuẩn thể thức báo cáo học thuật.",
-    "mon": "Pháp luật đại cương",
-    "khoi": "Đại học",
-    "capHoc": "Đại học",
-    "doiTuong": "sinhvien",
-    "loai": "tailieusinhvien",
-    "dinhDang": "DOCX",
-    "linkDemo": "",
-    "boSach": "Giáo trình ĐH Quốc gia",
-    "chuanCV": "Chuẩn học thuật NCKH",
-    "maTranDapAn": "Tiểu luận mẫu & Đáp án tình huống"
-  },
-  {
-    "ma": "SV-TRIET-02",
-    "tieuDe": "Đề cương ôn tập & 300 câu trắc nghiệm Triết học Mác - Lênin có đáp án",
-    "moTa": "Tổng hợp sơ đồ tư duy lý thuyết 3 chương Triết học Mác - Lênin và ngân hàng 300 câu trắc nghiệm thi kết thúc học phần có giải thích chi tiết.",
-    "mon": "Triết học Mác - Lênin",
-    "khoi": "Đại học",
-    "capHoc": "Đại học",
-    "doiTuong": "sinhvien",
-    "loai": "chuyende",
-    "dinhDang": "DOCX",
-    "linkDemo": "https://drive.google.com/file/d/1nZmAg8-FrKxhI8i8RrxzYDg0GDTdRPkz/view?usp=sharing",
-    "boSach": "Bộ Giáo dục và Đào tạo",
-    "chuanCV": "Chương trình Đại học đại cương",
-    "maTranDapAn": "Sơ đồ tư duy & 300 câu trắc nghiệm"
-  },
-  {
-    "ma": "SV-KTCT-03",
-    "tieuDe": "Bài tập lớn & Chuyên đề Kinh tế chính trị Mác - Lênin",
-    "moTa": "Hệ thống bài tập tính toán giá trị thặng dư, tỷ suất lợi nhuận và các bài luận mẫu về nền kinh tế thị trường định hướng XHCN ở Việt Nam.",
-    "mon": "Kinh tế chính trị",
-    "khoi": "Đại học",
-    "capHoc": "Đại học",
-    "doiTuong": "sinhvien",
-    "loai": "tailieusinhvien",
-    "dinhDang": "DOCX",
-    "linkDemo": "",
-    "boSach": "Bộ Giáo dục và Đào tạo",
-    "chuanCV": "Chương trình Đại học đại cương",
-    "maTranDapAn": "Công thức giải & bài tập lớn mẫu"
-  },
-  {
-    "ma": "SV-XSTK-04",
-    "tieuDe": "Tổng hợp công thức & 150 bài tập giải chi tiết Xác suất Thống kê",
-    "moTa": "Sổ tay tra cứu nhanh toàn bộ công thức xác suất, biến ngẫu nhiên, ước lượng và kiểm định giả thuyết kèm 150 bài tập mẫu có lời giải từng bước.",
-    "mon": "Xác suất Thống kê",
-    "khoi": "Đại học",
-    "capHoc": "Đại học",
-    "doiTuong": "sinhvien",
-    "loai": "baitap",
-    "dinhDang": "DOCX",
-    "linkDemo": "",
-    "boSach": "Giáo trình Toán ĐH",
-    "chuanCV": "Toán cao cấp đại học",
-    "maTranDapAn": "150 bài tập mẫu & file Word chỉnh sửa"
-  },
-  {
-    "ma": "SV-KTVM-05",
-    "tieuDe": "Bộ đề thi thử & Hướng dẫn giải bài tập Kinh tế vĩ mô",
-    "moTa": "Bộ 10 đề thi kết thúc học phần Kinh tế vĩ mô có ma trận điểm, bài tập mô hình IS-LM, AS-AD và chính sách tài khóa, tiền tệ.",
-    "mon": "Kinh tế vĩ mô",
-    "khoi": "Đại học",
-    "capHoc": "Đại học",
-    "doiTuong": "sinhvien",
-    "loai": "dekiemtra",
-    "dinhDang": "DOCX",
-    "linkDemo": "https://drive.google.com/file/d/1dFGTOA1ybIrAeYKdqWFphMzyRWnL8N1G/view?usp=sharing",
-    "boSach": "Kinh tế học cơ bản",
-    "chuanCV": "Chuẩn đầu ra cử nhân",
-    "maTranDapAn": "10 đề thi & đáp án chi tiết"
-  },
-  {
-    "ma": "SV-BC-06",
-    "tieuDe": "Mẫu Báo cáo thực tập tốt nghiệp & Khóa luận cử nhân chuẩn Bộ GD&ĐT",
-    "moTa": "Bộ khung template Word chuẩn (.docx) có sẵn bìa, mục lục tự động, danh mục bảng biểu, định dạng căn lề, font chữ và phong cách trích dẫn APA 7th.",
-    "mon": "Phương pháp NCKH",
-    "khoi": "Đại học",
-    "capHoc": "Đại học",
-    "doiTuong": "sinhvien",
-    "loai": "tailieusinhvien",
-    "dinhDang": "DOCX",
-    "linkDemo": "",
-    "boSach": "Quy chuẩn NCKH & Luận văn",
-    "chuanCV": "Định dạng APA 7th",
-    "maTranDapAn": "Template Word tự động mục lục"
   }
 ];
 
@@ -1103,22 +1013,19 @@ const MON_THEO_LOP = {
   'Lớp 9': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Khoa học Tự nhiên', 'Lịch sử và Địa lý'],
   'Lớp 10': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
   'Lớp 11': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
-  'Lớp 12': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
-  'Đại học': ['Pháp luật đại cương', 'Triết học Mác - Lênin', 'Kinh tế chính trị', 'Xác suất Thống kê', 'Kinh tế vĩ mô', 'Phương pháp NCKH']
+  'Lớp 12': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý']
 };
 
 const MON_THEO_CAP = {
   'Tiểu học': ['Toán', 'Tiếng Việt', 'Tiếng Anh', 'Tự nhiên và Xã hội', 'Khoa học', 'Lịch sử và Địa lý'],
   'THCS': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Khoa học Tự nhiên', 'Lịch sử và Địa lý'],
-  'THPT': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý'],
-  'Đại học': ['Pháp luật đại cương', 'Triết học Mác - Lênin', 'Kinh tế chính trị', 'Xác suất Thống kê', 'Kinh tế vĩ mô', 'Phương pháp NCKH']
+  'THPT': ['Toán', 'Ngữ văn', 'Tiếng Anh', 'Vật lý', 'Hóa học', 'Sinh học', 'Lịch sử', 'Địa lý']
 };
 
 const KHOI_THEO_CAP = {
   'Tiểu học': ['Lớp 1', 'Lớp 2', 'Lớp 3', 'Lớp 4', 'Lớp 5'],
   'THCS': ['Lớp 6', 'Lớp 7', 'Lớp 8', 'Lớp 9'],
-  'THPT': ['Lớp 10', 'Lớp 11', 'Lớp 12'],
-  'Đại học': ['Đại học']
+  'THPT': ['Lớp 10', 'Lớp 11', 'Lớp 12']
 };
 
 // ─── CẤU HÌNH HỆ THỐNG ───
@@ -1333,7 +1240,7 @@ function renderFilterControls() {
 
   // Cập nhật options khối lớp theo cấp
   if (selKhoi) {
-    let validGrades = ['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12','Đại học'];
+    let validGrades = ['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12'];
     if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
       validGrades = KHOI_THEO_CAP[filterState.cap];
     }
@@ -1377,8 +1284,7 @@ function renderDrawerChips() {
     { id: '', label: 'Tất cả cấp' },
     { id: 'Tiểu học', label: 'Tiểu học (1–5)' },
     { id: 'THCS', label: 'THCS (6–9)' },
-    { id: 'THPT', label: 'THPT (10–12)' },
-    { id: 'Đại học', label: 'Đại học' }
+    { id: 'THPT', label: 'THPT (10–12)' }
   ];
 
   if (mLevelFilter) {
@@ -1389,7 +1295,7 @@ function renderDrawerChips() {
     `).join('');
   }
 
-  let validGrades = ['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12','Đại học'];
+  let validGrades = ['Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12'];
   if (filterState.cap && KHOI_THEO_CAP[filterState.cap]) {
     validGrades = KHOI_THEO_CAP[filterState.cap];
   }
@@ -1455,7 +1361,7 @@ function renderActivePills() {
     `);
   });
   if (filterState.doiTuong !== 'all') {
-    const lbl = filterState.doiTuong === 'giaovien' ? 'Giáo viên' : (filterState.doiTuong === 'sinhvien' ? 'Sinh viên' : 'Học sinh / Phụ huynh');
+    const lbl = filterState.doiTuong === 'giaovien' ? 'Giáo viên' : 'Học sinh / Phụ huynh';
     pills.push(`
       <span class="active-tag">
         ${lbl}
@@ -1468,8 +1374,7 @@ function renderActivePills() {
       giaoan: 'Giáo án/KHBD',
       dekiemtra: 'Đề kiểm tra',
       baitap: 'Bài tập & Phiếu',
-      chuyende: 'Chuyên đề',
-      tailieusinhvien: 'Tài liệu sinh viên'
+      chuyende: 'Chuyên đề'
     };
     pills.push(`
       <span class="active-tag">
@@ -1700,7 +1605,7 @@ function initDetailPage() {
   // Metadata
   const metaObj = {
     'detail-meta-dinhdang': doc.dinhDang ? `Word (.${doc.dinhDang.toLowerCase()})` : 'Word (.docx)',
-    'detail-meta-doituong': doc.doiTuong === 'giaovien' ? 'Giáo viên' : (doc.doiTuong === 'sinhvien' ? 'Sinh viên' : 'Học sinh & Phụ huynh'),
+    'detail-meta-doituong': doc.doiTuong === 'giaovien' ? 'Giáo viên' : 'Học sinh & Phụ huynh',
     'detail-meta-sotrang': '15+ trang (Đầy đủ cả năm)',
     'detail-meta-capnhat': 'Năm học 2025–2026'
   };
@@ -1774,7 +1679,7 @@ window.switchDetailTab = function(tabName, btn) {
     `;
   } else if (tabName === 'noidung') {
     tabContent.innerHTML = `
-      <p style="margin-bottom:10px;">Toàn bộ nội dung tài liệu được lưu dưới dạng tệp Microsoft Word (.docx) nguyên gốc, không khóa bảo vệ, sẵn sàng cho thầy cô và các bạn sinh viên tải về bổ sung, tinh chỉnh.</p>
+      <p style="margin-bottom:10px;">Toàn bộ nội dung tài liệu được lưu dưới dạng tệp Microsoft Word (.docx) nguyên gốc, không khóa bảo vệ, sẵn sàng cho thầy cô và các em học sinh tải về bổ sung, tinh chỉnh.</p>
       <p>Sau khi nhận file qua Zalo <strong>${CONFIG.ZALO_PHONE_DISPLAY}</strong>, bạn có thể in ấn ngay hoặc chia sẻ cho đồng nghiệp.</p>
     `;
   } else {
@@ -1874,8 +1779,8 @@ window.handleSheetData = function(res) {
         cap = 'Tiểu học';
       } else if (['lớp 6', 'lớp 7', 'lớp 8', 'lớp 9'].some(l => rawLower.includes(l))) {
         cap = 'THCS';
-      } else if (rawLower.includes('đại') || rawLower.includes('sinh viên')) {
-        cap = 'Đại học';
+      } else {
+        cap = 'THPT';
       }
 
       let monChuan = rawMon;
