@@ -1741,9 +1741,9 @@ function initDetailPage() {
   if (tabContentEl) {
     tabContentEl.innerHTML = `
       <div style="display:flex; flex-direction:column; gap:12px;">
-        <h4 style="font-weight:700; color:var(--c-text-primary);">1. Kế hoạch giảng dạy &amp; Cấu trúc tài liệu:</h4>
+        <h4 style="font-weight: 600; color:var(--c-text-primary);">1. Kế hoạch giảng dạy &amp; Cấu trúc tài liệu:</h4>
         <p>Tài liệu được biên soạn kỹ lưỡng theo định dạng Microsoft Word (.docx), các bảng biểu và đề mục được phân cấp rõ ràng, dễ dàng chỉnh sửa tên trường, lớp, giáo viên giảng dạy.</p>
-        <h4 style="font-weight:700; color:var(--c-text-primary);">2. Điểm nổi bật học thuật:</h4>
+        <h4 style="font-weight: 600; color:var(--c-text-primary);">2. Điểm nổi bật học thuật:</h4>
         <ul style="padding-left:20px; display:flex; flex-direction:column; gap:6px;">
           <li>${escapeHTML(doc.chuanCV || 'Chuẩn phân phối chương trình mới')}</li>
           <li>${escapeHTML(doc.maTranDapAn || 'Kèm ma trận và bảng đặc tả chi tiết')}</li>
@@ -1759,7 +1759,7 @@ function initDetailPage() {
     const fileId = doc.linkDemo.match(/\/d\/([a-zA-Z0-9_-]+)/)[1];
     pdfContainer.style.display = 'block';
     pdfContainer.innerHTML = `
-      <h3 style="font-size:1.15rem; font-weight:700; color:var(--c-text-primary); margin-bottom:12px;">Bản đọc thử PDF (Trực tiếp từ Google Drive)</h3>
+      <h3 style="font-size:1.15rem; font-weight: 600; color:var(--c-text-primary); margin-bottom:12px;">Bản đọc thử PDF (Trực tiếp từ Google Drive)</h3>
       <div class="pdf-embed-container">
         <iframe src="https://drive.google.com/file/d/${escapeHTML(fileId)}/preview" allow="autoplay" loading="lazy"></iframe>
       </div>
