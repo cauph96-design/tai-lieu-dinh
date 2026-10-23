@@ -1,0 +1,945 @@
+{
+  "version": "0.6",
+  "reqId": "0",
+  "status": "ok",
+  "sig": "36154194",
+  "table": {
+    "cols": [
+      {
+        "id": "A",
+        "label": "",
+        "type": "string"
+      },
+      {
+        "id": "B",
+        "label": "",
+        "type": "string"
+      },
+      {
+        "id": "C",
+        "label": "",
+        "type": "string"
+      },
+      {
+        "id": "D",
+        "label": "",
+        "type": "string"
+      },
+      {
+        "id": "E",
+        "label": "",
+        "type": "string"
+      },
+      {
+        "id": "F",
+        "label": "",
+        "type": "string"
+      }
+    ],
+    "rows": [
+      {
+        "c": [
+          {
+            "v": "Mã"
+          },
+          {
+            "v": "Tiêu đề"
+          },
+          {
+            "v": "Mô tả"
+          },
+          {
+            "v": "Môn"
+          },
+          {
+            "v": "Khối"
+          },
+          {
+            "v": "demo"
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "TH-TOAN-01"
+          },
+          {
+            "v": "Bộ Toán Tiểu Học 1–5"
+          },
+          {
+            "v": "Trọn bộ bài tập, đề kiểm tra Toán từ lớp 1 đến lớp 5."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Tiểu học"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "TH-VAN-01"
+          },
+          {
+            "v": "Tập Làm Văn Tiểu Học"
+          },
+          {
+            "v": "Hướng dẫn viết văn miêu tả, kể chuyện cho học sinh tiểu học."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Tiểu học"
+          },
+          {
+            "v": "https://drive.google.com/file/d/1nZmAg8-FrKxhI8i8RrxzYDg0GDTdRPkz/view?usp=sharing"
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "TH-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Tiểu Học 1–5"
+          },
+          {
+            "v": "Từ vựng, ngữ pháp cơ bản, bài nghe và bài tập theo chương trình mới."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Tiểu học"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "TH-KHTN-01"
+          },
+          {
+            "v": "Khoa Học Tự Nhiên Tiểu Học"
+          },
+          {
+            "v": "Thí nghiệm vui, kiến thức tự nhiên dành cho lớp 4–5."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Tiểu học"
+          },
+          {
+            "v": "https://drive.google.com/file/d/1dFGTOA1ybIrAeYKdqWFphMzyRWnL8N1G/view?usp=sharing"
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "TH-KHXH-01"
+          },
+          {
+            "v": "Lịch Sử & Địa Lý Tiểu Học"
+          },
+          {
+            "v": "Tài liệu tổng hợp Lịch sử – Địa lý lớp 4–5 theo chương trình mới."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Tiểu học"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L6-TOAN-01"
+          },
+          {
+            "v": "Toán Lớp 6"
+          },
+          {
+            "v": "Số học, hình học, phân số – lý thuyết trọng tâm và bài tập."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Lớp 6"
+          },
+          {
+            "v": "https://drive.google.com/file/d/1nZmAg8-FrKxhI8i8RrxzYDg0GDTdRPkz/view?usp=sharing"
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L6-VAN-01"
+          },
+          {
+            "v": "Ngữ Văn Lớp 6"
+          },
+          {
+            "v": "Phân tích tác phẩm, tập làm văn tự sự, bài văn mẫu."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Lớp 6"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L6-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Lớp 6"
+          },
+          {
+            "v": "Ngữ pháp, từ vựng theo unit, đề kiểm tra giữa kỳ và cuối kỳ."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Lớp 6"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L6-KHTN-01"
+          },
+          {
+            "v": "KHTN Lớp 6"
+          },
+          {
+            "v": "Vật lý, Hoá học, Sinh học tích hợp – bài giảng và thí nghiệm."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Lớp 6"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L6-KHXH-01"
+          },
+          {
+            "v": "KHXH Lớp 6"
+          },
+          {
+            "v": "Lịch sử, Địa lý tích hợp – sơ đồ tư duy và câu hỏi ôn tập."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Lớp 6"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L7-TOAN-01"
+          },
+          {
+            "v": "Toán Lớp 7"
+          },
+          {
+            "v": "Đại số, hình học – phương pháp giải nhanh, đề thi thử."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Lớp 7"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L7-VAN-01"
+          },
+          {
+            "v": "Ngữ Văn Lớp 7"
+          },
+          {
+            "v": "Văn biểu cảm, nghị luận – dàn ý chi tiết và bài văn mẫu."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Lớp 7"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L7-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Lớp 7"
+          },
+          {
+            "v": "Ngữ pháp nâng cao, kỹ năng đọc hiểu, viết đoạn văn."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Lớp 7"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L7-KHTN-01"
+          },
+          {
+            "v": "KHTN Lớp 7"
+          },
+          {
+            "v": "Cơ học, nhiệt học, sinh thái – lý thuyết và bài tập vận dụng."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Lớp 7"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L7-KHXH-01"
+          },
+          {
+            "v": "KHXH Lớp 7"
+          },
+          {
+            "v": "Lịch sử thế giới trung đại, địa lý các châu lục."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Lớp 7"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L8-TOAN-01"
+          },
+          {
+            "v": "Toán Lớp 8"
+          },
+          {
+            "v": "Phương trình, bất phương trình, hình học không gian cơ bản."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Lớp 8"
+          },
+          {
+            "v": "https://drive.google.com/file/d/1dFGTOA1ybIrAeYKdqWFphMzyRWnL8N1G/view?usp=sharing"
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L8-VAN-01"
+          },
+          {
+            "v": "Ngữ Văn Lớp 8"
+          },
+          {
+            "v": "Văn nghị luận xã hội, phân tích thơ hiện đại."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Lớp 8"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L8-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Lớp 8"
+          },
+          {
+            "v": "Câu bị động, câu điều kiện, đề thi theo chuẩn."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Lớp 8"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L8-KHTN-01"
+          },
+          {
+            "v": "KHTN Lớp 8"
+          },
+          {
+            "v": "Áp suất, phản ứng hoá học, cơ thể người."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Lớp 8"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L8-KHXH-01"
+          },
+          {
+            "v": "KHXH Lớp 8"
+          },
+          {
+            "v": "Cách mạng tư sản, địa lý kinh tế Việt Nam."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Lớp 8"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L9-TOAN-01"
+          },
+          {
+            "v": "Toán Lớp 9"
+          },
+          {
+            "v": "Hàm số bậc hai, hệ phương trình, hình học tổng hợp – ôn thi vào 10."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Lớp 9"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L9-VAN-01"
+          },
+          {
+            "v": "Ngữ Văn Lớp 9"
+          },
+          {
+            "v": "Tổng ôn tác phẩm trọng tâm, nghị luận văn học – luyện thi vào 10."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Lớp 9"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L9-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Lớp 9"
+          },
+          {
+            "v": "Tổng ôn ngữ pháp, bài tập đọc hiểu, viết lại câu – thi vào 10."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Lớp 9"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L9-KHTN-01"
+          },
+          {
+            "v": "KHTN Lớp 9"
+          },
+          {
+            "v": "Điện học, quang học, di truyền – ôn thi tổng hợp."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Lớp 9"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L9-KHXH-01"
+          },
+          {
+            "v": "KHXH Lớp 9"
+          },
+          {
+            "v": "Lịch sử Việt Nam hiện đại, địa lý dân cư & kinh tế."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Lớp 9"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L10-TOAN-01"
+          },
+          {
+            "v": "Toán Lớp 10"
+          },
+          {
+            "v": "Mệnh đề, tập hợp, hàm số bậc hai, vector – lý thuyết & bài tập."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Lớp 10"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L10-VAN-01"
+          },
+          {
+            "v": "Ngữ Văn Lớp 10"
+          },
+          {
+            "v": "Văn học dân gian, trung đại – phân tích chuyên sâu, bài mẫu."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Lớp 10"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L10-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Lớp 10"
+          },
+          {
+            "v": "Ngữ pháp, từ vựng theo chủ đề, luyện kỹ năng nghe nói."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Lớp 10"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L10-KHTN-01"
+          },
+          {
+            "v": "KHTN Lớp 10"
+          },
+          {
+            "v": "Vật lý: Động học; Hoá học: Cấu tạo nguyên tử; Sinh: Tế bào."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Lớp 10"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L10-KHXH-01"
+          },
+          {
+            "v": "KHXH Lớp 10"
+          },
+          {
+            "v": "Lịch sử văn minh thế giới, địa lý tự nhiên đại cương."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Lớp 10"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L11-TOAN-01"
+          },
+          {
+            "v": "Toán Lớp 11"
+          },
+          {
+            "v": "Lượng giác, tổ hợp – xác suất, dãy số, giới hạn."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Lớp 11"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L11-VAN-01"
+          },
+          {
+            "v": "Ngữ Văn Lớp 11"
+          },
+          {
+            "v": "Thơ mới, văn xuôi lãng mạn & hiện thực phê phán."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Lớp 11"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L11-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Lớp 11"
+          },
+          {
+            "v": "Mệnh đề quan hệ, câu giả định, viết luận IELTS nền tảng."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Lớp 11"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L11-KHTN-01"
+          },
+          {
+            "v": "KHTN Lớp 11"
+          },
+          {
+            "v": "Điện từ, hoá hữu cơ đại cương, sinh thái học."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Lớp 11"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L11-KHXH-01"
+          },
+          {
+            "v": "KHXH Lớp 11"
+          },
+          {
+            "v": "Cách mạng tư sản & công nghiệp, địa lý kinh tế thế giới."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Lớp 11"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L12-TOAN-01"
+          },
+          {
+            "v": "Toán Lớp 12"
+          },
+          {
+            "v": "Khảo sát hàm số, tích phân, hình không gian – tổng ôn thi TN."
+          },
+          {
+            "v": "Toán"
+          },
+          {
+            "v": "Lớp 12"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L12-VAN-01"
+          },
+          {
+            "v": "Ngữ Văn Lớp 12"
+          },
+          {
+            "v": "Phân tích tác phẩm trọng tâm, nghị luận xã hội – ôn thi TN."
+          },
+          {
+            "v": "Văn"
+          },
+          {
+            "v": "Lớp 12"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L12-ANH-01"
+          },
+          {
+            "v": "Tiếng Anh Lớp 12"
+          },
+          {
+            "v": "Tổng ôn ngữ pháp, 30 đề thi thử TN quốc gia có đáp án."
+          },
+          {
+            "v": "Anh"
+          },
+          {
+            "v": "Lớp 12"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L12-KHTN-01"
+          },
+          {
+            "v": "KHTN Lớp 12"
+          },
+          {
+            "v": "Sóng, hạt nhân, este – polymer, di truyền học – ôn thi TN."
+          },
+          {
+            "v": "KHTN"
+          },
+          {
+            "v": "Lớp 12"
+          },
+          {
+            "v": null
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "L12-KHXH-01"
+          },
+          {
+            "v": "KHXH Lớp 12"
+          },
+          {
+            "v": "Lịch sử Việt Nam 1945–nay, địa lý VN – ôn thi TN."
+          },
+          {
+            "v": "KHXH"
+          },
+          {
+            "v": "Lớp 12"
+          },
+          {
+            "v": null
+          }
+        ]
+      }
+    ],
+    "parsedNumHeaders": 0
+  }
+}

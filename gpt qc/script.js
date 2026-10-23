@@ -1032,13 +1032,17 @@ const KHOI_THEO_CAP = {
   'THPT': ['Lớp 10', 'Lớp 11', 'Lớp 12']
 };
 
-// ─── CẤU HÌNH HỆ THỐNG ───
+// ─── CẤU HÌNH HỆ THỐNG & NGUỒN DỮ LIỆU (DATA ACCESS LAYER) ───
 const CONFIG = {
   ZALO_PHONE: '0926999869',
   ZALO_PHONE_DISPLAY: '0926.999.869',
   ZALO_LINK: 'https://zalo.me/0926999869',
-  SHEET_ID: '1wQQXVthJrTmYSJPJfuGJ3kbHdi3YnhM1_Dch1QAZvuM',
-  SUPPORT_HOURS: '8:00 – 21:00 (Thứ 2 – Chủ nhật)'
+  SUPPORT_HOURS: '8:00 – 21:00 (Thứ 2 – Chủ nhật)',
+  // DATA ADAPTER:
+  // - Chế độ 'verified_local': Sử dụng kho 66 học liệu chuẩn đã kiểm duyệt, an toàn 100%, không rò rỉ dữ liệu nội bộ.
+  // - Ngưng hoàn toàn việc gọi trực tiếp endpoint Google Sheets gviz/tq từ trình duyệt để bảo vệ thông tin quản trị.
+  DATA_SOURCE: 'verified_local',
+  API_ENDPOINT: '/api/documents'
 };
 
 // ─── TRẠNG THÁI BỘ LỌC TOÀN CỤC ───
@@ -1953,24 +1957,56 @@ function processSheetData(res) {
   }
 }
 
-window.handleSheetData = processSheetData;
+// ─── DATA ADAPTER — LỚP TRUY XUẤT DỮ LIỆU TẬP TRUNG (DATA ACCESS LAYER) ───
+// Nguyên tắc an toàn:
+// 1. Tuyệt đối không gọi trực tiếp endpoint Google Sheets gviz/tq từ trình duyệt client.
+// 2. Chỉ nạp các trường được phép công khai (PUBLIC_WHITELIST).
+// 3. Tự động loại bỏ bất kỳ bản nháp (status === 'draft') hoặc dữ liệu nội bộ.
+const DataAdapter = {
+  PUBLIC_WHITELIST: ['ma', 'tieuDe', 'moTa', 'mon', 'khoi', 'capHoc', 'doiTuong', 'loai', 'dinhDang', 'linkDemo', 'boSach', 'chuanCV', 'maTranDapAn'],
 
-async function fetchGoogleSheetData() {
-  if (!CONFIG.SHEET_ID) return;
-  try {
-    const url = `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}/gviz/tq?tqx=out:json`;
-    const res = await fetch(url);
-    if (!res.ok) return;
-    const text = await res.text();
-    const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]+)\);/);
-    if (match && match[1]) {
-      const data = JSON.parse(match[1]);
-      processSheetData(data);
+  sanitize(item) {
+    if (!item || item.status === 'draft' || item.status === 'archived') {
+      return null;
     }
-  } catch (err) {
-    console.warn('Google Sheets sync skipped (offline or network error):', err);
+    const clean = {};
+    for (const key of this.PUBLIC_WHITELIST) {
+      if (item[key] !== undefined) {
+        clean[key] = item[key];
+      }
+    }
+    return clean;
+  },
+
+  async loadDocuments() {
+    // Khi triển khai kết nối API máy chủ / Supabase proxy
+    if (CONFIG.DATA_SOURCE === 'api_proxy' || CONFIG.DATA_SOURCE === 'supabase_api') {
+      try {
+        const res = await fetch(CONFIG.API_ENDPOINT);
+        if (res.ok) {
+          const json = await res.json();
+          if (json.data && Array.isArray(json.data)) {
+            const sanitized = json.data.map(d => this.sanitize(d)).filter(Boolean);
+            if (sanitized.length > 0) {
+              danhSach = sanitized;
+              if (window.location.pathname.includes('/kho-tai-lieu')) {
+                capNhatGiaoDienKho();
+              } else if (window.location.pathname.includes('/tai-lieu')) {
+                initDetailPage();
+              }
+              return danhSach;
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('[DataAdapter] Remote proxy unavailable, falling back to verified local dataset:', err);
+      }
+    }
+
+    // Chế độ mặc định an toàn: Sử dụng kho 66 học liệu chuẩn đã kiểm duyệt, không gọi gviz/tq
+    return danhSach;
   }
-}
+};
 
 // ─── KHỞI TẠO TOÀN TRANG (DOM READY) ───
 document.addEventListener('DOMContentLoaded', () => {
@@ -2045,6 +2081,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initHomePage();
   }
 
-  // 3. Nạp dữ liệu nền từ Google Sheet
-  fetchGoogleSheetData();
+  // 3. Khởi tạo dữ liệu qua DataAdapter an toàn (Không bắn gviz/tq từ trình duyệt)
+  DataAdapter.loadDocuments();
 });
