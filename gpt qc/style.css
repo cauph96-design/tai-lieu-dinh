@@ -300,6 +300,17 @@ img, svg {
   transform: translateY(-1px);
   box-shadow: var(--shadow-card);
 }
+.btn--secondary {
+  background: var(--c-pink-light);
+  color: var(--c-green-dark);
+  border-color: var(--c-pink-pastel);
+}
+.btn--secondary:hover {
+  background: var(--c-pink-pastel);
+  color: var(--c-green-dark);
+  border-color: #E2BDCC;
+  transform: translateY(-1px);
+}
 .btn--outline {
   background: var(--c-surface);
   color: var(--c-text-primary);
@@ -337,12 +348,12 @@ img, svg {
    HERO SECTION (TRANG CHỦ)
    ========================================================================== */
 .hero {
-  padding: 48px 0 56px;
+  padding: 44px 0 52px;
   position: relative;
 }
 .hero__grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.95fr;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: 48px;
 }
@@ -361,32 +372,40 @@ img, svg {
 }
 
 .hero__title {
-  font-size: 2.85rem;
+  font-size: clamp(1.85rem, 2.6vw + 0.4rem, 2.45rem);
   font-weight: 600;
   color: var(--c-text-primary);
-  line-height: 1.18;
-  letter-spacing: -0.6px;
-  margin-bottom: 16px;
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+  max-width: 580px;
+  text-wrap: balance;
+}
+
+.hero__title-line {
+  display: block;
 }
 
 .hero__desc {
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1.1vw + 0.2rem, 1.02rem);
   color: var(--c-text-secondary);
-  line-height: 1.65;
-  margin-bottom: 28px;
-  max-width: 540px;
+  line-height: 1.62;
+  margin-bottom: 26px;
+  max-width: 520px;
 }
 
 /* Hero Search Bar */
 .hero__search {
   position: relative;
   max-width: 520px;
+  width: 100%;
   margin-bottom: 24px;
 }
 .hero__search-input {
   width: 100%;
-  padding: 15px 56px 15px 20px;
-  font-size: 0.95rem;
+  padding: 14px 54px 14px 20px;
+  font-size: 0.94rem;
+  font-family: inherit;
   border: 1.5px solid var(--c-border);
   border-radius: var(--r-full);
   background: var(--c-surface);
@@ -395,23 +414,29 @@ img, svg {
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
+.hero__search-input::placeholder {
+  color: var(--c-text-muted);
+  opacity: 0.9;
+}
 .hero__search-input:focus {
   border-color: var(--c-green-brand);
-  box-shadow: 0 0 0 4px rgba(71, 118, 91, 0.12);
+  box-shadow: 0 0 0 3px rgba(71, 118, 91, 0.15);
 }
 .hero__search-btn {
   position: absolute;
   right: 6px;
   top: 50%;
   transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--r-full);
   background: var(--c-green-dark);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  cursor: pointer;
   transition: var(--transition);
 }
 .hero__search-btn:hover {
@@ -422,7 +447,7 @@ img, svg {
 .hero__actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -434,7 +459,7 @@ img, svg {
 .hero__illustration img,
 .hero__illustration svg {
   width: 100%;
-  max-width: 520px;
+  max-width: 480px;
   height: auto;
 }
 
@@ -1628,13 +1653,16 @@ textarea.form-control {
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 1024px) {
+  .hero {
+    padding: 32px 0 44px;
+  }
   .hero__grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .hero__illustration {
     order: -1;
-    max-width: 440px;
+    max-width: 320px;
     margin: 0 auto;
   }
   .categories__grid {
@@ -1721,14 +1749,37 @@ textarea.form-control {
     height: 36px;
   }
   .hero {
-    padding: 28px 0 40px;
+    padding: 20px 0 32px;
+  }
+  .hero__grid {
+    gap: 20px;
+  }
+  .hero__illustration {
+    order: -1;
+    max-width: 230px;
+    margin: 0 auto;
+  }
+  .hero__preheader {
+    font-size: 0.68rem;
+    padding: 4px 10px;
+    margin-bottom: 12px;
   }
   .hero__title {
-    font-size: 1.85rem;
+    font-size: clamp(1.45rem, 5.8vw, 1.75rem);
     line-height: 1.25;
+    margin-bottom: 12px;
   }
   .hero__desc {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .hero__search {
+    margin-bottom: 18px;
+  }
+  .hero__search-input {
+    padding: 12px 50px 12px 16px;
+    font-size: 0.88rem;
   }
   .hero__actions {
     flex-direction: column;
@@ -1738,6 +1789,7 @@ textarea.form-control {
   .hero__actions .btn {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
   .categories__grid {
     grid-template-columns: 1fr;
