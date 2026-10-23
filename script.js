@@ -1721,8 +1721,8 @@ function initDetailPage() {
   const metaObj = {
     'detail-meta-dinhdang': doc.dinhDang ? `Word (.${doc.dinhDang.toLowerCase()})` : 'Word (.docx)',
     'detail-meta-doituong': dtText,
-    'detail-meta-sotrang': 'Đầy đủ nội dung trọn bộ',
-    'detail-meta-capnhat': 'Năm học 2025–2026 (Chương trình GDPT mới)'
+    'detail-meta-sotrang': 'Trọn bộ cả năm',
+    'detail-meta-capnhat': 'Năm học 2025–2026 (GDPT mới)'
   };
   for (const [id, val] of Object.entries(metaObj)) {
     const el = document.getElementById(id);
@@ -1732,7 +1732,7 @@ function initDetailPage() {
   // Zalo Deep Link
   const zaloBtn = document.getElementById('btn-detail-zalo');
   if (zaloBtn) {
-    const zaloMsg = `Chào bạn, mình cần hỗ trợ tư vấn tài liệu: [${doc.ma}] - ${doc.tieuDe}`;
+    const zaloMsg = `Chào bạn, mình cần tư vấn tài liệu: [${doc.ma}] - ${doc.tieuDe}`;
     zaloBtn.href = `${CONFIG.ZALO_LINK}?text=${encodeURIComponent(zaloMsg)}`;
   }
 
@@ -1741,13 +1741,13 @@ function initDetailPage() {
   if (tabContentEl) {
     tabContentEl.innerHTML = `
       <div style="display:flex; flex-direction:column; gap:12px;">
-        <h4 style="font-weight: 600; color:var(--c-text-primary);">1. Kế hoạch giảng dạy &amp; Cấu trúc tài liệu:</h4>
-        <p>Tài liệu được biên soạn kỹ lưỡng theo định dạng Microsoft Word (.docx), các bảng biểu và đề mục được phân cấp rõ ràng, dễ dàng chỉnh sửa tên trường, lớp, giáo viên giảng dạy.</p>
-        <h4 style="font-weight: 600; color:var(--c-text-primary);">2. Điểm nổi bật học thuật:</h4>
+        <h4 style="font-weight: 600; color:var(--c-text-primary);">1. Kế hoạch &amp; Cấu trúc tài liệu:</h4>
+        <p>Biên soạn định dạng Microsoft Word (.docx), phân cấp đề mục rõ ràng, dễ dàng chỉnh sửa thông tin trường, lớp và giáo viên.</p>
+        <h4 style="font-weight: 600; color:var(--c-text-primary);">2. Điểm nổi bật:</h4>
         <ul style="padding-left:20px; display:flex; flex-direction:column; gap:6px;">
-          <li>${escapeHTML(doc.chuanCV || 'Chuẩn phân phối chương trình mới')}</li>
+          <li>${escapeHTML(doc.chuanCV || 'Chuẩn chương trình GDPT mới')}</li>
           <li>${escapeHTML(doc.maTranDapAn || 'Kèm ma trận và bảng đặc tả chi tiết')}</li>
-          <li>Định dạng font chữ chuẩn Unicode (Times New Roman / Inter), căn lề chuẩn trang in A4.</li>
+          <li>Font chữ Unicode chuẩn, căn lề A4 sẵn sàng in ấn.</li>
         </ul>
       </div>
     `;
@@ -1768,8 +1768,8 @@ function initDetailPage() {
     pdfContainer.style.display = 'block';
     pdfContainer.innerHTML = `
       <div style="background:var(--c-surface-subtle); border:1px dashed var(--c-border-strong); border-radius:var(--r-md); padding:24px; text-align:center;">
-        <p style="font-weight:600; color:var(--c-text-primary); margin-bottom:6px;">Bản xem thử đang được cập nhật</p>
-        <p style="font-size:0.88rem; color:var(--c-text-secondary); margin-bottom:12px;">Quý thầy cô &amp; phụ huynh vui lòng bấm &ldquo;Hỏi tư vấn qua Zalo&rdquo; ở góc trên để nhận file xem thử ngay.</p>
+        <p style="font-weight:600; color:var(--c-text-primary); margin-bottom:6px;">Bản đọc thử đang được cập nhật</p>
+        <p style="font-size:0.88rem; color:var(--c-text-secondary); margin-bottom:12px;">Vui lòng bấm &ldquo;Trao đổi qua Zalo&rdquo; để xem trước trang mẫu thực tế.</p>
       </div>
     `;
   }
@@ -1792,21 +1792,21 @@ window.switchDetailTab = function(tabName, btn) {
   if (tabName === 'mucluc') {
     tabContent.innerHTML = `
       <ol style="padding-left:20px; line-height:2;">
-        <li><strong>Phần I:</strong> Mục tiêu và yêu cầu cần đạt theo phẩm chất, năng lực.</li>
+        <li><strong>Phần I:</strong> Mục tiêu và yêu cầu cần đạt (phẩm chất, năng lực).</li>
         <li><strong>Phần II:</strong> Thiết bị dạy học và học liệu trực quan.</li>
-        <li><strong>Phần III:</strong> Tiến trình dạy học 4 bước chuẩn Bộ Giáo dục và Đào tạo.</li>
-        <li><strong>Phần IV:</strong> Phiếu học tập, bài tập củng cố và đáp án chi tiết.</li>
+        <li><strong>Phần III:</strong> Tiến trình dạy học 4 bước chuẩn BGD&ĐT.</li>
+        <li><strong>Phần IV:</strong> Phiếu bài tập củng cố và đáp án chi tiết.</li>
       </ol>
     `;
   } else if (tabName === 'noidung') {
     tabContent.innerHTML = `
-      <p style="margin-bottom:10px;">Toàn bộ nội dung tài liệu được lưu dưới dạng tệp Microsoft Word (.docx) nguyên gốc, không khóa bảo vệ, sẵn sàng cho thầy cô và các em học sinh tải về bổ sung, tinh chỉnh.</p>
-      <p>Sau khi nhận file qua Zalo <strong>${CONFIG.ZALO_PHONE_DISPLAY}</strong>, bạn có thể in ấn ngay hoặc chia sẻ cho đồng nghiệp.</p>
+      <p style="margin-bottom:10px;">Tài liệu lưu dưới dạng tệp Microsoft Word (.docx) nguyên gốc, không đặt mật khẩu, thuận tiện chỉnh sửa và in ấn ngay.</p>
+      <p>Nhận file nhanh chóng qua Zalo <strong>${CONFIG.ZALO_PHONE_DISPLAY}</strong> để sử dụng trọn đời.</p>
     `;
   } else {
     tabContent.innerHTML = `
-      <p><strong>Bản quyền &amp; Phân phối:</strong> Tài Liệu Đỉnh — Đỉnh cao tài liệu.</p>
-      <p>Mọi thắc mắc kỹ thuật hoặc hỗ trợ định dạng file Word, vui lòng nhắn trực tiếp Zalo <strong>${CONFIG.ZALO_PHONE_DISPLAY}</strong> trong khung giờ 8:00 – 21:00 hàng ngày.</p>
+      <p><strong>Bản quyền &amp; phân phối:</strong> Tài Liệu Đỉnh — Đỉnh cao tài liệu.</p>
+      <p>Hỗ trợ kỹ thuật và định dạng file Word qua Zalo <strong>${CONFIG.ZALO_PHONE_DISPLAY}</strong> (8:00 – 21:00 hàng ngày).</p>
     `;
   }
 };
@@ -1824,7 +1824,7 @@ function initContactPage() {
     const mon = document.getElementById('c-mon')?.value || 'Tài liệu giáo dục';
     const mota = document.getElementById('c-mota')?.value.trim() || 'Cần tư vấn trọn bộ';
 
-    const msg = `Xin chào Tài Liệu Đỉnh! Mình là [${vaiTro}], mình đang tìm tài liệu cấp [${cap}], môn [${mon}]. Nhu cầu cụ thể: ${mota}`;
+    const msg = `Chào Tài Liệu Đỉnh, mình là [${vaiTro}], đang tìm tài liệu [${cap}] - Môn [${mon}]. Nhu cầu: ${mota}`;
 
     navigator.clipboard.writeText(msg).then(() => {
       showToast('Đã sao chép nội dung tin nhắn!');
